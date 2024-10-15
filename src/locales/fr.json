@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "tech": "Technologies",
+    "projects": "Projets récents",
+    "contact": "Formulaire de contact"
+  },
+  "welcome": "Bienvenue sur mon portfolio",
+  "slogan": "Des solutions web qui évoluent avec vous.",
+  "about_me": "Je conçois et développe des solutions web sur mesure qui évoluent avec votre entreprise, vous assurant de rester en avance dans un monde digital en constante évolution."
+}

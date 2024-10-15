@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "tech": "Stack",
+    "projects": "Recent projects",
+    "contact": "Contact form"
+  },
+  "welcome": "Welcome to my portfolio",
+  "slogan": "Web solutions that grow with you.",
+  "about_me": "I design and develop custom web solutions that evolve with your business, ensuring your digital presence is always one step ahead."
+}
