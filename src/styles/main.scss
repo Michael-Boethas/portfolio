@@ -1,0 +1,18 @@
+@import "./_typography";
+@import "./_colors";
+@import "./_variables";
+@import "./_global";
+
+// Components ///////////////////
+
+@import "./components/About";
+@import "./components/Contact";
+@import "./components/Footer";
+@import "./components/Header";
+@import "./components/LanguageSwitch";
+@import "./components/Nav";
+@import "./components/ProjectCard";
+@import "./components/Projects";
+@import "./components/Stack";
+@import "./components/ThemeToggle";
+@import "./components/Welcome";

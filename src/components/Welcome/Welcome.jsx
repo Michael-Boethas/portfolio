@@ -1,3 +1,9 @@
+"use client";
+
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function Welcome() {
-  return <div>WELCOME</div>;
+  const { textContent } = useLanguage();
+
+  return <div>{textContent.slogan}</div>;
 }

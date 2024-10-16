@@ -1,3 +1,9 @@
+"use client";
+
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function About() {
-  return <div>ABOUT</div>;
+  const { textContent } = useLanguage();
+
+  return <div className="about-section">{textContent.about_me}</div>;
 }
