@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
-import { useLanguage } from "../../context/LanguageContext";
+import Link from 'next/link';
+import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function Nav() {
   const { textContent } = useLanguage();
@@ -17,3 +17,4 @@ export default function Nav() {
     </nav>
   );
 }
+

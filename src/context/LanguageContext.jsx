@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { createContext, useContext, useState } from "react";
-import en from "../locales/en.json";
-import fr from "../locales/fr.json";
+import { createContext, useContext, useState } from 'react';
+import en from '../locales/en.json';
+import fr from '../locales/fr.json';
 
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("fr"); // Default language
+  const [language, setLanguage] = useState('fr'); // Default language
   const languagesList = { en, fr };
 
   return (
     <LanguageContext.Provider
-      value={{ textContent: languagesList[language], setLanguage }}
+      value={{ language, textContent: languagesList[language], setLanguage }}
     >
       {children}
     </LanguageContext.Provider>

@@ -1,14 +1,17 @@
-"use client";
+'use client';
 
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function LanguageSwitch() {
-  const { setLanguage } = useLanguage();
+  const { language, setLanguage } = useLanguage();
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'fr' : 'en');
+  };
 
   return (
-    <div>
-      <button onClick={() => setLanguage("en")}>English</button>
-      <button onClick={() => setLanguage("fr")}>Français</button>
-    </div>
+    <button className="language-button" onClick={toggleLanguage}>
+      {language === 'en' ? 'FR' : 'EN'}
+    </button>
   );
 }

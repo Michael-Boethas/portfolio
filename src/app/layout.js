@@ -1,12 +1,12 @@
-import { LanguageProvider } from "@/context/LanguageContext";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import "../styles/main.scss";
+import { LanguageProvider } from '@/context/LanguageContext';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+import '../styles/main.scss';
 
 const metadata = {
-  title: "Web Developer Portfolio",
+  title: 'Web Developer Portfolio',
   description:
-    "Portfolio of a web developer specializing in front-end and back-end technologies like React and Express.",
+    'Portfolio of a web developer specializing in front-end and back-end technologies like React and Express.',
 };
 
 export default function RootLayout({ children }) {
@@ -51,4 +51,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
