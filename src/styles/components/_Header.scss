@@ -1,0 +1,53 @@
+.slogan__text, .bi-chevron-compact-down {
+    font-size: 3rem;
+    animation: fade-in 3000ms ease-in;
+    @media screen and (min-width: 768px) {
+        font-size: 5rem;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header--background {
+    background: linear-gradient(45deg, $bg-fx-color-1, $bg-fx-color-2, $bg-fx-color-3, $bg-fx-color-4);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header--overlay {
+    animation: fade-out 3000ms forwards;
+  }
+  
+  @keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+  

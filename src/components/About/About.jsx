@@ -5,5 +5,9 @@ import { useLanguage } from '../../context/LanguageContext';
 export default function About() {
   const { textContent } = useLanguage();
 
-  return <div className="about-section">{textContent.about_me}</div>;
+  return (
+    <section className="container-fluid">
+      <p className="container">{textContent.about_me}</p>
+    </section>
+  );
 }

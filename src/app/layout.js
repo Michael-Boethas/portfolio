@@ -1,5 +1,5 @@
 import { LanguageProvider } from '@/context/LanguageContext';
-import Header from '@/components/Header/Header';
+import Nav from '@/components/Nav/Nav';
 import Footer from '@/components/Footer/Footer';
 import '../styles/main.scss';
 
@@ -42,11 +42,11 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        <LanguageProvider>
-          <Header />
-          {children}
-          <Footer />
-        </LanguageProvider>
+          <LanguageProvider>
+            {/* <Nav /> */}
+            {children}
+            <Footer />
+          </LanguageProvider>
       </body>
     </html>
   );
