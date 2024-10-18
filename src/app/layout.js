@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" sizes="192x192" href="/web-app-manifest-192x192.png" />
         <link rel="icon" sizes="512x512" href="/web-app-manifest-512x512.png" />
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
@@ -42,11 +42,11 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-          <LanguageProvider>
-            {/* <Nav /> */}
-            {children}
-            <Footer />
-          </LanguageProvider>
+        <LanguageProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

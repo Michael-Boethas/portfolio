@@ -13,7 +13,9 @@ export default function Nav() {
   };
 
   return (
-    <nav className={`navbar navbar-expand-md ${isCollapsed ? '' : 'float-start'}`}>
+    <nav
+      className={`navbar navbar-expand-md ${isCollapsed ? '' : 'float-start'}`}
+    >
       <button
         className={`navbar-toggler-icon d-md-none ${isCollapsed ? '' : 'ms-auto'}`}
         type="button"

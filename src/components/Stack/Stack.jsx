@@ -1,3 +1,3 @@
 export default function Stack() {
-  return <section>STACK</section>;
+  return <section id="stack">STACK</section>;
 }

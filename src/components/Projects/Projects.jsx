@@ -2,7 +2,7 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 
 export default function Projects() {
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <ProjectCard />
       <ProjectCard />
     </section>

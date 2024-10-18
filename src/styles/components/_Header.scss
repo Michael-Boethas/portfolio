@@ -1,53 +1,87 @@
-.slogan__text, .bi-chevron-compact-down {
-    font-size: 3rem;
-    animation: fade-in 3000ms ease-in;
-    @media screen and (min-width: 768px) {
-        font-size: 5rem;
-    }
+.slogan__text,
+.bi-chevron-compact-down {
+  font-size: 3rem;
+  animation: fade-in 3000ms ease-in;
+
+  @media screen and (min-width: 768px) {
+    font-size: 5rem;
+  }
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    33% {
-        opacity: 0
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .header--background {
-    background: linear-gradient(45deg, $bg-fx-color-1, $bg-fx-color-2, $bg-fx-color-3, $bg-fx-color-4);
-    background-size: 400% 400%;
-    animation: gradient 20s ease infinite;
+  background: radial-gradient(
+    ellipse,
+    $bg-fx-color-1,
+    $bg-fx-color-2,
+    $bg-fx-color-3,
+    $bg-fx-color-4
+  );
+  background-size: 900% 900%;
+  animation: gradient 60s ease infinite;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
 
-    50% {
-        background-position: 100% 50%;
-    }
+  12.5% {
+    background-position: 100% 0%;
+  }
 
-    100% {
-        background-position: 0% 50%;
-    }
+  25% {
+    background-position: 100% 100%;
+  }
+
+  37.5% {
+    background-position: 0% 100%;
+  }
+
+  50% {
+    background-position: 50% 0%;
+  }
+
+  62.5% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 100%;
+  }
+
+  87.5% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .header--overlay {
-    animation: fade-out 3000ms forwards;
+  animation: fade-out 3000ms forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+
+  100% {
+    opacity: 0;
   }
-  
+}
