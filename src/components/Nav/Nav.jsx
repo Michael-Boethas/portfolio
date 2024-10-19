@@ -27,22 +27,22 @@ export default function Nav() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link href="#about" className="nav-link">
-              {textContent.nav.about}
+              {textContent.sections.about}
             </Link>
           </li>
           <li className="nav-item">
             <Link href="#projects" className="nav-link">
-              {textContent.nav.projects}
+              {textContent.sections.projects}
             </Link>
           </li>
           <li className="nav-item">
             <Link href="#stack" className="nav-link">
-              {textContent.nav.stack}
+              {textContent.sections.stack}
             </Link>
           </li>
           <li className="nav-item">
             <Link href="#contact" className="nav-link">
-              {textContent.nav.contact}
+              {textContent.sections.contact}
             </Link>
           </li>
         </ul>

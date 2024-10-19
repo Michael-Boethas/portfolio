@@ -1,18 +1,29 @@
-  'use client';
+'use client';
 
-  import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '../../context/LanguageContext';
 
-  export default function About() {
-    const { textContent } = useLanguage();
+export default function About() {
+  const { textContent } = useLanguage();
 
-    return (
-      <section id="about" className="row gx-0 bg-light d-md-flex">
-        <div className="about__picture-container col-md-4 d-flex justify-content-center align-items-center p-4">
-          <img className='img-fluid rounded-circle w-50 h-75 w-md-75 h-md-100' src="/images/ma_tronche.webp" alt="Photo of the web developer" />
+  return (
+    <section id="about" className="bg-cream-25 py-md-4 py-lg-5">
+      <div className="container d-md-flex gap-md-5 align-items-center">
+        <div className="d-none d-md-block d-flex p-lg-5">
+          <img
+            className="about__photo rounded-circle border border-5 border-primary p-1"
+            src="/images/ma_tronche.webp"
+            alt="Photo of the web developer"
+          />
         </div>
-        <div className="about__text-container col-md-8 d-flex justify-content-center">
-          <p className="fs-2 w-auto  text-center align-self-center p-5">{textContent.about_me}</p>
+        <div className="d-flex flex-column gap-3 px-4 px-md-5 py-4 py-md-0">
+          <h2 className="fs-1 text-center text-md-start">
+            {textContent.sections.about}
+          </h2>
+          <p className="fs-4 text-center text-md-start">
+            {textContent.about_me}
+          </p>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}

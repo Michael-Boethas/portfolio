@@ -11,7 +11,7 @@ export default function LanguageSwitch() {
 
   return (
     <button
-      className="d-flex align-items-center gap-2 fs-5 fw-bold bg-light rounded px-2"
+      className="d-flex align-items-center gap-2 fs-5 fw-bold rounded px-2"
       onClick={toggleLanguage}
     >
       <i className="bi bi-translate"></i>

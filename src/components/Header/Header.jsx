@@ -16,10 +16,12 @@ export default function Header() {
     <header className="header--background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative">
       <div className="header--overlay bg-dark position-absolute w-100 h-100"></div>
       <div className="slogan__container w-75 text-center">
-        <p className="slogan__text text-white fw-bold">{textContent.slogan}</p>
+        <h1 className="slogan__text text-white fw-bold">
+          {textContent.slogan}
+        </h1>
       </div>
       <i
-        className="bi bi-chevron-compact-down text-light position-absolute bottom-0"
+        className="bi bi-chevron-compact-down text-light position-absolute bottom-0 mb-5 mb-md-0"
         onClick={scrollDown}
         style={{ cursor: 'pointer' }}
       ></i>

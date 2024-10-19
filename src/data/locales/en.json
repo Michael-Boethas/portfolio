@@ -1,7 +1,7 @@
 {
-  "nav": {
+  "sections": {
     "home": "Home",
-    "about": "About",
+    "about": "About me",
     "projects": "Projects",
     "stack": "Stack",
     "contact": "Contact"

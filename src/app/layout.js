@@ -33,12 +33,19 @@ export default function RootLayout({ children }) {
         <link rel="icon" sizes="192x192" href="/web-app-manifest-192x192.png" />
         <link rel="icon" sizes="512x512" href="/web-app-manifest-512x512.png" />
 
+        {/* Devicon CDN */}
+        {/* <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        /> */}
+
         <meta name="mobile-web-app-capable" content="yes" />
         <meta
-          name="apple-mobile-web-app-status-bar-style"
+          name="mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <meta name="apple-mobile-web-app-title" content={metadata.title} />
+        <meta name="mobile-web-app-title" content={metadata.title} />
       </head>
 
       <body>
