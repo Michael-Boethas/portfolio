@@ -19,7 +19,7 @@ export default function Header() {
       <LanguageSwitch className="position-absolute text-light top-0 start-0 m-4 m-md-2"/>
       <div className="slogan__container w-75 text-center">
         <h1 className="slogan__text text-white fw-bold">
-          {textContent.slogan}
+          {textContent.sections.header.slogan}
         </h1>
       </div>
       <i

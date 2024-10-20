@@ -41,7 +41,7 @@
     },
     "express": {
         "name": "Express",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg",
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
         "skill_level": "7"
     }
 }

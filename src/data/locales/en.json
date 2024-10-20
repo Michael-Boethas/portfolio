@@ -1,11 +1,18 @@
 {
   "sections": {
-    "home": "Home",
-    "about": "About me",
+    "header": {
+      "title": "home",
+      "slogan": "Web solutions that grow with you."
+    },
+    "about": {
+      "title": "About me",
+      "about_me": "I design and develop custom web solutions that evolve with your business, ensuring your digital presence is always one step ahead."
+    },
     "projects": "Projects",
-    "stack": "Stack",
+    "stack": {
+      "title": "Stack",
+      "main": "I mainly work with "
+    },
     "contact": "Contact"
-  },
-  "slogan": "Web solutions that grow with you.",
-  "about_me": "I design and develop custom web solutions that evolve with your business, ensuring your digital presence is always one step ahead."
+  }
 }
