@@ -15,14 +15,16 @@
       "kasa": {
         "name": "Kasa",
         "project_url": "https://p5-kasa-seven.vercel.app/",
-        "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
-        "description": ""
+        "codebase_url": "https://github.com/Michael-Boethas/p5-Kasa",
+        "thumbnail_url": "/images/Screenshot-Kasa.webp",
+        "description": "Front-end of an online accommodation rental platform where users can browse accommodation listings with detailed descriptions, photos, and reviews. I developed this project as part of my training to practice creating a modern web application using React. The site is optimized for all screen sizes, from mobile to desktop. This project showcases proficiency in React for developing interactive web applications, the use of hooks for state management and side effects, as well as the development of a responsive design with CSS3."
       },
       "nina_carducci": {
         "name": "Nina Carducci's portfolio",
-        "project_url": "https://p5-kasa-seven.vercel.app/",
-        "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
-        "description": ""
+        "project_url": "https://michael-boethas.github.io/P4/",
+        "codebase_url": "https://github.com/Michael-Boethas/P4",
+        "thumbnail_url": "/images/Screenshot-Nina-Carducci.webp",
+        "description": "This project involved the comprehensive optimization of Nina Carducci's portfolio website, focusing on improving performance, accessibility, and search engine optimization (SEO). I conducted detailed audits using Lighthouse and GTMetrix to identify areas for enhancement and implemented various optimizations based on the findings."
       }
     },
     "stack": {

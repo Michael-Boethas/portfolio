@@ -1,5 +1,6 @@
 .header--overlay {
-  animation: fade-out 5000ms forwards;
+  z-index: 1;
+  animation: fade-out 2000ms ease-in forwards;
 }
 
 @keyframes fade-out {
@@ -15,13 +16,13 @@
 
 .slogan__text,
 .bi-chevron-compact-down {
-  font-size: 3rem;
+  font-size: 2.5rem;
 
   @media screen and (min-width: $md) {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   @media screen and (min-width: $lg) {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 
