@@ -2,16 +2,33 @@
   "sections": {
     "header": {
       "title": "home",
-      "slogan": "Web solutions that grow with you."
+      "slogan": "Web solutions that grow with you.",
+      "github": "https://github.com/Michael-Boethas",
+      "linkedin": "https://www.linkedin.com/in/michael-boethas-8bba6764/"
     },
     "about": {
       "title": "About me",
       "about_me": "I design and develop custom web solutions that evolve with your business, ensuring your digital presence is always one step ahead."
     },
-    "projects": "Projects",
+    "projects": {
+      "title": "Recent projects",
+      "kasa": {
+        "name": "Kasa",
+        "project_url": "https://p5-kasa-seven.vercel.app/",
+        "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
+        "description": ""
+      },
+      "nina_carducci": {
+        "name": "Nina Carducci's portfolio",
+        "project_url": "https://p5-kasa-seven.vercel.app/",
+        "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
+        "description": ""
+      }
+    },
     "stack": {
       "title": "Stack",
-      "main": "I mainly work with "
+      "main": "I mainly work with",
+      "secondary": "I've had the opportunity to work with"
     },
     "contact": "Contact"
   }

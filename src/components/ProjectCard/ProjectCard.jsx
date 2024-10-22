@@ -1,3 +1,3 @@
-export default function ProjectCard() {
-  return <div className="project__card">PROJECT_CARD</div>;
+export default function ProjectCard({projectData}) {
+  return <div className="project__card">{projectData.name}</div>;
 }

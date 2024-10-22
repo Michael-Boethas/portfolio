@@ -1,47 +1,64 @@
 {
     "html": {
         "name": "HTML",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-        "skill_level": "8"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
     },
     "css": {
         "name": "CSS",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-        "skill_level": "7"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
     },
     "javascript": {
         "name": "Javascript",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-        "skill_level": "6"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
     },
     "git": {
         "name": "Git",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg",
-        "skill_level": "8"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg"
     },
     "react": {
         "name": "React",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-        "skill_level": "7"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
     },
     "nodejs": {
         "name": "Node.js",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-        "skill_level": "6"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg"
     },
     "sass": {
         "name": "Sass",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
-        "skill_level": "7"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
     },
     "mongodb": {
         "name": "MongoDB",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
-        "skill_level": "6"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg"
     },
+    "aws": {
+        "name": "AWS",
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+    },    
     "express": {
         "name": "Express",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-        "skill_level": "7"
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+    },
+    "nextjs": {
+        "name": "Next.js",
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg"
+    },
+    "vercel": {
+        "name": "Vercel",
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
+    },
+    "bootstrap": {
+        "name": "Bootstrap",
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+    },
+    "inkscape": {
+        "name": "Inkscape",
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-plain.svg"
+    },
+    "figma": {
+        "name": "Figma",
+        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
     }
 }
+
+

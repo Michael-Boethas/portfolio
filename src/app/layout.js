@@ -34,11 +34,11 @@ export default function RootLayout({ children }) {
         <link rel="icon" sizes="512x512" href="/web-app-manifest-512x512.png" />
 
         {/* Devicon CDN */}
-        {/* <link
+        <link
           rel="stylesheet"
           type="text/css"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        /> */}
+        />
 
         <meta name="mobile-web-app-capable" content="yes" />
         <meta
@@ -50,6 +50,9 @@ export default function RootLayout({ children }) {
 
       <body>
         <LanguageProvider>
+          <span className="screen-size-warning alert alert-warning">
+            This website is not optimized for screens under 320px wide
+          </span>
           {/* <Nav /> */}
           {children}
           <Footer />

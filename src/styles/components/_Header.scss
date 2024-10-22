@@ -9,6 +9,7 @@
 
   100% {
     opacity: 0;
+    display: none;
   }
 }
 
@@ -20,7 +21,7 @@
     font-size: 4rem;
   }
   @media screen and (min-width: $lg) {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -34,6 +35,11 @@
   );
   background-size: 2000% 2000%;
   animation: gradient 60s ease infinite;
+}
+
+.header-links {
+  height: 50px;
+  width: 50px;
 }
 
 @keyframes gradient {

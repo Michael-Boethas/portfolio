@@ -9,8 +9,8 @@ export default function HomePage() {
     <div>
       <Header />
       <About />
-      <Stack />
       <Projects />
+      <Stack />
       <Contact />
     </div>
   );

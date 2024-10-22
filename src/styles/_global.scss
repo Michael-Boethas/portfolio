@@ -1,3 +1,10 @@
+.screen-size-warning {
+  display: block;
+  @media screen and (min-width: $min-width-warning) {
+    display: none;
+  }
+}
+
 // html,
 // body {
 //   box-sizing: border-box;

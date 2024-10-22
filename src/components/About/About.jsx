@@ -8,7 +8,7 @@ export default function About() {
 
   return (
     <section id="about" className="bg-cream-25 py-md-4 py-lg-5">
-      <div className="container d-md-flex gap-md-5 align-items-center">
+      <div className="container d-md-flex gap-md-5 align-items-center border-start border-3 border-md-0">
         <div className="d-none d-md-block d-flex p-lg-5">
           <Image
             className="about__photo rounded-circle border border-5 border-primary p-1"
@@ -20,7 +20,7 @@ export default function About() {
           />
         </div>
         <div className="d-flex flex-column gap-3 px-4 px-md-5 py-4 py-md-0">
-          <h2 className="fs-1 text-center text-md-start">
+          <h2 className="fs-1 fst-italic text-center text-md-start">
             {textContent.sections.about.title}
           </h2>
           <p className="fs-4 text-center text-md-start">
