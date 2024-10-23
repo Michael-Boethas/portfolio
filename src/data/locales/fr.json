@@ -11,7 +11,7 @@
       "about_me": "Je conçois et développe des solutions web sur mesure qui évoluent avec votre entreprise, vous assurant de rester en avance dans un monde digital en constante évolution."
     },
     "projects": {
-      "title": "Projets récents",
+      "title": "Projets",
       "kasa": {
         "name": "Kasa",
         "project_url": "https://p5-kasa-seven.vercel.app/",
@@ -32,7 +32,9 @@
       "main": "Je travaille principalement avec ",
       "secondary": "J'ai pu travailler avec"
     },
-    "contact": "Contact"
+    "contact": {
+      "title": "Écrivez-moi"
+    }
   }
 }
 

@@ -2,7 +2,7 @@
 
 import { useLanguage } from '../../context/LanguageContext';
 
-export default function LanguageSwitch({ className }) {
+export default function LanguageSwitch() {
   const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
@@ -11,7 +11,7 @@ export default function LanguageSwitch({ className }) {
 
   return (
     <button
-      className={`d-flex gap-2 fs-2 fw-bold bg-transparent border-0 ${className}`}
+      className="lang-switch d-flex align-items-center gap-2 fs-4 fw-bold bg-transparent border-0 px-4"
       onClick={toggleLanguage}
     >
       <i className="bi bi-translate"></i>

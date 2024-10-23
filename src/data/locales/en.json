@@ -11,7 +11,7 @@
       "about_me": "I design and develop custom web solutions that evolve with your business, ensuring your digital presence is always one step ahead."
     },
     "projects": {
-      "title": "Recent projects",
+      "title": "Projects",
       "kasa": {
         "name": "Kasa",
         "project_url": "https://p5-kasa-seven.vercel.app/",
@@ -32,6 +32,8 @@
       "main": "I mainly work with",
       "secondary": "I've had the opportunity to work with"
     },
-    "contact": "Contact"
+    "contact": {
+      "title": "Contact me"
+    }
   }
 }

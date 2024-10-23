@@ -2,7 +2,7 @@
 
 import { useLanguage } from '../../context/LanguageContext';
 import Link from 'next/link';
-import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
+import Nav from '@/components/Nav/Nav';
 
 export default function Header() {
   const { textContent } = useLanguage();
@@ -11,7 +11,7 @@ export default function Header() {
     <header className="header--background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative">
       <div className="header--overlay bg-dark position-absolute w-100 h-100"></div>
 
-      <LanguageSwitch className="position-absolute text-light top-0 start-0" />
+      <Nav />
 
       <div className="slogan__container w-75 text-center">
         <h1 className="slogan__text text-white fw-bold">

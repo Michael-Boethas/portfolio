@@ -1,5 +1,4 @@
 import { LanguageProvider } from '@/context/LanguageContext';
-import Nav from '@/components/Nav/Nav';
 import Footer from '@/components/Footer/Footer';
 import '../styles/main.scss';
 
@@ -53,7 +52,6 @@ export default function RootLayout({ children }) {
           <span className="screen-size-warning alert alert-warning">
             This website is not optimized for screens under 320px wide
           </span>
-          {/* <Nav /> */}
           {children}
           <Footer />
         </LanguageProvider>
