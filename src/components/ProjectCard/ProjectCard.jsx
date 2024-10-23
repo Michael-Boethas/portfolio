@@ -22,7 +22,8 @@ export default function ProjectCard({ projectData }) {
         <h5 className="card-title" onClick={toggleContent}>
           {projectData.name}
         </h5>
-        <div className={`card-text collapse h-auto ${isCollapsed ? '' : 'show'}`}>
+        
+        <div className={`card-text collapse ${isCollapsed ? '' : 'show'}`}>
           <p>{projectData.description}</p>
 
           <div className="d-flex flex-column gap-2 py-3">
@@ -34,6 +35,7 @@ export default function ProjectCard({ projectData }) {
             </a>
           </div>
         </div>
+
       </div>
     </div>
   );

@@ -13,9 +13,7 @@ export default function Projects() {
       </h2>
       <div className="container d-flex flex-column flex-md-row flex-wrap justify-content-center gap-5 p-5">
         <ProjectCard projectData={textContent.sections.projects.kasa} />
-        <ProjectCard
-          projectData={textContent.sections.projects.nina_carducci}
-        />
+        <ProjectCard projectData={textContent.sections.projects.nina_carducci} />
       </div>
     </section>
   );

@@ -10,7 +10,7 @@
 
   100% {
     opacity: 0;
-    display: none;
+    pointer-events: none;
   }
 }
 
@@ -23,6 +23,9 @@
   }
   @media screen and (min-width: $lg) {
     font-size: 4rem;
+  }
+  @media screen and (min-width: $xl) {
+    font-size: 4.5rem;
   }
 }
 
