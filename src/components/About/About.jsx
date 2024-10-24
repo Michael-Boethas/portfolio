@@ -7,7 +7,7 @@ export default function About() {
   const { textContent } = useLanguage();
 
   return (
-    <section id="about" className="bg-cream-25 py-md-4 py-lg-5">
+    <section id="about" className="bg-cream py-md-4 py-5">
       <div className="container d-md-flex gap-md-5 align-items-center border-start border-3 border-md-0">
         <div className="d-none d-md-block d-flex p-lg-5">
           <Image
@@ -16,6 +16,7 @@ export default function About() {
             alt="Photo of the web developer"
             width={250}
             height={250}
+            priority
           />
         </div>
         <div className="d-flex flex-column gap-3 px-4 px-md-5 py-4 py-md-0">

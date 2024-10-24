@@ -1,4 +1,5 @@
 import { LanguageProvider } from '@/context/LanguageContext';
+import Nav from '@/components/Nav/Nav';
 import Footer from '@/components/Footer/Footer';
 import '../styles/main.scss';
 
@@ -48,13 +49,23 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
+
         <LanguageProvider>
-          <span className="screen-size-warning alert alert-warning">
-            This website is not optimized for screens under 320px wide
-          </span>
+          <div className="screen-size-warning alert alert-warning mt-5 fs-4 text-center">
+            <div className="d-flex flex-column align-items-center">
+              <i className="bi bi-exclamation-octagon p-4 fs-1"></i>
+              <span>
+                This website is not optimized for screens under 320px wide
+              </span>
+            </div>
+          </div>
+
+          <Nav />
           {children}
           <Footer />
+
         </LanguageProvider>
+        
       </body>
     </html>
   );

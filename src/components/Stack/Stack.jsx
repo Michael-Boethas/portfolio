@@ -8,7 +8,7 @@ export default function Stack() {
   const { textContent } = useLanguage();
 
   return (
-    <section id="stack" className="bg-cream-25 vh-75 py-5">
+    <section id="stack" className="bg-cream vh-75 py-5">
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.stack.title}
       </h2>

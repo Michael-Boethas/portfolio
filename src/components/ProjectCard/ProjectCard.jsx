@@ -17,25 +17,25 @@ export default function ProjectCard({ projectData }) {
         width={400}
         height={300}
         onClick={toggleContent}
+        priority
       />
       <div className="card-body">
         <h5 className="card-title" onClick={toggleContent}>
           {projectData.name}
         </h5>
-        
+
         <div className={`card-text collapse ${isCollapsed ? '' : 'show'}`}>
           <p>{projectData.description}</p>
 
           <div className="d-flex flex-column gap-2 py-3">
-            <a href={projectData.project_url} className="btn btn-primary">
+            <a href={projectData.project_url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Site
             </a>
-            <a href={projectData.codebase_url} className="btn btn-primary">
+            <a href={projectData.codebase_url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               Code
             </a>
           </div>
         </div>
-
       </div>
     </div>
   );

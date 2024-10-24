@@ -1,48 +1,24 @@
-// Background colors ////////////
-
-.bg-black {
-  background-color: black;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.bg-lightgrey {
-  background-color: lightgrey;
-}
-
-.bg-lightgrey-75 {
-  background-color: #d3d3d3bf;
-}
-
-.bg-lightgrey-50 {
-  background-color: #d3d3d380;
-}
-
-.bg-lightgrey-25 {
-  background-color: #d3d3d340;
-}
-
-.bg-cream {
-  background-color: #ffeedd;
-}
-
-.bg-cream-75 {
-  background-color: #ffeeddbf;
-}
-
-.bg-cream-50 {
-  background-color: #ffeedd80;
-}
-
-.bg-cream-25 {
-  background-color: #ffeedd40;
-}
-
-// Background effect colors /////////
+// Header background effect colors /////////
 
 $bg-fx-color-1: #08815d;
 $bg-fx-color-2: #102e2b;
 $bg-fx-color-3: #c24700;
 $bg-fx-color-4: #4b0247;
+
+
+// Background colors ///////////////////////
+
+.bg-cream {
+  background-color: #fdf4ed;
+}
+
+
+.nav-link,
+nav span {
+  color: #ffffff;
+
+  &:hover {
+    color: #08815d;
+  }
+}
+
