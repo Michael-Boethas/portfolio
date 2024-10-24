@@ -7,20 +7,20 @@ export default function About() {
   const { textContent } = useLanguage();
 
   return (
-    <section id="about" className="bg-cream py-md-4 py-5">
-      <div className="container d-md-flex gap-md-5 align-items-center border-start border-3 border-md-0">
+    <section id="about" className="bg-light py-5">
+      <div className="container d-md-flex gap-md-5 align-items-center border-start border-3">
         <div className="d-none d-md-block d-flex p-lg-5">
           <Image
-            className="rounded-circle border border-5 border-primary p-1"
+            className="rounded-circle border border-5 border-secondary p-1"
             src="/images/ma_tronche.webp"
-            alt="Photo of the web developer"
+            alt="Picture of me"
             width={250}
             height={250}
             priority
           />
         </div>
-        <div className="d-flex flex-column gap-3 px-4 px-md-5 py-4 py-md-0">
-          <h2 className="fs-1 fst-italic text-center text-md-start">
+        <div className="d-flex flex-column gap-3 px-4 px-md-5 py-4">
+          <h2 className="fs-1 fst-italic text-center text-md-start py-5">
             {textContent.sections.about.title}
           </h2>
           <p className="fs-4 text-center text-md-start">

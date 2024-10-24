@@ -1,0 +1,39 @@
+.shine {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  // border-radius: 0;
+  cursor: pointer;
+}
+
+.shine::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  width: 150%;
+  height: 20%;
+  background: #ffffffb4;
+  transform: rotate(45deg);
+  // animation: shine 10s infinite;
+  pointer-events: none;
+}
+
+.shine:hover::before {
+  animation: shine 10s infinite;
+}
+
+@keyframes shine {
+  0% {
+    top: 100%;
+    left: -100%;
+  }
+  10% {
+    top: -100%;
+    left: 100%;
+  }
+  100% {
+    top: -100%;
+    left: 100%;
+  }
+}

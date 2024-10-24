@@ -33,9 +33,17 @@
       "secondary": "J'ai pu travailler avec"
     },
     "contact": {
-      "title": "Écrivez-moi"
+      "title": "Contact",
+      "email_input_label": "Votre adresse e-mail",
+      "text_input_label": "Votre message",
+      "submit_button_label": "Envoyer"
+    },
+    "footer": {
+      "contact_CTA": "Écrivez-moi",
+      "message_part_1": "Je suis actuellement basé à",
+      "available": "disponible ",
+      "unavailable": "indisponible ",
+      "message_part_2": "pour des missions freelance"
     }
   }
 }
-
-

@@ -9,7 +9,7 @@ export default function ProjectCard({ projectData }) {
   };
 
   return (
-    <div className="project-card card shadow">
+    <div className="project-card hover--zoom card shadow">
       <Image
         className="project-card__image"
         src={projectData.thumbnail_url}
@@ -20,18 +20,28 @@ export default function ProjectCard({ projectData }) {
         priority
       />
       <div className="card-body">
-        <h5 className="card-title" onClick={toggleContent}>
+        <h3 className="card-title fs-4" onClick={toggleContent}>
           {projectData.name}
-        </h5>
+        </h3>
 
         <div className={`card-text collapse ${isCollapsed ? '' : 'show'}`}>
           <p>{projectData.description}</p>
 
           <div className="d-flex flex-column gap-2 py-3">
-            <a href={projectData.project_url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <a
+              href={projectData.project_url}
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Site
             </a>
-            <a href={projectData.codebase_url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <a
+              href={projectData.codebase_url}
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Code
             </a>
           </div>

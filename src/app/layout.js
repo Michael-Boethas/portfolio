@@ -49,7 +49,6 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-
         <LanguageProvider>
           <div className="screen-size-warning alert alert-warning mt-5 fs-4 text-center">
             <div className="d-flex flex-column align-items-center">
@@ -63,9 +62,7 @@ export default function RootLayout({ children }) {
           <Nav />
           {children}
           <Footer />
-
         </LanguageProvider>
-        
       </body>
     </html>
   );

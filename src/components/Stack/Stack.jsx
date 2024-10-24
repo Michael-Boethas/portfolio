@@ -8,14 +8,14 @@ export default function Stack() {
   const { textContent } = useLanguage();
 
   return (
-    <section id="stack" className="bg-cream vh-75 py-5">
+    <section id="stack" className="bg-light vh-75 py-5">
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.stack.title}
       </h2>
 
       <div className="d-flex flex-column align-items-center">
         <h3 className="p-3 fw-light">{textContent.sections.stack.main}</h3>
-        <div className="container w-75 d-flex flex-column flex-md-row justify-content-center align-items-center gap-md-5 p-3 p-md-5">
+        <div className="shine container w-75 d-flex flex-column flex-md-row justify-content-center align-items-center gap-md-5 p-3 p-md-5">
           <div className="d-flex flex-column">
             <div className="d-flex gap-2">
               <Tech techData={techStack.html} className="tech__img--min" />
@@ -31,7 +31,7 @@ export default function Stack() {
           </div>
         </div>
 
-        <div className="line-50 mt-5 mb-3"></div>
+        <div className="line-50 line-primary mt-5 mb-3"></div>
 
         <div className="d-flex flex-column align-items-center">
           <h3 className="p-3 fw-light text-center">

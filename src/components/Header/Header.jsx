@@ -7,18 +7,21 @@ export default function Header() {
   const { textContent } = useLanguage();
 
   return (
-    <header id='header' className="header--background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative">
+    <header
+      id="header"
+      className="header--background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative"
+    >
       <div className="header--overlay bg-dark position-absolute w-100 h-100"></div>
 
-      <div className="slogan__container w-75 text-center">
-        <h1 className="slogan__text text-white fw-bold">
+      <div className="w-75 text-center">
+        <h1 className="header__text text-white fw-bold">
           {textContent.sections.header.slogan}
         </h1>
 
         <div className="d-flex justify-content-center gap-4 py-5">
           <a
             href={textContent.sections.header.linkedin}
-            className="nav-link"
+            className="hover--zoom nav-link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -27,7 +30,7 @@ export default function Header() {
 
           <a
             href={textContent.sections.header.github}
-            className="nav-link"
+            className="hover--zoom nav-link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -38,7 +41,7 @@ export default function Header() {
 
       <Link
         href="#about"
-        className="nav-link position-absolute bottom-0 end-0 m-5 mb-sm-4 mb-md-0"
+        className="hover--zoom nav-link position-absolute bottom-0 end-0 m-5 mb-sm-4 mb-md-0"
       >
         <i className="bi bi-chevron-compact-down text-light"></i>
       </Link>

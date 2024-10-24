@@ -1,6 +1,40 @@
 .screen-size-warning {
   display: block;
+
   @media screen and (min-width: $min-width-warning) {
     display: none;
   }
+}
+
+.nav-link,
+nav span {
+  color: #ffffff;
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: $lg) {
+    &:hover {
+      font-weight: bold;
+      color: $primary;
+    }
+  }
+}
+
+.hover--zoom {
+  transition: transform 200ms;
+
+  @media screen and (min-width: $lg) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+h2 {
+  color: #636363;
 }

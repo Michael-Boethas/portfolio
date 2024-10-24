@@ -33,7 +33,17 @@
       "secondary": "I've had the opportunity to work with"
     },
     "contact": {
-      "title": "Contact me"
+      "title": "Contact",
+      "email_input_label": "Your email address",
+      "text_input_label": "Your message",
+      "submit_button_label": "Submit"
+    },
+    "footer": {
+      "contact_CTA": "Get in touch",
+      "message_part_1": "I'm currently based in ",
+      "available": "available ",
+      "unavailable": "unavailable ",
+      "message_part_2": "for freelance work opportunities."
     }
   }
 }
