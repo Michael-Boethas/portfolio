@@ -9,7 +9,7 @@ export default function ProjectCard({ projectData }) {
   };
 
   return (
-    <div className="project-card hover--zoom card shadow">
+    <figure className="project-card hover--zoom card shadow rounded-0">
       <Image
         className="project-card__image"
         src={projectData.thumbnail_url}
@@ -19,7 +19,7 @@ export default function ProjectCard({ projectData }) {
         onClick={toggleContent}
         priority
       />
-      <div className="card-body">
+      <figcaption className="card-body">
         <h3 className="card-title fs-4" onClick={toggleContent}>
           {projectData.name}
         </h3>
@@ -30,7 +30,7 @@ export default function ProjectCard({ projectData }) {
           <div className="d-flex flex-column gap-2 py-3">
             <a
               href={projectData.project_url}
-              className="btn btn-primary"
+              className="btn btn-light-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -38,7 +38,7 @@ export default function ProjectCard({ projectData }) {
             </a>
             <a
               href={projectData.codebase_url}
-              className="btn btn-primary"
+              className="btn btn-light-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -46,7 +46,7 @@ export default function ProjectCard({ projectData }) {
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   );
 }

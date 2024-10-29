@@ -31,7 +31,7 @@ export default function Stack() {
           </div>
         </div>
 
-        <div className="line-50 line-primary mt-5 mb-3"></div>
+        <div className="h-line-50 line-primary mt-5 mb-3"></div>
 
         <div className="d-flex flex-column align-items-center">
           <h3 className="p-3 mb-5 fw-light text-center">

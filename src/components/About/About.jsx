@@ -8,19 +8,20 @@ export default function About() {
 
   return (
     <section id="about" className="bg-light py-5">
-      <div className="container d-md-flex gap-md-5 align-items-center border-start border-3">
-        <div className="d-none d-md-block d-flex p-lg-5">
+      <div className="container d-md-flex gap-md-5 align-items-center">
+        <div className="d-none d-md-flex flex-column gap-3 p-4 p-lg-5 border-start border-3">
           <Image
-            className="rounded-circle border border-5 border-secondary p-1"
+            className="rounded-circle border border-5 border-primary p-1"
             src="/images/ma_tronche.webp"
             alt="Picture of me"
             width={250}
             height={250}
             priority
-            role='img'
+            role="img"
           />
+          <span className='text-light--grey font-monospace fs-3 fw-bold align-self-end d-flex gap-1 align-items-end'><i class="bi bi-arrow-90deg-up fs-1"></i>Michaël</span>
         </div>
-        <div className="d-flex flex-column gap-3 px-4 px-md-5">
+        <div className="d-flex flex-column gap-3 px-4 px-lg-5">
           <h2 className="fs-1 fst-italic text-center text-md-start py-4">
             {textContent.sections.about.title}
           </h2>

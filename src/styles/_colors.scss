@@ -3,3 +3,125 @@
 $bg-fx-color-1: #c90075;
 $bg-fx-color-2: #08815d;
 $bg-fx-color-3: #c24700;
+
+
+// Color themes
+
+$colors-list: (
+  'primary',
+  'secondary',
+  'light',
+  'grey',
+  'dark',
+  'success',
+  'warning',
+  'danger',
+  'info'
+);
+
+@function light-theme($color) {
+  @if $color =='primary' {
+    @return #ce973d;
+  }
+
+  @else if $color =='secondary' {
+    @return #08815d;
+  }
+
+  @else if $color =='light' {
+    @return #fffaef;
+  }
+
+  @else if $color =='grey' {
+    @return #636363;
+  }
+
+  @else if $color =='dark' {
+    @return #111827;
+  }
+
+  @else if $color =='success' {
+    @return #4caf50;
+  }
+
+  @else if $color =='warning' {
+    @return #ff9800;
+  }
+
+  @else if $color =='danger' {
+    @return #e74c3c;
+  }
+
+  @else if $color =='info' {
+    @return #2196f3;
+  }
+
+  @else {
+    @return null;
+  }
+}
+
+@function dark-theme($color) {
+  @if $color =='primary' {
+    @return #ce973d;
+  }
+
+  @else if $color =='secondary' {
+    @return #08815d;
+  }
+
+  @else if $color =='light' {
+    @return #fffaef;
+  }
+
+  @else if $color =='grey' {
+    @return #636363;
+  }
+
+  @else if $color =='dark' {
+    @return #111827;
+  }
+
+  @else if $color =='success' {
+    @return #4caf50;
+  }
+
+  @else if $color =='warning' {
+    @return #ff9800;
+  }
+
+  @else if $color =='danger' {
+    @return #e74c3c;
+  }
+
+  @else if $color =='info' {
+    @return #2196f3;
+  }
+
+  @else {
+    @return null;
+  }
+}
+
+@each $color in $colors-list {
+  .text-light--#{$color} {
+    color: light-theme($color) !important;
+  }
+  .text-dark--#{$color} {
+    color: dark-theme($color) !important;
+  }
+  .bg-light--#{$color} {
+    background-color: light-theme($color) !important;
+  }
+  .bg-dark--#{$color} {
+    background-color: dark-theme($color) !important;
+  }
+  // .btn-light--#{$color} {
+  //   background-color: light-theme($color) !important;
+  // }
+  // .btn-dark--#{$color} {
+  //   background-color: dark-theme($color) !important;
+  // }
+}
+
+@import '~bootstrap/scss/bootstrap';

@@ -19,7 +19,7 @@ export default function Contact() {
       aria-hidden="true"
     >
       <div className="modal-dialog">
-        <div className="modal-content bg-light">
+        <div className="modal-content bg-light rounded-0">
           <div className="modal-header">
             <h2 className="modal-title" id="contactLabel">
               {textContent.sections.contact.title}

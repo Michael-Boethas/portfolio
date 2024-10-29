@@ -39,7 +39,6 @@ export default function Header() {
             <i className="devicon-github-plain text-white font--large"></i>
           </a>
         </div>
-
       </div>
 
       <Link
@@ -49,7 +48,6 @@ export default function Header() {
       >
         <i className="bi bi-chevron-compact-down text-light"></i>
       </Link>
-
     </header>
   );
 }

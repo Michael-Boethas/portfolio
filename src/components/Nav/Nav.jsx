@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
 export default function Nav() {
   const { textContent } = useLanguage();
   const [isCollapsed, setIsCollapsed] = useState(true);
-  
+
   const toggleCollapse = () => setIsCollapsed(!isCollapsed);
 
   const toggleOpacity = () => {
@@ -31,7 +31,6 @@ export default function Nav() {
   }, []);
 
   useEffect(() => {
-    
     // Initial check for scroll position
     toggleOpacity();
 
@@ -66,31 +65,51 @@ export default function Nav() {
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav d-flex flex-column align-items-end align-items-sm-center flex-lg-row gap-md-4">
-            <Link href="/" className="nav-link d-flex fs-5 p-sm-1" onClick={toggleCollapse}>
+            <Link
+              href="/"
+              className="nav-link d-flex fs-5 p-sm-1"
+              onClick={toggleCollapse}
+            >
               <span className="react-brackets">&lt;</span>
               <span>{textContent.sections.header.title}</span>
               <span className="react-brackets ps-2 ps-lg-0">/&gt;</span>
             </Link>
 
-            <Link href="#about" className="nav-link d-flex fs-5 p-sm-1" onClick={toggleCollapse}>
+            <Link
+              href="#about"
+              className="nav-link d-flex fs-5 p-sm-1"
+              onClick={toggleCollapse}
+            >
               <span className="react-brackets">&lt;</span>
               <span>{textContent.sections.about.title}</span>
               <span className="react-brackets ps-2 ps-lg-0">/&gt;</span>
             </Link>
 
-            <Link href="#projects" className="nav-link d-flex fs-5 p-sm-1" onClick={toggleCollapse}>
+            <Link
+              href="#projects"
+              className="nav-link d-flex fs-5 p-sm-1"
+              onClick={toggleCollapse}
+            >
               <span className="react-brackets">&lt;</span>
               <span>{textContent.sections.projects.title}</span>
               <span className="react-brackets ps-2 ps-lg-0">/&gt;</span>
             </Link>
 
-            <Link href="#stack" className="nav-link d-flex fs-5 p-sm-1" onClick={toggleCollapse}>
+            <Link
+              href="#stack"
+              className="nav-link d-flex fs-5 p-sm-1"
+              onClick={toggleCollapse}
+            >
               <span className="react-brackets">&lt;</span>
               <span>{textContent.sections.stack.title}</span>
               <span className="react-brackets ps-2 ps-lg-0">/&gt;</span>
             </Link>
 
-            <Link href="#contact" className="nav-link d-flex fs-5 p-sm-1" onClick={toggleCollapse}>
+            <Link
+              href="#contact"
+              className="nav-link d-flex fs-5 p-sm-1"
+              onClick={toggleCollapse}
+            >
               <span className="react-brackets">&lt;</span>
               <span>{textContent.sections.contact.title}</span>
               <span className="react-brackets ps-2 ps-lg-0">/&gt;</span>
