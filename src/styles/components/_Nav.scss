@@ -1,5 +1,5 @@
-.nav--custom {
-  background-color: #000000dd;
+.nav-custom {
+  background-color: #000000bf;
   font-size: 1.2rem;
   z-index: 1000;
   transition: background-color 200ms ease-in;
@@ -7,7 +7,7 @@
   @media screen and (min-width: $lg) {
     background-color: #00000000;
 
-    &.scrolled {
+    &.nav--opacity {
       background-color: #000000bf;
     }
   }

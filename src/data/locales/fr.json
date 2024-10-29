@@ -2,13 +2,13 @@
   "sections": {
     "header": {
       "title": "Accueil",
-      "slogan": "Des solutions web qui évoluent avec vous.",
+      "slogan": "Des solutions web qui évoluent avec vous",
       "github": "https://github.com/Michael-Boethas",
       "linkedin": "https://www.linkedin.com/in/michael-boethas-8bba6764/?originalSubdomain=fr"
     },
     "about": {
       "title": "À propos",
-      "about_me": "Je conçois et développe des solutions web sur mesure qui évoluent avec votre entreprise, vous assurant de rester en avance dans un monde digital en constante évolution."
+      "about_me": "Je suis développeur web full-stack, spécialisé dans la création de sites et d'applications sur mesure qui répondent aux besoins spécifiques des entreprises. J'apprécie de travailler à la fois sur le design front-end et l'architecture back-end, garantissant des page propres et réactives, ainsi qu'un code évolutif pour des sites efficaces et sécurisés qui peuvent accompagner la croissance de votre projet."
     },
     "projects": {
       "title": "Projets",
@@ -17,7 +17,7 @@
         "project_url": "https://p5-kasa-seven.vercel.app/",
         "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
         "thumbnail_url": "/images/Screenshot-Kasa.webp",
-        "description": "Front-end d'une plateforme de location d'hébergements en ligne où les utilisateurs peuvent consulter des offres d'hébergements avec des descriptions détaillées, des photos et des avis. J'ai développé ce projet dans le cadre de ma formation pour m'exercer à la création d'une application web moderne en utilisant React. Le site est optimisé pour affichage sur tout type d'écran: desktop, tablette et mobile. Ce projet met en avant la maîtrise de React pour le développement d'applications web interactives, l'utilisation des hooks pour la gestion des états et des effets de bord ainsi que le développement d'un design responsive avec CSS3"
+        "description": "Développement front-end d'une plateforme de location d'hébergements en ligne, permettant aux utilisateurs de consulter des annonces avec descriptions détaillées, photos et avis. Il s'agit d'une application web moderne, optimisée pour tous les types d’écrans : ordinateur, tablette et mobile. Le projet met en avant l’utilisation de React et React Router pour créer des applications interactives avec des composants réutilisables, une gestion efficace des états et des effets de bord, ainsi qu’un design responsive développé avec Sass."
       },
       "nina_carducci": {
         "name": "Portfolio de Nina Carducci",
@@ -30,7 +30,7 @@
     "stack": {
       "title": "Technologies",
       "main": "Je travaille principalement avec ",
-      "secondary": "J'ai pu travailler avec"
+      "secondary": "Quelques technologies que j'utilise"
     },
     "contact": {
       "title": "Contact",
@@ -39,11 +39,12 @@
       "submit_button_label": "Envoyer"
     },
     "footer": {
-      "contact_CTA": "Écrivez-moi",
-      "message_part_1": "Je suis actuellement basé à",
+      "contact_CTA": "Me contacter",
+      "message_part_1": "Je suis actuellement basé à ",
       "available": "disponible ",
       "unavailable": "indisponible ",
-      "message_part_2": "pour des missions freelance"
+      "message_part_2": "pour des missions freelance. N'hésitez pas à me contacter si vous avez des questions ou souhaitez discuter de projets ou de collaborations potentielles.",
+      "training": "Formé chez Openclassrooms "
     }
   }
 }

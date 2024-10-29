@@ -2,13 +2,13 @@
   "sections": {
     "header": {
       "title": "Home",
-      "slogan": "Web solutions that grow with you.",
+      "slogan": "Web solutions that grow with you",
       "github": "https://github.com/Michael-Boethas",
       "linkedin": "https://www.linkedin.com/in/michael-boethas-8bba6764/"
     },
     "about": {
       "title": "About me",
-      "about_me": "I design and develop custom web solutions that evolve with your business, ensuring your digital presence is always one step ahead."
+      "about_me": "I’m a full-stack web developer focused on building custom websites and applications that meet the specific needs of businesses. I enjoy working on both front-end design and back-end architecture, ensuring clean, responsive layouts and scalable code for efficient and secure sites that can grow alongside your business."
     },
     "projects": {
       "title": "Projects",
@@ -17,7 +17,7 @@
         "project_url": "https://p5-kasa-seven.vercel.app/",
         "codebase_url": "https://github.com/Michael-Boethas/p5-Kasa",
         "thumbnail_url": "/images/Screenshot-Kasa.webp",
-        "description": "Front-end of an online accommodation rental platform where users can browse accommodation listings with detailed descriptions, photos, and reviews. I developed this project as part of my training to practice creating a modern web application using React. The site is optimized for all screen sizes, from mobile to desktop. This project showcases proficiency in React for developing interactive web applications, the use of hooks for state management and side effects, as well as the development of a responsive design with CSS3."
+        "description": "Front-end development of an online accommodation rental platform, allowing users to browse listings with detailed descriptions, photos, and reviews. This is a modern web application optimized for all screen types: desktop, tablet, and mobile. The project highlights the use of React and React Router to create interactive applications with reusable components, efficient state and side-effect management, as well as a responsive design developed with Sass."
       },
       "nina_carducci": {
         "name": "Nina Carducci's portfolio",
@@ -30,7 +30,7 @@
     "stack": {
       "title": "Stack",
       "main": "I mainly work with",
-      "secondary": "I've had the opportunity to work with"
+      "secondary": "Some other technologies I use"
     },
     "contact": {
       "title": "Contact",
@@ -43,7 +43,8 @@
       "message_part_1": "I'm currently based in ",
       "available": "available ",
       "unavailable": "unavailable ",
-      "message_part_2": "for freelance work opportunities."
+      "message_part_2": "for freelance work opportunities. Feel free to email me if you have any questions or would like to discuss potential projects or collaborations.",
+      "training": "Trained at OpenClassrooms "
     }
   }
 }

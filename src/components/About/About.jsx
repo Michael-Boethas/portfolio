@@ -17,10 +17,11 @@ export default function About() {
             width={250}
             height={250}
             priority
+            role='img'
           />
         </div>
-        <div className="d-flex flex-column gap-3 px-4 px-md-5 py-4">
-          <h2 className="fs-1 fst-italic text-center text-md-start py-5">
+        <div className="d-flex flex-column gap-3 px-4 px-md-5">
+          <h2 className="fs-1 fst-italic text-center text-md-start py-4">
             {textContent.sections.about.title}
           </h2>
           <p className="fs-4 text-center text-md-start">

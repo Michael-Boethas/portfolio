@@ -12,15 +12,14 @@
   top: 100%;
   left: -100%;
   width: 150%;
-  height: 20%;
+  height: 30%;
   background: #ffffffb4;
   transform: rotate(45deg);
-  // animation: shine 10s infinite;
   pointer-events: none;
 }
 
 .shine:hover::before {
-  animation: shine 10s infinite;
+  animation: shine 8s infinite;
 }
 
 @keyframes shine {

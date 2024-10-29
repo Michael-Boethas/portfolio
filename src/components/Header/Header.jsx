@@ -13,7 +13,7 @@ export default function Header() {
     >
       <div className="header--overlay bg-dark position-absolute w-100 h-100"></div>
 
-      <div className="w-75 text-center">
+      <div className="w-75 text-center mt-5">
         <h1 className="header__text text-white fw-bold">
           {textContent.sections.header.slogan}
         </h1>
@@ -24,6 +24,7 @@ export default function Header() {
             className="hover--zoom nav-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
           >
             <i className="devicon-linkedin-plain text-white font--large"></i>
           </a>
@@ -33,18 +34,22 @@ export default function Header() {
             className="hover--zoom nav-link"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub Profile"
           >
             <i className="devicon-github-plain text-white font--large"></i>
           </a>
         </div>
+
       </div>
 
       <Link
         href="#about"
         className="hover--zoom nav-link position-absolute bottom-0 end-0 m-5 mb-sm-4 mb-md-0"
+        aria-label="Scroll down to About section"
       >
         <i className="bi bi-chevron-compact-down text-light"></i>
       </Link>
+
     </header>
   );
 }

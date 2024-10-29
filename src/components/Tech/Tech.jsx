@@ -6,7 +6,7 @@ export default function Tech({ techData, className }) {
       <Image
         className={`tech__img ${className}`}
         src={techData.icon_url}
-        alt={techData.name}
+        alt={""}
         width={300}
         height={300}
       />

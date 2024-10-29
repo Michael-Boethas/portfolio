@@ -14,8 +14,8 @@ export default function Stack() {
       </h2>
 
       <div className="d-flex flex-column align-items-center">
-        <h3 className="p-3 fw-light">{textContent.sections.stack.main}</h3>
-        <div className="shine container w-75 d-flex flex-column flex-md-row justify-content-center align-items-center gap-md-5 p-3 p-md-5">
+        <h3 className="p-3 mb-5 fw-light">{textContent.sections.stack.main}</h3>
+        <div className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center ">
           <div className="d-flex flex-column">
             <div className="d-flex gap-2">
               <Tech techData={techStack.html} className="tech__img--min" />
@@ -24,7 +24,7 @@ export default function Stack() {
             <Tech techData={techStack.javascript} className="tech__img--min" />
           </div>
 
-          <div className="d-flex gap-5">
+          <div className="d-flex justify-content-center gap-4">
             <Tech techData={techStack.express} />
             <Tech techData={techStack.react} />
             <Tech techData={techStack.nodejs} />
@@ -34,7 +34,7 @@ export default function Stack() {
         <div className="line-50 line-primary mt-5 mb-3"></div>
 
         <div className="d-flex flex-column align-items-center">
-          <h3 className="p-3 fw-light text-center">
+          <h3 className="p-3 mb-5 fw-light text-center">
             {textContent.sections.stack.secondary}
           </h3>
 
