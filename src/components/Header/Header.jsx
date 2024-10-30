@@ -9,12 +9,12 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="header--background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative"
+      className="header__background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative"
     >
-      <div className="header--overlay bg-dark position-absolute w-100 h-100"></div>
+      <div className="header__overlay bg-dark position-absolute w-100 h-100"></div>
 
       <div className="w-75 text-center mt-5">
-        <h1 className="header__text text-white fw-bold">
+        <h1 className="font-huge text-white fw-bold">
           {textContent.sections.header.slogan}
         </h1>
 
@@ -26,7 +26,7 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
           >
-            <i className="devicon-linkedin-plain text-white font--large"></i>
+            <i className="devicon-linkedin-plain text-white font-large"></i>
           </a>
 
           <a
@@ -36,7 +36,7 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
           >
-            <i className="devicon-github-plain text-white font--large"></i>
+            <i className="devicon-github-plain text-white font-large"></i>
           </a>
         </div>
       </div>

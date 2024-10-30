@@ -6,21 +6,11 @@
   }
 }
 
-.nav-link,
-nav span {
-  color: #ffffff;
-  &:hover,
-  &:focus,
-  &:visited,
-  &:active {
-    color: #ffffff;
-    text-decoration: none;
-  }
-
+.hover--highlight {
   @media screen and (min-width: $lg) {
     &:hover {
       font-weight: bold;
-      color: $primary;
+      color: $primary !important;
     }
   }
 }
@@ -34,4 +24,3 @@ nav span {
     }
   }
 }
-

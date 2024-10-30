@@ -32,8 +32,9 @@ export default function Footer() {
           </strong>{' '}
           {language === 'fr' ? 'et' : 'and'}{' '}
           <em
-            className={`fw-bold fs-4 fst-normal ${available === 'yes' ? 'text-success' : 'text-warning'
-              }`}
+            className={`fw-bold fs-4 fst-normal ${
+              available === 'yes' ? 'text-success' : 'text-warning'
+            }`}
             role="status"
           >
             {available === 'yes'

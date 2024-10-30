@@ -1,16 +1,27 @@
-// @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syne+Mono&family=VT323&display=swap');
+.font-large {
+    font-size: 2rem;
 
-// .header__text {
-//     font-family: "Syne Mono", monospace;
-// }
+    @media screen and (min-width: $md) {
+        font-size: 3rem;
+    }
 
-.font--large {
-  font-size: 2rem;
+    @media screen and (min-width: $lg) {
+        font-size: 3.5rem;
+    }
+}
+
+.font-huge {
+  font-size: 2.5rem;
 
   @media screen and (min-width: $md) {
-    font-size: 3rem;
-  }
-  @media screen and (min-width: $lg) {
     font-size: 3.5rem;
+  }
+
+  @media screen and (min-width: $lg) {
+    font-size: 4rem;
+  }
+
+  @media screen and (min-width: $xl) {
+    font-size: 4.5rem;
   }
 }

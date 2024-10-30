@@ -19,7 +19,9 @@ export default function About() {
             priority
             role="img"
           />
-          <span className='text-light--grey font-monospace fs-3 fw-bold align-self-end d-flex gap-1 align-items-end'><i class="bi bi-arrow-90deg-up fs-1"></i>Michaël</span>
+          <span className="text-light--grey font-monospace fs-3 fw-bold align-self-end d-flex gap-1 align-items-end">
+            <i className="bi bi-arrow-90deg-up fs-1"></i>Michaël
+          </span>
         </div>
         <div className="d-flex flex-column gap-3 px-4 px-lg-5">
           <h2 className="fs-1 fst-italic text-center text-md-start py-4">

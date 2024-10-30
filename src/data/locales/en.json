@@ -36,7 +36,9 @@
       "title": "Contact",
       "email_input_label": "Your email address",
       "text_input_label": "Your message",
-      "submit_button_label": "Submit"
+      "submit_button_label": "Submit",
+      "success_message": "Email sent successfully !",
+      "error_message": "Failed to send email."
     },
     "footer": {
       "contact_CTA": "Get in touch",

@@ -1,13 +1,28 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Contact() {
   const { textContent } = useLanguage();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState({ success: null, message: '' });
+
+
+  useEffect(() => {
+    const handleModalClose = () => {
+      setStatus({ success: null, message: '' });
+    };
+
+    const modalElement = document.getElementById('contact-form');
+    modalElement?.addEventListener('hide.bs.modal', handleModalClose);
+
+    // Cleanup event listener on unmount
+    return () => {
+      modalElement?.removeEventListener('hide.bs.modal', handleModalClose);
+    };
+  }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -35,13 +50,13 @@ export default function Contact() {
         throw new Error('Network response was not ok');
       }
 
-      setStatus('Email sent successfully!');
+      setStatus({ success: true, message: textContent.sections.contact.success_message });
       setEmail('');
       setMessage('');
 
     } catch (error) {
       console.error('Error submitting form:', error);
-      setStatus('Failed to send email.');
+      setStatus({ success: false, message: textContent.sections.contact.error_message });
     }
   };
 
@@ -66,7 +81,7 @@ export default function Contact() {
               aria-label="Close"
             ></button>
           </div>
-          <div className="modal-body">
+          <div className="modal-body d-flex flex-column">
             <form
               className="d-flex flex-column align-items-stretch"
               onSubmit={handleSubmit}
@@ -121,7 +136,9 @@ export default function Contact() {
                 {textContent.sections.contact.submit_button_label}
               </button>
             </form>
-            {status && <p className="mt-2">{status}</p>}
+
+            {/* Display submit status only if status is truthy */}
+            {status.message && <p className={`align-self-center fs-6 mt-4 px-5 ${status.success ? 'alert alert-success text-success' : 'alert alert-danger text-danger'}`}>{status.message}</p>}
           </div>
           <div className="modal-footer"></div>
         </div>

@@ -67,7 +67,7 @@ export default function Nav() {
           <div className="navbar-nav d-flex flex-column align-items-end align-items-sm-center flex-lg-row gap-md-4">
             <Link
               href="/"
-              className="nav-link d-flex fs-5 p-sm-1"
+              className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
               onClick={toggleCollapse}
             >
               <span className="react-brackets">&lt;</span>
@@ -77,7 +77,7 @@ export default function Nav() {
 
             <Link
               href="#about"
-              className="nav-link d-flex fs-5 p-sm-1"
+              className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
               onClick={toggleCollapse}
             >
               <span className="react-brackets">&lt;</span>
@@ -87,7 +87,7 @@ export default function Nav() {
 
             <Link
               href="#projects"
-              className="nav-link d-flex fs-5 p-sm-1"
+              className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
               onClick={toggleCollapse}
             >
               <span className="react-brackets">&lt;</span>
@@ -97,7 +97,7 @@ export default function Nav() {
 
             <Link
               href="#stack"
-              className="nav-link d-flex fs-5 p-sm-1"
+              className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
               onClick={toggleCollapse}
             >
               <span className="react-brackets">&lt;</span>
@@ -107,7 +107,7 @@ export default function Nav() {
 
             <Link
               href="#contact"
-              className="nav-link d-flex fs-5 p-sm-1"
+              className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
               onClick={toggleCollapse}
             >
               <span className="react-brackets">&lt;</span>

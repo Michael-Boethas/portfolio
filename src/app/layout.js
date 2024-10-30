@@ -11,6 +11,9 @@ const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+
+    <LanguageProvider>
+
     <html lang="fr">
       <head>
         <meta charSet="utf-8" />
@@ -49,7 +52,6 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        <LanguageProvider>
           <div className="screen-size-warning alert alert-warning mt-5 fs-4 text-center">
             <div className="d-flex flex-column align-items-center">
               <i className="bi bi-exclamation-octagon p-4 fs-1"></i>
@@ -62,8 +64,9 @@ export default function RootLayout({ children }) {
           <Nav />
           {children}
           <Footer />
-        </LanguageProvider>
       </body>
     </html>
+    </LanguageProvider>
+
   );
 }
