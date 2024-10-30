@@ -98,7 +98,7 @@ export default function Contact() {
 
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlFor="emailInput"
                   className="form-label"
                 >
                   {textContent.sections.contact.email_input_label}
@@ -106,7 +106,7 @@ export default function Contact() {
                 <input
                   type="email"
                   className="form-control rounded-0"
-                  id="exampleFormControlInput1"
+                  id="emailInput"
                   placeholder="name@domain.tld"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -115,14 +115,14 @@ export default function Contact() {
               </div>
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlTextarea1"
+                  htmlFor="messageTextArea"
                   className="form-label"
                 >
                   {textContent.sections.contact.text_input_label}
                 </label>
                 <textarea
                   className="form-control rounded-0"
-                  id="exampleFormControlTextarea1"
+                  id="messageTextarea"
                   rows="12"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

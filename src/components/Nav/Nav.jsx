@@ -54,7 +54,7 @@ export default function Nav() {
           aria-expanded={!isCollapsed}
           aria-label="Toggle navigation"
         >
-          <div className="d-flex align-items-center">
+          <div className="hover--highlight text-white d-flex align-items-center">
             <span className="react-brackets fs-1">&lt;</span>
             <span className="bi bi-three-dots fs-6 "></span>
             <span className="react-brackets fs-1"> /&gt;</span>
