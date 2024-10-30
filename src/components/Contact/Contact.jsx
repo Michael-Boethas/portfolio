@@ -87,15 +87,15 @@ export default function Contact() {
               className="d-flex flex-column align-items-stretch"
               onSubmit={handleSubmit}
             >
-              {/* Honeypot field to trick bots */}
+              {/* ******************** */}
               <input
                 type="text"
-                name="hidden_field"
+                name="beeVomitJar"
                 style={{ display: 'none' }}
                 tabIndex="-1"
                 autoComplete="off"
               />
-              {/* Honeypot Field to trick bots */}
+              {/* ******************** */}
 
               <div className="mb-3">
                 <label
@@ -123,7 +123,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   className="form-control rounded-0"
-                  id="messageTextarea"
+                  id="messageTextArea"
                   rows="12"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

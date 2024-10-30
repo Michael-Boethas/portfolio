@@ -1,0 +1,67 @@
+
+// Glint effect ////////////////////////
+
+.glint-effect {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 150%;
+    height: 35%;
+    background: #ffffffb3;
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    animation: glint-effect 8s infinite;
+  }
+}
+
+@keyframes glint-effect {
+  0% {
+    top: 100%;
+    left: -100%;
+  }
+  10%, 100% {
+    top: -100%;
+    left: 100%;
+  }
+}
+
+
+// Separation line ///////////////////////
+
+.h-line-50 {
+  border-top: 3px solid lightgrey;
+  width: 50vw;
+  height: 0;
+}
+
+// Hover effects ////////////////////////
+
+.hover--highlight {
+  @media screen and (min-width: $lg) {
+    &:hover {
+      font-weight: bold;
+      color: $primary !important;
+    }
+  }
+}
+
+.hover--zoom {
+  transition: transform 200ms;
+
+  @media screen and (min-width: $lg) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

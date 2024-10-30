@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-5 px-4">
         <button
           type="button"
-          className="shine hover--zoom flex-shrink-0 btn bg-light--primary rounded-0 text-light fs-3 px-5 py-3 m-3"
+          className="glint-effect hover--zoom flex-shrink-0 btn bg-light--primary rounded-0 text-light fs-3 px-5 py-3 m-3"
           data-bs-toggle="modal"
           data-bs-target="#contact-form"
           aria-label="Open Contact Form"
@@ -45,7 +45,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="line-50 line-primary mt-5 mb-3"></div>
+      <div className="h-line-50 mt-5 mb-3"></div>
 
       <div className="fs-5 p-3 d-flex gap-3 align-items-center">
         <span className="fs-5">{textContent.sections.footer.training}</span>

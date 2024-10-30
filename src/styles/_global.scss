@@ -6,21 +6,4 @@
   }
 }
 
-.hover--highlight {
-  @media screen and (min-width: $lg) {
-    &:hover {
-      font-weight: bold;
-      color: $primary !important;
-    }
-  }
-}
 
-.hover--zoom {
-  transition: transform 200ms;
-
-  @media screen and (min-width: $lg) {
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-}

@@ -2,7 +2,7 @@
   background-color: #000000bf;
   font-size: 1.2rem;
   z-index: 1000;
-  transition: background-color 200ms ease-in;
+  transition: background-color 300ms ease-in;
 
   @media screen and (min-width: $lg) {
     background-color: #00000000;
@@ -11,21 +11,23 @@
       background-color: #000000bf;
     }
   }
-}
 
-.navbar-toggler {
-  border: none;
+  .navbar-toggler {
+    border: none;
+  
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
+  .react-brackets {
+    display: flex;
+  
+    @media screen and (min-width: $lg) {
+      display: none;
+    }
   }
 }
 
-.react-brackets {
-  display: flex;
 
-  @media screen and (min-width: $lg) {
-    display: none;
-  }
-}
