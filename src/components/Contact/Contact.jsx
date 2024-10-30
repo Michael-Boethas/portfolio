@@ -38,7 +38,7 @@ export default function Contact() {
     formData.append('message', message);
 
     try {
-        const response = await fetch(process.env.EMAIL_SERVICE_ENDPOINT, {
+        const response = await fetch(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ENDPOINT, {
 
         method: 'POST',
         body: formData,
