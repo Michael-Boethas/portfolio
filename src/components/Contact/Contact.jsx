@@ -1,13 +1,48 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
+import { useState } from 'react';
 
 export default function Contact() {
   const { textContent } = useLanguage();
-  const handleSubmit = (event) => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log('Form submitted!');
+    // If a bot filled the honeypot field, block the submission
+    if (event.target.hidden_field.value) {
+      console.log('Bot detected: submission blocked.');
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('email', email);
+    formData.append('message', message);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mwpkvddo', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      setStatus('Email sent successfully!');
+      setEmail('');
+      setMessage('');
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('Failed to send email.');
+    }
   };
 
   return (
@@ -26,7 +61,7 @@ export default function Contact() {
             </h2>
             <button
               type="button"
-              className="btn-close"
+              className="btn-close pe-5"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
@@ -36,6 +71,16 @@ export default function Contact() {
               className="d-flex flex-column align-items-stretch"
               onSubmit={handleSubmit}
             >
+              {/* Honeypot field to trick bots */}
+              <input
+                type="text"
+                name="hidden_field"
+                style={{ display: 'none' }}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+              {/* Honeypot Field to trick bots */}
+
               <div className="mb-3">
                 <label
                   htmlFor="exampleFormControlInput1"
@@ -45,9 +90,11 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control rounded-0"
                   id="exampleFormControlInput1"
-                  placeholder="name@example.com"
+                  placeholder="name@domain.tld"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -59,19 +106,22 @@ export default function Contact() {
                   {textContent.sections.contact.text_input_label}
                 </label>
                 <textarea
-                  className="form-control"
+                  className="form-control rounded-0"
                   id="exampleFormControlTextarea1"
                   rows="12"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="btn btn-secondary text-light align-self-center px-5"
+                className="btn btn-primary text-light align-self-center rounded-0 px-5"
               >
                 {textContent.sections.contact.submit_button_label}
               </button>
             </form>
+            {status && <p className="mt-2">{status}</p>}
           </div>
           <div className="modal-footer"></div>
         </div>

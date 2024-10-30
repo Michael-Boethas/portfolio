@@ -30,7 +30,7 @@ export default function ProjectCard({ projectData }) {
           <div className="d-flex flex-column gap-2 py-3">
             <a
               href={projectData.project_url}
-              className="btn btn-light-primary"
+              className="btn btn-primary rounded-0"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -38,7 +38,7 @@ export default function ProjectCard({ projectData }) {
             </a>
             <a
               href={projectData.codebase_url}
-              className="btn btn-light-primary"
+              className="btn btn-primary rounded-0"
               target="_blank"
               rel="noopener noreferrer"
             >

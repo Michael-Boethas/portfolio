@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-dark text-light w-100 d-flex flex-column align-items-center p-4"
+      className="bg-dark text-light w-100 d-flex flex-column align-items-center p-4 py-5"
     >
       <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-5 px-4">
         <button
