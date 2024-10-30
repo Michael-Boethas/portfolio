@@ -38,7 +38,8 @@ export default function Contact() {
     formData.append('message', message);
 
     try {
-      const response = await fetch('https://formspree.io/f/mwpkvddo', {
+        const response = await fetch(process.env.EMAIL_SERVICE_ENDPOINT, {
+
         method: 'POST',
         body: formData,
         headers: {
