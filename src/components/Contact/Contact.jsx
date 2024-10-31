@@ -27,8 +27,8 @@ export default function Contact() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // If a bot filled the honeypot field, block the submission
-    if (event.target.hidden_field.value) {
+    // beeVomitJar check
+    if (event.target.beeVomitJar.value) {
       console.log('Bot detected: submission blocked.');
       return;
     }
