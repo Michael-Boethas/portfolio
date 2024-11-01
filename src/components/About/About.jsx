@@ -11,7 +11,7 @@ export default function About() {
       <div className="container d-md-flex gap-md-5 align-items-center">
         <div className="d-none d-md-flex flex-column gap-3 p-4 p-lg-5 border-start border-3">
           <Image
-            className="rounded-circle border border-5 border-primary p-1"
+            className="rounded-circle border border-5 border-primary p-1 me-4"
             src="/images/ma_tronche.webp"
             alt="Picture of me"
             width={250}

@@ -19,8 +19,8 @@ export default function ProjectCard({ projectData }) {
         onClick={toggleContent}
         priority
       />
-      <figcaption className="card-body">
-        <h3 className="card-title fs-4" onClick={toggleContent}>
+      <figcaption className="card-body" onClick={toggleContent}>
+        <h3 className="card-title fs-4">
           {projectData.name}
         </h3>
 

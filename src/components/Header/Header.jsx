@@ -46,7 +46,7 @@ export default function Header() {
         className="hover--zoom nav-link position-absolute bottom-0 end-0 m-5 mb-sm-4 mb-md-0"
         aria-label="Scroll down to About section"
       >
-        <i className="bi bi-chevron-compact-down text-light"></i>
+        <i className="bi bi-chevron-compact-down font-huge text-light"></i>
       </Link>
     </header>
   );
