@@ -26,8 +26,8 @@ export default function ProjectCard({ projectData }) {
       />
       <figcaption className="card-body" onClick={toggleContent}>
         <div>
-          <div className="d-flex gap-2 align-items-center my-2">
-            <h3 className="card-title fs-4 m-0 pe-4">{projectData.name}</h3>
+          <div className="d-flex gap-2 align-items-center">
+            <h3 className="card-title fs-4 m-0 pe-4 ">{projectData.name}</h3>
 
             {projectData.stack.map((tech, index) => (
               <div key={index} className="d-flex align-items-center">
@@ -46,7 +46,7 @@ export default function ProjectCard({ projectData }) {
           </div>
         </div>
 
-        <div className={`card-text collapse ${isCollapsed ? '' : 'show'}`}>
+        <div className={`card-text collapse mt-2 pt-2 border-top ${isCollapsed ? '' : 'show'}`}>
           <p>{projectData.description}</p>
 
           <div className="d-flex flex-column gap-2 py-3">
