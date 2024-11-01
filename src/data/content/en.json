@@ -8,7 +8,7 @@
     },
     "about": {
       "title": "About me",
-      "about_me": "I’m a full-stack web developer focused on building custom websites and applications that meet the specific needs of businesses. I enjoy working on both front-end design and back-end architecture, ensuring clean, responsive layouts and scalable code for efficient and secure sites that can grow alongside your business."
+      "about_me": "I’m a full-stack web developer focused on building custom websites and applications that meet the specific needs of businesses. I love the process of taking an idea from concept to reality, seeing a project grow from nothing into a fully functional, engaging product. Working on both front-end design and back-end architecture, I ensure clean, responsive layouts and scalable code for efficient, secure sites that can evolve alongside your business."
     },
     "projects": {
       "title": "Projects",
@@ -17,14 +17,16 @@
         "project_url": "https://p5-kasa-seven.vercel.app/",
         "codebase_url": "https://github.com/Michael-Boethas/p5-Kasa",
         "thumbnail_url": "/images/Screenshot-Kasa.webp",
-        "description": "Front-end development of an online accommodation rental platform, allowing users to browse listings with detailed descriptions, photos, and reviews. This is a modern web application optimized for all screen types: desktop, tablet, and mobile. The project highlights the use of React and React Router to create interactive applications with reusable components, efficient state and side-effect management, as well as a responsive design developed with Sass."
+        "description": "Front-end development of an online accommodation rental platform, allowing users to browse listings with detailed descriptions, photos, and reviews. This is a modern web application optimized for all screen types: desktop, tablet, and mobile. The project highlights the use of React and React Router to create interactive applications with reusable components, efficient state and side-effect management, as well as a responsive design developed with Sass.",
+        "stack": ["react", "sass"]
       },
       "nina_carducci": {
         "name": "Nina Carducci's portfolio",
         "project_url": "https://michael-boethas.github.io/P4/",
         "codebase_url": "https://github.com/Michael-Boethas/P4",
         "thumbnail_url": "/images/Screenshot-Nina-Carducci.webp",
-        "description": "This project involved the comprehensive optimization of Nina Carducci's portfolio website, focusing on improving performance, accessibility, and search engine optimization (SEO). I conducted detailed audits using Lighthouse and GTMetrix to identify areas for enhancement and implemented various optimizations based on the findings."
+        "description": "This project involved the comprehensive optimization of Nina Carducci's portfolio website, focusing on improving performance, accessibility, and search engine optimization (SEO). I conducted detailed audits using Lighthouse and GTMetrix to identify areas for enhancement and implemented various optimizations based on the findings.",
+        "stack": []
       }
     },
     "stack": {

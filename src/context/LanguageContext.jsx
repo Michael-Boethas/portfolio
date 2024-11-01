@@ -1,8 +1,8 @@
 'use client';
 
 import { createContext, useContext, useState } from 'react';
-import en from '../data/locales/en.json';
-import fr from '../data/locales/fr.json';
+import en from '../data/content/en.json';
+import fr from '../data/content/fr.json';
 
 const LanguageContext = createContext();
 

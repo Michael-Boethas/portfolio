@@ -1,7 +1,12 @@
+'use client';
+
 import { useState } from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
+import techStack from '../../data/stack.json';
 
 export default function ProjectCard({ projectData }) {
+  const { language } = useLanguage();
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleContent = () => {
@@ -20,9 +25,26 @@ export default function ProjectCard({ projectData }) {
         priority
       />
       <figcaption className="card-body" onClick={toggleContent}>
-        <h3 className="card-title fs-4">
-          {projectData.name}
-        </h3>
+        <div>
+          <div className="d-flex gap-2 align-items-center my-2">
+            <h3 className="card-title fs-4 m-0 pe-4">{projectData.name}</h3>
+
+            {projectData.stack.map((tech, index) => (
+              <div key={index} className="d-flex align-items-center">
+                {techStack[tech].icon_url && (
+                  <Image
+                    src={techStack[tech].icon_url}
+                    alt={`${tech.name} icon`}
+                    width={30}
+                    height={30}
+                    className="me-1"
+                  />
+                )}
+                <span>{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className={`card-text collapse ${isCollapsed ? '' : 'show'}`}>
           <p>{projectData.description}</p>
@@ -34,7 +56,7 @@ export default function ProjectCard({ projectData }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Site
+              {language === 'fr' ? 'Projet' : 'Project'}
             </a>
             <a
               href={projectData.codebase_url}
