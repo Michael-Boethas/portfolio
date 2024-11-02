@@ -7,7 +7,7 @@ export default function Projects() {
   const { textContent } = useLanguage();
 
   return (
-    <section id="projects" className="py-5">
+    <section id="projects" className="py-5 theme-light-bg--2">
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.projects.title}
       </h2>

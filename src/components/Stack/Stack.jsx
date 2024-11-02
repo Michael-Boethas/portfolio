@@ -8,20 +8,20 @@ export default function Stack() {
   const { textContent } = useLanguage();
 
   return (
-    <section id="stack" className="bg-light vh-75 py-5">
+    <section id="stack" className="theme-light-bg--1 vh-75 py-5">
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.stack.title}
       </h2>
 
       <div className="d-flex flex-column align-items-center">
         <h3 className="p-3 mb-5 fw-light">{textContent.sections.stack.main}</h3>
-        <div className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center ">
+        <div className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center">
           <div className="d-flex flex-column">
             <div className="d-flex gap-2">
-              <Tech techData={techStack.html} className="tech__img--min" />
-              <Tech techData={techStack.css} className="tech__img--min" />
+              <Tech techData={techStack.html} />
+              <Tech techData={techStack.css} />
             </div>
-            <Tech techData={techStack.javascript} className="tech__img--min" />
+            <Tech techData={techStack.javascript} />
           </div>
 
           <div className="d-flex justify-content-center gap-4">

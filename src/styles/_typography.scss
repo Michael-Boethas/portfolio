@@ -1,13 +1,13 @@
 .font-large {
-    font-size: 2rem;
+  font-size: 2rem;
 
-    @media screen and (min-width: $md) {
-        font-size: 3rem;
-    }
+  @media screen and (min-width: $md) {
+    font-size: 3rem;
+  }
 
-    @media screen and (min-width: $lg) {
-        font-size: 3.5rem;
-    }
+  @media screen and (min-width: $lg) {
+    font-size: 3.5rem;
+  }
 }
 
 .font-huge {

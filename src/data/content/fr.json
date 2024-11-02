@@ -21,12 +21,12 @@
         "stack": ["react", "sass"]
       },
       "nina_carducci": {
-        "name": "Portfolio de Nina Carducci",
+        "name": "Nina Carducci",
         "project_url": "https://michael-boethas.github.io/P4/",
         "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
         "thumbnail_url": "/images/Screenshot-Nina-Carducci.webp",
         "description": "Ce projet a consisté en l’optimisation du site portfolio de Nina Carducci, notamment l'amélioration des performances, de l'accessibilité et du référencement (SEO). J'ai réalisé des audits à l'aide de Lighthouse, GTMetrix et Wave afin de repérer les points à améliorer, puis j'ai appliqué différentes optimisations selon les résultats obtenus. Le rapport d'intervention complet est disponible sur le dépot Github avec le code optimisé",
-        "stack": []
+        "stack": ["html", "javascript"]
       }
     },
     "stack": {

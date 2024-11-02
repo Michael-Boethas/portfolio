@@ -7,7 +7,7 @@ export default function About() {
   const { textContent } = useLanguage();
 
   return (
-    <section id="about" className="bg-light py-5">
+    <section id="about" className="theme-light-bg--1 py-5">
       <div className="container d-md-flex gap-md-5 align-items-center">
         <div className="d-none d-md-flex flex-column gap-3 p-4 p-lg-5 border-start border-3">
           <Image

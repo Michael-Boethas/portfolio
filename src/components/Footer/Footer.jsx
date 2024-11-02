@@ -11,12 +11,12 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-dark text-light w-100 d-flex flex-column align-items-center p-4 py-5"
+      className="theme-light-bg--3 text-light w-100 d-flex flex-column align-items-center p-4 py-5"
     >
       <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-5 px-4">
         <button
           type="button"
-          className="glint-effect hover--zoom flex-shrink-0 btn bg-light--primary rounded-0 text-light fs-3 px-5 py-3 m-3"
+          className="glint-effect hover--zoom flex-shrink-0 btn theme-light-bg--1--primary rounded-0 text-light fs-3 px-5 py-3 m-3"
           data-bs-toggle="modal"
           data-bs-target="#contact-form"
           aria-label="Open Contact Form"

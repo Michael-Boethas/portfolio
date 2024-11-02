@@ -11,7 +11,7 @@ export default function Header() {
       id="header"
       className="header__background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative"
     >
-      <div className="header__overlay bg-dark position-absolute w-100 h-100"></div>
+      <div className="header__overlay bg-black position-absolute w-100 h-100"></div>
 
       <div className="w-75 text-center mt-5">
         <h1 className="font-huge text-white fw-bold">

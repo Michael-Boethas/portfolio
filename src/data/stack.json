@@ -1,63 +1,78 @@
 {
     "html": {
         "name": "HTML",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        "icon_light": "devicon-html5-plain colored",
+        "icon_dark": "devicon-html5-plain colored"
     },
     "css": {
         "name": "CSS",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        "icon_light": "devicon-css3-plain colored",
+        "icon_dark": "devicon-css3-plain colored"
     },
     "javascript": {
         "name": "Javascript",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        "icon_light": "devicon-javascript-plain colored",
+        "icon_dark": "devicon-javascript-plain colored"
     },
     "git": {
         "name": "Git",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg"
+        "icon_light": "devicon-git-plain colored",
+        "icon_dark": "devicon-git-plain colored"
     },
     "react": {
         "name": "React",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        "icon_light": "devicon-react-original colored",
+        "icon_dark": "devicon-react-original colored"
     },
     "nodejs": {
         "name": "Node.js",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg"
+        "icon_light": "devicon-nodejs-plain colored",
+        "icon_dark": "devicon-nodejs-plain colored"
     },
     "sass": {
         "name": "Sass",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+        "icon_light": "devicon-sass-original colored",
+        "icon_dark": "devicon-sass-original colored"
     },
     "mongodb": {
         "name": "MongoDB",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-plain.svg"
+        "icon_light": "devicon-mongodb-plain colored",
+        "icon_dark": "devicon-mongodb-plain colored"
     },
     "aws": {
         "name": "AWS",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-    },    
+        "icon_light": "devicon-amazonwebservices-plain-wordmark colored",
+        "icon_dark": "devicon-amazonwebservices-plain-wordmark colored"
+    },
     "express": {
         "name": "Express",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+        "icon_light": "devicon-express-original colored",
+        "icon_dark": "devicon-express-original"
     },
     "nextjs": {
         "name": "Next.js",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg"
+        "icon_light": "devicon-nextjs-original-wordmark colored",
+        "icon_dark": "devicon-nextjs-original-wordmark"
     },
     "vercel": {
         "name": "Vercel",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
+        "icon_light": "devicon-vercel-original colored",
+        "icon_dark": "devicon-vercel-original"
     },
     "bootstrap": {
         "name": "Bootstrap",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+        "icon_light": "devicon-bootstrap-plain colored",
+        "icon_dark": "devicon-bootstrap-plain colored"
     },
     "inkscape": {
         "name": "Inkscape",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-plain.svg"
+        "icon_light": "devicon-inkscape-plain colored",
+        "icon_dark": "devicon-inkscape-plain"
     },
     "figma": {
         "name": "Figma",
-        "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+        "icon_light": "devicon-figma-plain colored",
+        "icon_dark": "devicon-figma-plain colored"
     }
 }
 

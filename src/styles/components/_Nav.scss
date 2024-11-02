@@ -14,7 +14,7 @@
 
   .navbar-toggler {
     border: none;
-  
+
     &:focus {
       outline: none;
       box-shadow: none;
@@ -23,11 +23,9 @@
 
   .react-brackets {
     display: flex;
-  
+
     @media screen and (min-width: $lg) {
       display: none;
     }
   }
 }
-
-

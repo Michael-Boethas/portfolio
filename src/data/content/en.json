@@ -21,12 +21,12 @@
         "stack": ["react", "sass"]
       },
       "nina_carducci": {
-        "name": "Nina Carducci's portfolio",
+        "name": "Nina Carducci",
         "project_url": "https://michael-boethas.github.io/P4/",
         "codebase_url": "https://github.com/Michael-Boethas/P4",
         "thumbnail_url": "/images/Screenshot-Nina-Carducci.webp",
         "description": "This project involved the comprehensive optimization of Nina Carducci's portfolio website, focusing on improving performance, accessibility, and search engine optimization (SEO). I conducted detailed audits using Lighthouse and GTMetrix to identify areas for enhancement and implemented various optimizations based on the findings. The full optimization report is available on the GitHub repository along with the optimized code",
-        "stack": []
+        "stack": ["html", "javascript"]
       }
     },
     "stack": {

@@ -9,7 +9,6 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState({ success: null, message: '' });
 
-
   useEffect(() => {
     const handleModalClose = () => {
       setStatus({ success: null, message: '' });
@@ -38,26 +37,33 @@ export default function Contact() {
     formData.append('message', message);
 
     try {
-        const response = await fetch(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ENDPOINT, {
-
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json',
-        },
-      });
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ENDPOINT,
+        {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
 
-      setStatus({ success: true, message: textContent.sections.contact.success_message });
+      setStatus({
+        success: true,
+        message: textContent.sections.contact.success_message,
+      });
       setEmail('');
       setMessage('');
-
     } catch (error) {
       console.error('Error submitting form:', error);
-      setStatus({ success: false, message: textContent.sections.contact.error_message });
+      setStatus({
+        success: false,
+        message: textContent.sections.contact.error_message,
+      });
     }
   };
 
@@ -70,7 +76,7 @@ export default function Contact() {
       aria-hidden="true"
     >
       <div className="modal-dialog">
-        <div className="modal-content bg-light rounded-0">
+        <div className="modal-content theme-light-bg--1 rounded-0">
           <div className="modal-header">
             <h2 className="modal-title" id="contactLabel">
               {textContent.sections.contact.title}
@@ -98,10 +104,7 @@ export default function Contact() {
               {/* ******************** */}
 
               <div className="mb-3">
-                <label
-                  htmlFor="emailInput"
-                  className="form-label"
-                >
+                <label htmlFor="emailInput" className="form-label">
                   {textContent.sections.contact.email_input_label}
                 </label>
                 <input
@@ -115,10 +118,7 @@ export default function Contact() {
                 />
               </div>
               <div className="mb-3">
-                <label
-                  htmlFor="messageTextArea"
-                  className="form-label"
-                >
+                <label htmlFor="messageTextArea" className="form-label">
                   {textContent.sections.contact.text_input_label}
                 </label>
                 <textarea
@@ -139,7 +139,13 @@ export default function Contact() {
             </form>
 
             {/* Display submit status only if status is truthy */}
-            {status.message && <p className={`align-self-center fs-6 mt-4 px-5 ${status.success ? 'alert alert-success text-success' : 'alert alert-danger text-danger'}`}>{status.message}</p>}
+            {status.message && (
+              <p
+                className={`align-self-center fs-6 mt-4 px-5 ${status.success ? 'alert alert-success text-success' : 'alert alert-danger text-danger'}`}
+              >
+                {status.message}
+              </p>
+            )}
           </div>
           <div className="modal-footer"></div>
         </div>
