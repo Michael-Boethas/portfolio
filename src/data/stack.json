@@ -47,17 +47,17 @@
     "express": {
         "name": "Express",
         "icon_light": "devicon-express-original colored",
-        "icon_dark": "devicon-express-original"
+        "icon_dark": "devicon-express-original colored"
     },
     "nextjs": {
         "name": "Next.js",
-        "icon_light": "devicon-nextjs-original-wordmark colored",
-        "icon_dark": "devicon-nextjs-original-wordmark"
+        "icon_light": "devicon-nextjs-plain colored",
+        "icon_dark": "devicon-nextjs-plain colored"
     },
     "vercel": {
         "name": "Vercel",
         "icon_light": "devicon-vercel-original colored",
-        "icon_dark": "devicon-vercel-original"
+        "icon_dark": "devicon-vercel-original colored"
     },
     "bootstrap": {
         "name": "Bootstrap",
@@ -67,7 +67,7 @@
     "inkscape": {
         "name": "Inkscape",
         "icon_light": "devicon-inkscape-plain colored",
-        "icon_dark": "devicon-inkscape-plain"
+        "icon_dark": "devicon-inkscape-plain colored"
     },
     "figma": {
         "name": "Figma",

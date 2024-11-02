@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../../context/LanguageContext';
 import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 export default function Nav() {
   const { textContent } = useLanguage();
@@ -45,7 +46,12 @@ export default function Nav() {
   return (
     <nav className="nav-custom container-fluid position-fixed top-0 navbar navbar-expand-lg">
       <div className="container-fluid">
+
+        <div className='d-flex gap-1'>
+        <ThemeToggle />
         <LanguageSwitch />
+        </div>
+
         <button
           className="navbar-toggler"
           type="button"

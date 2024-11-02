@@ -1,14 +1,16 @@
 'use client';
 
 import { useLanguage } from '../../context/LanguageContext';
+import { useTheme } from '@/context/ThemeContext';
 import Tech from '../../components/Tech/Tech';
 import techStack from '../../data/stack.json';
 
 export default function Stack() {
   const { textContent } = useLanguage();
+  const { theme } = useTheme();
 
   return (
-    <section id="stack" className="theme-light-bg--1 vh-75 py-5">
+    <section id="stack" className={`${ theme === 'light' ? 'theme-L-bg-stack theme-L-txt-dark' : 'theme-D-bg-stack theme-D-txt-light'} py-5`}>
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.stack.title}
       </h2>
@@ -16,7 +18,7 @@ export default function Stack() {
       <div className="d-flex flex-column align-items-center">
         <h3 className="p-3 mb-5 fw-light">{textContent.sections.stack.main}</h3>
         <div className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center">
-          <div className="d-flex flex-column">
+          <div className="font-large d-flex flex-column">
             <div className="d-flex gap-2">
               <Tech techData={techStack.html} />
               <Tech techData={techStack.css} />
@@ -24,7 +26,7 @@ export default function Stack() {
             <Tech techData={techStack.javascript} />
           </div>
 
-          <div className="d-flex justify-content-center gap-4">
+          <div className="font-large d-flex justify-content-center gap-4">
             <Tech techData={techStack.express} />
             <Tech techData={techStack.react} />
             <Tech techData={techStack.nodejs} />
@@ -38,7 +40,7 @@ export default function Stack() {
             {textContent.sections.stack.secondary}
           </h3>
 
-          <div className="w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5">
+          <div className="font-large w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5">
             <Tech techData={techStack.nextjs} />
             <Tech techData={techStack.vercel} />
             <Tech techData={techStack.bootstrap} />

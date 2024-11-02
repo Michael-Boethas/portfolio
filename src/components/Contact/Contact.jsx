@@ -1,10 +1,12 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
+import { useTheme } from '@/context/ThemeContext';
 import { useState, useEffect } from 'react';
 
 export default function Contact() {
   const { textContent } = useLanguage();
+  const { theme } = useTheme();
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState({ success: null, message: '' });
@@ -76,14 +78,14 @@ export default function Contact() {
       aria-hidden="true"
     >
       <div className="modal-dialog">
-        <div className="modal-content theme-light-bg--1 rounded-0">
+        <div className={`${ theme === 'light' ? 'theme-L-bg-contact theme-L-txt-dark' : 'theme-D-bg-contact theme-D-txt-light'} modal-content rounded-0`}>
           <div className="modal-header">
             <h2 className="modal-title" id="contactLabel">
               {textContent.sections.contact.title}
             </h2>
             <button
               type="button"
-              className="btn-close pe-5"
+              className={`${ theme === 'light' ? '' : 'bg-light rounded-0'} btn-close pe-5 `}
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
