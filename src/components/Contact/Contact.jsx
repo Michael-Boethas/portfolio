@@ -78,14 +78,14 @@ export default function Contact() {
       aria-hidden="true"
     >
       <div className="modal-dialog">
-        <div className={`${ theme === 'light' ? 'theme-L-bg-contact theme-L-txt-dark' : 'theme-D-bg-contact theme-D-txt-light'} modal-content rounded-0`}>
+        <div className={`${theme === 'light' ? 'theme-L-bg-contact theme-L-txt-dark' : 'theme-D-bg-contact theme-D-txt-light'} modal-content rounded-0`}>
           <div className="modal-header">
             <h2 className="modal-title" id="contactLabel">
               {textContent.sections.contact.title}
             </h2>
             <button
               type="button"
-              className={`${ theme === 'light' ? '' : 'bg-light rounded-0'} btn-close pe-5 `}
+              className={`${theme === 'light' ? '' : 'bg-light rounded-0'} btn-close pe-5 `}
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
@@ -111,7 +111,7 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
-                  className="form-control rounded-0"
+                  className={`form-control rounded-0 ${theme === 'light' ? '' : 'opacity-50'}`}
                   id="emailInput"
                   placeholder="name@domain.tld"
                   value={email}
@@ -124,7 +124,7 @@ export default function Contact() {
                   {textContent.sections.contact.text_input_label}
                 </label>
                 <textarea
-                  className="form-control rounded-0"
+                  className={`form-control rounded-0 ${theme === 'light' ? '' : 'opacity-50'}`}
                   id="messageTextArea"
                   rows="12"
                   value={message}
