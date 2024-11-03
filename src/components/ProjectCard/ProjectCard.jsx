@@ -17,7 +17,7 @@ export default function ProjectCard({ projectData }) {
 
   return (
     // <figure className="project-card hover--zoom card shadow rounded-0">
-    <figure className={`project-card hover--zoom card shadow rounded-0 ${ theme === 'light' ? '' : 'theme-D-bg-about text-white'}`}>
+    <figure className={`project-card hover--zoom card shadow rounded-0 ${ theme === 'light' ? '' : 'theme-D-bg-project-card text-white'}`}>
 
       <Image
         className="project-card__image"
