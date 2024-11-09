@@ -12,7 +12,7 @@ const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <LanguageProvider>
+    <LanguageProvider> // Language context wrapping the whole content
       <html lang="fr">
         <head>
           <meta charSet="utf-8" />

@@ -13,8 +13,11 @@ export default function Header() {
       id="header"
       className={`${theme === 'light' ? 'header__bg-light' : 'header__bg-dark'} d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative`}
     >
+
+      // Header overlay for fade-in transition
       <div className="header__overlay bg-black position-absolute w-100 h-100"></div>
 
+      // Slogan and links 
       <div className="w-75 text-center mt-5">
         <h1 className="font-huge text-white fw-bold">
           {textContent.sections.header.slogan}
@@ -43,6 +46,7 @@ export default function Header() {
         </div>
       </div>
 
+      // Scroll down button
       <Link
         href="#about"
         className="hover--zoom nav-link position-absolute bottom-0 end-0 m-5 mb-sm-4 mb-md-0"
