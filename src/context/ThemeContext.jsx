@@ -1,3 +1,5 @@
+// Context for the application of the color theme across all the elements ////
+
 'use client';
 
 import { createContext, useContext, useState } from 'react';

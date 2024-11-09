@@ -5,7 +5,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
-  const { language, textContent } = useLanguage();
+  const { textContent } = useLanguage();
   const { theme } = useTheme();
   const available = process.env.NEXT_PUBLIC_AVAILABILITY;
   const location = process.env.NEXT_PUBLIC_LOCATION;
@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className={`${ theme === 'light' ? 'theme-L-bg-footer text-white' : 'theme-D-bg-footer theme-D-txt-light'} w-100 d-flex flex-column align-items-center p-4`}
+      className={`${theme === 'light' ? 'theme-L-bg-footer text-white' : 'theme-D-bg-footer theme-D-txt-light'} w-100 d-flex flex-column align-items-center p-4`}
     >
       <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-5 px-4">
         <button
@@ -28,21 +28,15 @@ export default function Footer() {
         </button>
 
         <p className="fs-4 text-center text-md-start col-md-6 p-3">
-          {textContent.sections.footer.message_part_1}{' '}
+          {textContent.sections.footer.message_part_1}
           <strong className="text-primary fw-bold" aria-label="Location">
             {location}
-          </strong>{' '}
-          {language === 'fr' ? 'et' : 'and'}{' '}
-          <em className='fst-normal'
-            // className={`fw-bold fs-4 fst-normal ${
-            //   available === 'yes' ? 'text-success' : 'text-warning'
-            // }`}
-            // role="status"
-          >
+          </strong>
+          <em className="fst-normal">
             {available === 'yes'
               ? textContent.sections.footer.available
               : textContent.sections.footer.unavailable}
-          </em>{' '}
+          </em>
           {textContent.sections.footer.message_part_2}
         </p>
       </div>

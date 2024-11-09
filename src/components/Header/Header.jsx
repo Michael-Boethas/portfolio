@@ -1,15 +1,17 @@
 'use client';
 
 import { useLanguage } from '../../context/LanguageContext';
+import { useTheme } from '@/context/ThemeContext';
 import Link from 'next/link';
 
 export default function Header() {
   const { textContent } = useLanguage();
+  const { theme } = useTheme();
 
   return (
     <header
       id="header"
-      className="header__background d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative"
+      className={`${theme === 'light' ? 'header__bg-light' : 'header__bg-dark'} d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative`}
     >
       <div className="header__overlay bg-black position-absolute w-100 h-100"></div>
 

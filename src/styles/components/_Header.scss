@@ -16,14 +16,25 @@
   }
 }
 
-// Radial gradient animation ///////////////////
+// Radial gradient for header animation ///////////////////
 
-.header__background {
+.header__bg-light {
   background: radial-gradient(
     ellipse,
-    $bg-fx-color-1,
-    $bg-fx-color-2,
-    $bg-fx-color-3 80%
+    map-get($light-theme-bg-fx, 'bg-fx-color-1'),
+    map-get($light-theme-bg-fx, 'bg-fx-color-2'),
+    map-get($light-theme-bg-fx, 'bg-fx-color-3') 80%
+  );
+  background-size: 1000% 1000%;
+  animation: gradient 60s ease infinite;
+}
+
+.header__bg-dark {
+  background: radial-gradient(
+    ellipse,
+    map-get($dark-theme-bg-fx, 'bg-fx-color-1'),
+    map-get($dark-theme-bg-fx, 'bg-fx-color-2'),
+    map-get($dark-theme-bg-fx, 'bg-fx-color-3') 80%
   );
   background-size: 1000% 1000%;
   animation: gradient 60s ease infinite;

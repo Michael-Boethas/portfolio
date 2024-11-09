@@ -15,7 +15,6 @@ export default function ThemeToggle() {
             onClick={toggleTheme}
             aria-label='Theme toggle'
         >
-            {/* <span className="bi bi-lightbulb-fill"></span> */}
             <span className={`${theme === 'light' ? 'bi-lightbulb-fill' : 'bi-lightbulb'} bi`}></span>
 
         </button>
