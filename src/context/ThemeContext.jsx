@@ -10,9 +10,7 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light'); // Default theme
 
   return (
-    <ThemeContext.Provider
-      value={{ theme, setTheme }}
-    >
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );

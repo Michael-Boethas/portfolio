@@ -78,7 +78,9 @@ export default function Contact() {
       aria-hidden="true"
     >
       <div className="modal-dialog">
-        <div className={`${theme === 'light' ? 'theme-L-bg-contact theme-L-txt-dark' : 'theme-D-bg-contact theme-D-txt-light'} modal-content rounded-0`}>
+        <div
+          className={`${theme === 'light' ? 'theme-L-bg-contact theme-L-txt-dark' : 'theme-D-bg-contact theme-D-txt-light'} modal-content rounded-0`}
+        >
           <div className="modal-header">
             <h2 className="modal-title" id="contactLabel">
               {textContent.sections.contact.title}

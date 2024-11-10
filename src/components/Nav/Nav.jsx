@@ -46,10 +46,9 @@ export default function Nav() {
   return (
     <nav className="nav-custom container-fluid position-fixed top-0 navbar navbar-expand-lg">
       <div className="container-fluid">
-
-        <div className='d-flex gap-1'>
-        <ThemeToggle />
-        <LanguageSwitch />
+        <div className="d-flex gap-1">
+          <ThemeToggle />
+          <LanguageSwitch />
         </div>
 
         <button

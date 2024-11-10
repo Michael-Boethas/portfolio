@@ -9,7 +9,10 @@ export default function About() {
   const { theme } = useTheme();
 
   return (
-    <section id="about" className={`${ theme === 'light' ? 'theme-L-bg-about theme-L-txt-dark' : 'theme-D-bg-about theme-D-txt-light'} py-5`}>
+    <section
+      id="about"
+      className={`${theme === 'light' ? 'theme-L-bg-about theme-L-txt-dark' : 'theme-D-bg-about theme-D-txt-light'} py-5`}
+    >
       <div className="container d-md-flex gap-md-5 align-items-center">
         <div className="d-none d-md-flex flex-column gap-3 p-4 p-lg-5 border-start border-3">
           <Image

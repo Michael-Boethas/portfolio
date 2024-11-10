@@ -17,8 +17,9 @@ export default function ProjectCard({ projectData }) {
 
   return (
     // <figure className="project-card hover--zoom card shadow rounded-0">
-    <figure className={`project-card hover--zoom card shadow rounded-0 ${ theme === 'light' ? '' : 'theme-D-bg-project-card text-white'}`}>
-
+    <figure
+      className={`project-card hover--zoom card shadow rounded-0 ${theme === 'light' ? '' : 'theme-D-bg-project-card text-white'}`}
+    >
       <Image
         className="project-card__image"
         src={projectData.thumbnail_url}
@@ -34,7 +35,9 @@ export default function ProjectCard({ projectData }) {
           <div className="d-flex gap-2">
             {projectData.stack.map((tech, index) => (
               <div key={index} className="fs-2">
-                  <span className={`${theme === 'light' ? '' : 'dark-icon-glow'} ${techStack[tech].icon_light}`}></span>
+                <span
+                  className={`${theme === 'light' ? '' : 'dark-icon-glow'} ${techStack[tech].icon_light}`}
+                ></span>
               </div>
             ))}
           </div>

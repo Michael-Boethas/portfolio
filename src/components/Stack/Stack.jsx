@@ -10,7 +10,10 @@ export default function Stack() {
   const { theme } = useTheme();
 
   return (
-    <section id="stack" className={`${ theme === 'light' ? 'theme-L-bg-stack theme-L-txt-dark' : 'theme-D-bg-stack theme-D-txt-light'} py-5`}>
+    <section
+      id="stack"
+      className={`${theme === 'light' ? 'theme-L-bg-stack theme-L-txt-dark' : 'theme-D-bg-stack theme-D-txt-light'} py-5`}
+    >
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.stack.title}
       </h2>

@@ -13,7 +13,7 @@ export default function LanguageSwitch() {
     <button
       className="hover--highlight d-flex align-items-center gap-2 fs-3 fw-bold bg-transparent border-0 ps-2 pe-4 text-white"
       onClick={toggleLanguage}
-      aria-label='Language switch'
+      aria-label="Language switch"
     >
       {/* <span className="bi bi-translate"></span> */}
       <span className="bi bi-globe-americas"></span>

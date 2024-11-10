@@ -13,7 +13,6 @@ export default function Header() {
       id="header"
       className={`${theme === 'light' ? 'header__bg-light' : 'header__bg-dark'} d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative`}
     >
-
       {/* Header overlay for fade-in transition */}
       <div className="header__overlay bg-black position-absolute w-100 h-100"></div>
 
