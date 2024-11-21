@@ -36,6 +36,23 @@ function Metadata() {
                 name="twitter:image"
                 content={`${process.env.NEXT_PUBLIC_BASE_URL}/opengraph-image.png?v=2`}
             />
+
+            {/* Icons */}
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+            <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+            <link rel="manifest" href="/site.webmanifest" />
+            <link rel="icon" sizes="192x192" href="/web-app-manifest-192x192.png" />
+            <link rel="icon" sizes="512x512" href="/web-app-manifest-512x512.png" />
+
+            {/* Devicon CDN */}
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+            {/* Mobile Web App */}
+            <meta name="mobile-web-app-capable" content="yes" />
+            <meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+            <meta name="mobile-web-app-title" content={textContent.metadata.title} />
         </>
     );
 }
