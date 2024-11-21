@@ -1,13 +1,20 @@
 'use client';
 
-import { useLanguage } from '../../context/LanguageContext';
+import { useEffect } from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function LanguageSwitch() {
   const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'fr' : 'en');
+    const newLanguage = language === 'en' ? 'fr' : 'en';
+    setLanguage(newLanguage);
   };
+
+  // Updating the lang attribute on render
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', language);
+  }, [language]);
 
   return (
     <button
@@ -15,7 +22,6 @@ export default function LanguageSwitch() {
       onClick={toggleLanguage}
       aria-label="Language switch"
     >
-      {/* <span className="bi bi-translate"></span> */}
       <span className="bi bi-globe-americas"></span>
       <span className="fs-4">{language === 'en' ? 'EN' : 'FR'}</span>
     </button>

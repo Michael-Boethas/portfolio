@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { useLanguage } from '../../context/LanguageContext';
+import Contact from '../Contact/Contact';
+import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
@@ -15,6 +16,8 @@ export default function Footer() {
       id="contact"
       className={`${theme === 'light' ? 'theme-L-bg-footer text-white' : 'theme-D-bg-footer theme-D-txt-light'} w-100 d-flex flex-column align-items-center p-4`}
     >
+      <Contact />
+
       <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-5 px-4">
         <button
           type="button"

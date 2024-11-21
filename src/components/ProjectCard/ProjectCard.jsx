@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
-import techStack from '../../data/stack.json';
+import techStack from '@/data/stack.json';
 
 export default function ProjectCard({ projectData }) {
   const { language } = useLanguage();
@@ -16,9 +16,8 @@ export default function ProjectCard({ projectData }) {
   };
 
   return (
-    // <figure className="project-card hover--zoom card shadow rounded-0">
     <figure
-      className={`project-card hover--zoom card shadow rounded-0 ${theme === 'light' ? '' : 'theme-D-bg-project-card text-white'}`}
+      className={`project-card hover--zoom card shadow rounded-0 ${theme === 'light' ? 'theme-L-bg-project-card' : 'theme-D-bg-project-card text-white'}`}
     >
       <Image
         className="project-card__image"

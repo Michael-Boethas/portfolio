@@ -6,7 +6,7 @@ import { createContext, useContext, useState } from 'react';
 
 const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
+export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light'); // Default theme
 
   return (
@@ -14,9 +14,9 @@ export const ThemeProvider = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
 // Custom hook to use the ThemeContext
-export const useTheme = () => {
+export function useTheme() {
   return useContext(ThemeContext);
-};
+}

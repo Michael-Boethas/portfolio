@@ -1,9 +1,9 @@
 'use client';
 
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
-import Tech from '../../components/Tech/Tech';
-import techStack from '../../data/stack.json';
+import Tech from '@/components/Tech/Tech';
+import techStack from '@/data/stack.json';
 
 export default function Stack() {
   const { textContent } = useLanguage();

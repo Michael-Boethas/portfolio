@@ -3,13 +3,13 @@
 'use client';
 
 import { createContext, useContext, useState } from 'react';
-import en from '../data/content/en.json';
-import fr from '../data/content/fr.json';
+import en from '@/data/content/en.json';
+import fr from '@/data/content/fr.json';
 
 const LanguageContext = createContext();
 
-export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('fr'); // Default language
+export function LanguageProvider({ children }) {
+  const [language, setLanguage] = useState(process.env.NEXT_PUBLIC_BASE_LANG); // Default language
   const languagesList = { en, fr };
 
   return (
@@ -19,9 +19,9 @@ export const LanguageProvider = ({ children }) => {
       {children}
     </LanguageContext.Provider>
   );
-};
+}
 
 // Custom hook to use the LanguageContext
-export const useLanguage = () => {
+export function useLanguage() {
   return useContext(LanguageContext);
-};
+}

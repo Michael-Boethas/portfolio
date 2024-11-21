@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "Mishmesh - Portfolio de développeur web",
+    "description": "Portfolio d’un développeur web spécialisé dans les technologies front-end et back-end comme React et Express."
+  },
   "sections": {
     "header": {
       "title": "Accueil",
@@ -18,7 +22,10 @@
         "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
         "thumbnail_url": "/images/Screenshot-Kasa.webp",
         "description": "Développement front-end d'une plateforme de location d'hébergements en ligne, permettant aux utilisateurs de consulter des annonces avec descriptions détaillées, photos et avis. Il s'agit d'une application web moderne, optimisée pour tous les types d’écrans : ordinateur, tablette et mobile. Le projet met en avant l’utilisation de React et React Router pour créer des applications interactives avec des composants réutilisables, une gestion efficace des états et des effets de bord, ainsi qu’un design responsive développé avec Sass.",
-        "stack": ["react", "sass"]
+        "stack": [
+          "react",
+          "sass"
+        ]
       },
       "nina_carducci": {
         "name": "Nina Carducci",
@@ -26,7 +33,10 @@
         "codebase_url": "https://github.com/Michael-Boethas/P4",
         "thumbnail_url": "/images/Screenshot-Nina-Carducci.webp",
         "description": "Ce projet a consisté en l’optimisation du site portfolio de Nina Carducci, notamment l'amélioration des performances, de l'accessibilité et du référencement (SEO). J'ai réalisé des audits à l'aide de Lighthouse, GTMetrix et Wave afin de repérer les points à améliorer, puis j'ai appliqué différentes optimisations selon les résultats obtenus. Le rapport d'intervention complet est disponible sur le dépot Github avec le code optimisé",
-        "stack": ["html", "javascript"]
+        "stack": [
+          "html",
+          "javascript"
+        ]
       }
     },
     "stack": {
