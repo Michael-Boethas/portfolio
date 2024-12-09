@@ -29,7 +29,8 @@ export default function Stack() {
             <Tech techData={techStack.javascript} />
           </div>
 
-          <div className="font-large d-flex justify-content-center gap-4">
+          <div className="font-large d-flex flex-wrap justify-content-center gap-4">
+            <Tech techData={techStack.mongodb} />
             <Tech techData={techStack.express} />
             <Tech techData={techStack.react} />
             <Tech techData={techStack.nodejs} />
@@ -48,7 +49,6 @@ export default function Stack() {
             <Tech techData={techStack.vercel} />
             <Tech techData={techStack.bootstrap} />
             <Tech techData={techStack.sass} />
-            <Tech techData={techStack.mongodb} />
             <Tech techData={techStack.aws} />
             <Tech techData={techStack.git} />
             <Tech techData={techStack.figma} />
