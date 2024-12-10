@@ -6,7 +6,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
-  const { textContent } = useLanguage();
+  const { language, textContent } = useLanguage();
   const { theme } = useTheme();
   const available = process.env.NEXT_PUBLIC_AVAILABILITY;
   const location = process.env.NEXT_PUBLIC_LOCATION;
@@ -50,7 +50,7 @@ export default function Footer() {
         <span className="fs-5">{textContent.sections.footer.training}</span>
         <a
           className="hover--zoom"
-          href="https://www.openclassrooms.com"
+          href={` ${language === 'fr' ? "https://www.openclassrooms.com/fr" : "https://www.openclassrooms.com"}`}
           target="_blank"
           rel="noopener noreferrer"
         >

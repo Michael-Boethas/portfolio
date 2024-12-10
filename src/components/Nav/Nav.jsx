@@ -25,6 +25,7 @@ export default function Nav() {
     }
   };
 
+  // Avoid SSR import of bootstrap.js to prevent errors related to unavailable DOM
   useEffect(() => {
     const bootstrap = async () => {
       await import('bootstrap/dist/js/bootstrap.bundle.min.js');
@@ -73,7 +74,7 @@ export default function Nav() {
         className={`collapse navbar-collapse ${!isCollapsed ? 'show' : ''}`}
         id="navbarNavAltMarkup"
       >
-        <div className="navbar-nav d-flex flex-column align-items-end align-items-sm-center flex-lg-row gap-md-4">
+        <div className="navbar-nav d-flex flex-column align-items-end me-3 me-sm-0 align-items-sm-center flex-lg-row gap-md-4">
           <Link
             href="/home"
             className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"

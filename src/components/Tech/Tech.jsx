@@ -7,9 +7,11 @@ export default function Tech({ techData }) {
 
   return (
     <div className="d-flex flex-column gap-2 align-items-center">
-      <i
+      <a
+        href={techData.url}
+        target="blank"
         className={`${theme === 'light' ? techData.icon_light : techData.icon_dark} ${theme === 'dark' ? 'dark-icon-glow' : ''}`}
-      ></i>
+      ></a>
       <p className="fs-6 fw-bold fst-italic">{techData.name}</p>
     </div>
   );
