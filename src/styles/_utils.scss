@@ -65,6 +65,16 @@
   }
 }
 
+.hover--lift {
+  transition: transform 200ms;
+
+  @media screen and (min-width: $lg) {
+    &:hover {
+      transform: translateY(-3%);
+    }
+  }
+}
+
 // Glow effects /////////////////////////
 
 .dark-icon-glow {

@@ -43,7 +43,7 @@
     },
     "mongodb": {
         "name": "MongoDB",
-        "url": "https://www.mongodb.com/",
+        "url": "https://www.mongodb.com/docs/",
         "icon_light": "devicon-mongodb-plain colored",
         "icon_dark": "devicon-mongodb-plain colored"
     },

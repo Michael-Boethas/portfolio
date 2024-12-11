@@ -15,7 +15,7 @@
       "about_me": "I’m a full-stack web developer focused on building custom websites and applications that meet the specific needs of businesses. I love the process of taking an idea from concept to reality, seeing a project grow from nothing into a fully functional, engaging product. Working on both front-end design and back-end architecture, I ensure clean, responsive layouts and scalable code for efficient, secure sites that can evolve alongside your business."
     },
     "projects": {
-      "title": "Projects",
+      "title": "Recent projects",
       "kasa": {
         "name": "Kasa",
         "project_url": "https://p5-kasa-seven.vercel.app/",

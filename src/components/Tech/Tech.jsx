@@ -6,7 +6,7 @@ export default function Tech({ techData }) {
   const { theme } = useTheme();
 
   return (
-    <div className="d-flex flex-column gap-2 align-items-center">
+    <div className="hover--lift d-flex flex-column gap-2 align-items-center">
       <a
         href={techData.url}
         target="blank"
