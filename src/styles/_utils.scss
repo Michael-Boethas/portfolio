@@ -61,7 +61,7 @@
 
   @media screen and (min-width: $lg) {
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
   }
 }
@@ -71,7 +71,7 @@
 
   @media screen and (min-width: $lg) {
     &:hover {
-      transform: translateY(-3%);
+      transform: translateY(-3%) scale(1.08);
     }
   }
 }
@@ -86,7 +86,7 @@
   }
 }
 
-// viewport triggered effects ////////////
+// Viewport triggered effects ////////////
 
 .viewport-trigger {
   opacity: 0;
@@ -99,13 +99,13 @@
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 .viewport-slide-in-from-right {
-  animation: slide-from-right 800ms cubic-bezier(.48,.46,.5,1.22) forwards;
+  animation: slide-from-right 700ms cubic-bezier(.43,.63,.42,1.19) forwards;
 }
 
 @keyframes slide-from-left {
@@ -115,11 +115,11 @@
   }
 
   100% {
-    transform: translateX(0%);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 .viewport-slide-in-from-left {
-  animation: slide-from-left 800ms cubic-bezier(.48,.46,.5,1.22) forwards;
+  animation: slide-from-left 700ms cubic-bezier(.43,.63,.42,1.19) forwards;
 }

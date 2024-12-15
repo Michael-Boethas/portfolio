@@ -15,9 +15,22 @@ export default function ProjectCard({ projectData }) {
     setIsCollapsed(!isCollapsed);
   };
 
+  // Force click on keyDown
+  const keyDownClick = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      event.currentTarget.click();
+    }
+  };
+
   return (
     <figure
       className={`project-card hover--zoom card shadow rounded-0 ${theme === 'light' ? 'theme-L-bg-project-card' : 'theme-D-bg-project-card text-white'}`}
+      tabIndex={0}
+      onClick={toggleContent}
+      onKeyDown={keyDownClick}
+      role="button"
+      aria-expanded={!isCollapsed}
     >
       <Image
         className="project-card__image"
@@ -25,10 +38,9 @@ export default function ProjectCard({ projectData }) {
         alt={`Screenshot of ${projectData.name}`}
         width={400}
         height={300}
-        onClick={toggleContent}
         priority
       />
-      <figcaption className="card-body" onClick={toggleContent}>
+      <figcaption className="card-body" >
         <div className="d-flex gap-2 justify-content-between align-items-center">
           <h3 className="card-title">{projectData.name}</h3>
           <div className="d-flex gap-2">
@@ -53,6 +65,7 @@ export default function ProjectCard({ projectData }) {
               className={`btn btn-primary rounded-0 ${theme === 'light' ? '' : 'text-white'}`}
               target="_blank"
               rel="noopener noreferrer"
+              onKeyDown={keyDownClick}
             >
               {language === 'fr' ? 'Projet' : 'Project'}
             </a>
@@ -61,6 +74,7 @@ export default function ProjectCard({ projectData }) {
               className={`btn btn-primary rounded-0 ${theme === 'light' ? '' : 'text-white'}`}
               target="_blank"
               rel="noopener noreferrer"
+              onKeyDown={keyDownClick}
             >
               Code
             </a>
