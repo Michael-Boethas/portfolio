@@ -25,7 +25,8 @@ export default function About() {
             role="img"
           />
           <span className="text-light--grey font-monospace fs-3 fw-bold align-self-end d-flex gap-1 align-items-end">
-            <i className="bi bi-arrow-90deg-up fs-1"></i>{ language === 'fr' ? 'Michaël' : 'Michael'}
+            <i className="bi bi-arrow-90deg-up fs-1"></i>
+            {language === 'fr' ? 'Michaël' : 'Michael'}
           </span>
         </div>
         <div className="d-flex flex-column gap-3 px-4 px-lg-5">

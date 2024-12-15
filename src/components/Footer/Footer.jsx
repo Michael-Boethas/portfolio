@@ -50,7 +50,7 @@ export default function Footer() {
         <span className="fs-5">{textContent.sections.footer.training}</span>
         <a
           className="hover--zoom"
-          href={` ${language === 'fr' ? "https://www.openclassrooms.com/fr" : "https://www.openclassrooms.com"}`}
+          href={` ${language === 'fr' ? 'https://www.openclassrooms.com/fr' : 'https://www.openclassrooms.com'}`}
           target="_blank"
           rel="noopener noreferrer"
         >

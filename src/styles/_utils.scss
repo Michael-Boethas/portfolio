@@ -29,6 +29,7 @@
     top: 100%;
     left: -100%;
   }
+
   10%,
   100% {
     top: -100%;
@@ -83,4 +84,42 @@
   &:hover {
     text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
   }
+}
+
+// viewport triggered effects ////////////
+
+.viewport-trigger {
+  opacity: 0;
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(20vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.viewport-slide-in-from-right {
+  animation: slide-from-right 800ms cubic-bezier(.48,.46,.5,1.22) forwards;
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-20vw);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.viewport-slide-in-from-left {
+  animation: slide-from-left 800ms cubic-bezier(.48,.46,.5,1.22) forwards;
 }

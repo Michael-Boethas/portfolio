@@ -21,15 +21,6 @@ export default function Projects() {
         <ProjectCard
           projectData={textContent.sections.projects.nina_carducci}
         />
-
-{/* 
-        <iframe
-          src="https://p5-kasa-seven.vercel.app/rental/b9123946"
-          width="400"
-          height="400"
-        ></iframe> */}
-
-
       </div>
     </section>
   );
