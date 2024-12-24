@@ -40,7 +40,7 @@ export default function ProjectCard({ projectData }) {
         height={300}
         priority
       />
-      <figcaption className="card-body" >
+      <figcaption className="card-body">
         <div className="d-flex gap-2 justify-content-between align-items-center">
           <h3 className="card-title">{projectData.name}</h3>
           <div className="d-flex gap-2">

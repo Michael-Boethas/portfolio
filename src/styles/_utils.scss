@@ -105,7 +105,8 @@
 }
 
 .viewport-slide-in-from-right {
-  animation: slide-from-right 700ms cubic-bezier(.43,.63,.42,1.19) forwards;
+  animation: slide-from-right 700ms cubic-bezier(0.43, 0.63, 0.42, 1.19)
+    forwards;
 }
 
 @keyframes slide-from-left {
@@ -121,5 +122,5 @@
 }
 
 .viewport-slide-in-from-left {
-  animation: slide-from-left 700ms cubic-bezier(.43,.63,.42,1.19) forwards;
+  animation: slide-from-left 700ms cubic-bezier(0.43, 0.63, 0.42, 1.19) forwards;
 }

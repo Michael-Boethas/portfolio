@@ -21,6 +21,7 @@ export default function Projects() {
         <ProjectCard
           projectData={textContent.sections.projects.nina_carducci}
         />
+        <ProjectCard projectData={textContent.sections.projects.mvg} />
       </div>
     </section>
   );

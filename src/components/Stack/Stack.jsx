@@ -15,7 +15,12 @@ export default function Stack() {
     document
       .querySelectorAll('.viewport-trigger')
       .forEach((techContainer, index) => {
-        return viewportClassTrigger(techContainer, index % 2 === 0 ? 'viewport-slide-in-from-right' : 'viewport-slide-in-from-left');
+        return viewportClassTrigger(
+          techContainer,
+          index % 2 === 0
+            ? 'viewport-slide-in-from-right'
+            : 'viewport-slide-in-from-left'
+        );
       });
   }, []);
 

@@ -18,25 +18,30 @@
       "title": "Projets récents",
       "kasa": {
         "name": "Kasa",
+        "type": "frontend",
         "project_url": "https://p5-kasa-seven.vercel.app/",
         "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
         "thumbnail_url": "/images/Screenshot-Kasa.webp",
         "description": "Développement front-end d'une plateforme de location d'hébergements en ligne, permettant aux utilisateurs de consulter des annonces avec descriptions détaillées, photos et avis. Il s'agit d'une application web moderne, optimisée pour tous les types d’écrans : ordinateur, tablette et mobile. Le projet met en avant l’utilisation de React et React Router pour créer des applications interactives avec des composants réutilisables, une gestion efficace des états et des effets de bord, ainsi qu’un design responsive développé avec Sass.",
-        "stack": [
-          "react",
-          "sass"
-        ]
+        "stack": ["react", "sass"]
       },
       "nina_carducci": {
         "name": "Nina Carducci",
+        "type": "frontend",
         "project_url": "https://michael-boethas.github.io/P4/",
         "codebase_url": "https://github.com/Michael-Boethas/P4",
         "thumbnail_url": "/images/Screenshot-Nina-Carducci.webp",
         "description": "Ce projet a consisté en l’optimisation du site portfolio de Nina Carducci, notamment l'amélioration des performances, de l'accessibilité et du référencement (SEO). J'ai réalisé des audits à l'aide de Lighthouse, GTMetrix et Wave afin de repérer les points à améliorer, puis j'ai appliqué différentes optimisations selon les résultats obtenus. Le rapport d'intervention complet est disponible sur le dépot Github avec le code optimisé",
-        "stack": [
-          "html",
-          "javascript"
-        ]
+        "stack": ["html", "javascript"]
+      },
+      "mvg": {
+        "name": "Mon Vieux Grimoire",
+        "type": "backend",
+        "project_url": "https://p6-mon-vieux-grimoire-m6zc.onrender.com/api-docs",
+        "codebase_url": "https://github.com/Michael-Boethas/p6-mon-vieux-grimoire",
+        "thumbnail_url": "/images/Screenshot-Mon-Vieux-Grimoire.webp",
+        "description": "Une API pour gérer un catalogue de livres avec un système de notation, développée avec Node.js, Express et MongoDB. Elle permet l'authentification des utilisateurs, la gestion des sessions, des fonctionnalités CRUD et le calcul automatique des notes moyennes. Le projet inclut également des middleware pour l'optimisation des images, le renforcement de la sécurité et le logging des événements.  (Note : Le serveur de déploiement peut être inactif, entraînant un délai avant l'établissement de la connexion.)",
+        "stack": ["mongodb", "express"]
       }
     },
     "stack": {
