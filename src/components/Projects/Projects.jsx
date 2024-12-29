@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
@@ -7,6 +8,22 @@ import { useTheme } from '@/context/ThemeContext';
 export default function Projects() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
+
+  useEffect(() => {
+    const mvgUrl = 'https://p6-mon-vieux-grimoire-m6zc.onrender.com/wake-up/';
+
+    const wakeUpMVG = async () => {
+      try {
+        console.info('Waking up Mon Vieux Grimoire API')
+        const response = await fetch(mvgUrl, { method: 'GET' });
+        console.log('API wake-up response:', await response.text());
+      } catch (error) {
+        console.error('Failed to wake up the API:', error);
+      }
+    };
+  
+    wakeUpMVG();
+  }, []);
 
   return (
     <section
