@@ -65,6 +65,8 @@ export default function Stack() {
             <Tech techData={techStack.vercel} />
             <Tech techData={techStack.bootstrap} />
             <Tech techData={techStack.sass} />
+            <Tech techData={techStack.swagger} />
+            <Tech techData={techStack.postman} />
             <Tech techData={techStack.aws} />
             <Tech techData={techStack.git} />
             <Tech techData={techStack.figma} />

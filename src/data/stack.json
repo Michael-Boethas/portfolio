@@ -59,6 +59,18 @@
         "icon_light": "devicon-express-original colored",
         "icon_dark": "devicon-express-original colored"
     },
+    "swagger": {
+        "name": "Swagger",
+        "url": "https://swagger.io/",
+        "icon_light": "devicon-swagger-plain colored",
+        "icon_dark": "devicon-swagger-plain colored"
+    },
+    "postman": {
+        "name": "Postman",
+        "url": "https://www.postman.com/",
+        "icon_light": "devicon-postman-plain colored",
+        "icon_dark": "devicon-postman-plain colored"
+    },
     "nextjs": {
         "name": "Next.js",
         "url": "https://nextjs.org/",
