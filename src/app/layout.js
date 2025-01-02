@@ -5,7 +5,6 @@ import { LanguageProvider, useLanguage } from '@/context/LanguageContext';
 import { ThemeProvider } from '@/context/ThemeContext';
 import ViewportWarning from '@/components/ViewportWarning/ViewportWarning';
 import Nav from '@/components/Nav/Nav';
-import { usePathname } from 'next/navigation';
 
 function Metadata() {
   const { textContent } = useLanguage();
@@ -80,8 +79,6 @@ function Metadata() {
 }
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-  
   return (
     <html lang={process.env.NEXT_PUBLIC_BASE_LANG}>
       <LanguageProvider>
@@ -91,7 +88,8 @@ export default function RootLayout({ children }) {
           </head>
           <body>
             <ViewportWarning />
-            {pathname !== '/not-found' && <Nav />}            {children}
+            <Nav />
+            {children}
           </body>
         </ThemeProvider>
       </LanguageProvider>

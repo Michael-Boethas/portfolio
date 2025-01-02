@@ -14,14 +14,13 @@ export default function Projects() {
 
     const wakeUpMVG = async () => {
       try {
-        console.info('Waking up Mon Vieux Grimoire API')
+        console.info('Waking up Mon Vieux Grimoire API');
         const response = await fetch(mvgUrl, { method: 'GET' });
         console.log('API wake-up response:', await response.text());
       } catch (error) {
         console.error('Failed to wake up the API:', error);
       }
     };
-  
     wakeUpMVG();
   }, []);
 

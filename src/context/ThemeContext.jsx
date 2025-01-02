@@ -11,7 +11,10 @@ export function ThemeProvider({ children }) {
 
   // Set theme based on user preference
   useEffect(() => {
-    const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)')
+      .matches
+      ? 'dark'
+      : 'light';
     setTheme(preferredTheme);
   }, []);
 
