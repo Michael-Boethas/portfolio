@@ -42,6 +42,15 @@
         "thumbnail_url": "/images/Screenshot-Mon-Vieux-Grimoire.webp",
         "description": "Une API pour gérer un catalogue de livres avec un système de notation, développée avec Node.js, Express et MongoDB. Elle permet l'authentification des utilisateurs, la gestion des sessions, des fonctionnalités CRUD et le calcul automatique des notes moyennes. Le projet inclut également des middleware pour l'optimisation des images, le renforcement de la sécurité et le logging des événements.  (Note : Le serveur de déploiement peut être inactif, entraînant un délai avant l'établissement de la connexion.)",
         "stack": ["mongodb", "express"]
+      },
+      "cristina_portfolio": {
+        "name": "Cristina Jiménez",
+        "type": "fullstack",
+        "project_url": "https://cristina-jimenez.netlify.app",
+        "codebase_url": "https://github.com/Michael-Boethas/cristina",
+        "thumbnail_url": "/images/Screenshot-Cristina-Portfolio.webp",
+        "description": "Portfolio professionnel de Cristina Jiménez, spécialiste en marketing international et communication. Le projet comprend une interface utilisateur moderne et responsive développée avec Next.js (optimisée pour la performance et le référencement), ainsi qu’un CMS (Strapi) permettant à Cristina de mettre à jour le contenu de son portfolio via un accès administrateur.",
+        "stack": ["nextjs", "typescript"]
       }
     },
     "stack": {

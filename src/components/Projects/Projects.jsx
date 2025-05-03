@@ -38,6 +38,9 @@ export default function Projects() {
           projectData={textContent.sections.projects.nina_carducci}
         />
         <ProjectCard projectData={textContent.sections.projects.mvg} />
+        <ProjectCard
+          projectData={textContent.sections.projects.cristina_portfolio}
+        />
       </div>
     </section>
   );

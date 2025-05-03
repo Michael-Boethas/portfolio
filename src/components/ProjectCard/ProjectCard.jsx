@@ -46,12 +46,18 @@ export default function ProjectCard({ projectData }) {
       role="button"
       aria-expanded={!isCollapsed}
     >
-      <div className={` ${isCollapsed ? '' : ''} ${tagColor} text-white d-flex flex-column p-2`}>
+      <div
+        className={` ${isCollapsed ? '' : ''} ${tagColor} text-white d-flex flex-column p-2`}
+      >
         {projectData.type.split('').map((letter, index) => {
-          return <span className='fst-italic fw-bold' key={index}>{letter.toUpperCase()}</span>;
+          return (
+            <span className="fst-italic fw-bold" key={index}>
+              {letter.toUpperCase()}
+            </span>
+          );
         })}
       </div>
-      <div className="">
+      <div>
         <Image
           className="project-card__image"
           src={projectData.thumbnail_url}
@@ -67,7 +73,7 @@ export default function ProjectCard({ projectData }) {
               {projectData.stack.map((tech, index) => (
                 <div key={index} className="fs-2">
                   <span
-                    className={`${theme === 'light' ? '' : 'dark-icon-glow'} ${techStack[tech].icon_light}`}
+                    className={`${theme === 'light' ? techStack[tech].icon_light : techStack[tech].icon_dark} ${theme === 'dark' ? 'dark-icon-glow' : ''}`}
                   ></span>
                 </div>
               ))}

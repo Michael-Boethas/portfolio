@@ -12,10 +12,16 @@
     "icon_dark": "devicon-css3-plain colored"
   },
   "javascript": {
-    "name": "Javascript",
+    "name": "JavaScript",
     "url": "https://tc39.es/ecma262/",
     "icon_light": "devicon-javascript-plain colored",
     "icon_dark": "devicon-javascript-plain colored"
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "url": "https://www.typescriptlang.org/",
+    "icon_light": "devicon-typescript-plain colored",
+    "icon_dark": "devicon-typescript-plain"
   },
   "git": {
     "name": "Git",
