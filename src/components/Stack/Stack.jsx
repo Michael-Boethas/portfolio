@@ -42,7 +42,7 @@ export default function Stack() {
               <Tech techData={techStack.html} />
               <Tech techData={techStack.css} />
             </div>
-            <Tech techData={techStack.javascript} />
+            <Tech techData={techStack.typescript} />
           </div>
 
           <div className="font-large d-flex flex-wrap justify-content-center gap-4">
@@ -62,11 +62,12 @@ export default function Stack() {
 
           <div className="viewport-trigger font-large w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5">
             <Tech techData={techStack.nextjs} />
-            <Tech techData={techStack.vercel} />
-            <Tech techData={techStack.bootstrap} />
             <Tech techData={techStack.sass} />
+            <Tech techData={techStack.bootstrap} />
+            <Tech techData={techStack.tailwind} />
             <Tech techData={techStack.swagger} />
             <Tech techData={techStack.postman} />
+            <Tech techData={techStack.vercel} />
             <Tech techData={techStack.aws} />
             <Tech techData={techStack.git} />
             <Tech techData={techStack.figma} />

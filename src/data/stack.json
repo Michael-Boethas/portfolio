@@ -21,7 +21,7 @@
     "name": "TypeScript",
     "url": "https://www.typescriptlang.org/",
     "icon_light": "devicon-typescript-plain colored",
-    "icon_dark": "devicon-typescript-plain"
+    "icon_dark": "devicon-typescript-plain colored"
   },
   "git": {
     "name": "Git",
@@ -94,6 +94,12 @@
     "url": "https://getbootstrap.com/",
     "icon_light": "devicon-bootstrap-plain colored",
     "icon_dark": "devicon-bootstrap-plain colored"
+  },
+  "tailwind": {
+    "name": "Tailwind",
+    "url": "https://tailwindcss.com/",
+    "icon_light": "devicon-tailwindcss-plain colored",
+    "icon_dark": "devicon-tailwindcss-plain colored"
   },
   "inkscape": {
     "name": "Inkscape",
