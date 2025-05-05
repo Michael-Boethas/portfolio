@@ -9,6 +9,38 @@ import Nav from '@/components/Nav/Nav';
 function Metadata() {
   const { textContent } = useLanguage();
 
+  // jsonLd array for structured data about creative works
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: 'Cristina Jiménez Portfolio',
+      url: 'https://cristina-jimenez.netlify.app',
+      description:
+        'A personal portfolio website designed and developed for Cristina Jiménez to showcase her projects and skills.',
+      dateCreated: '2025-05-02',
+      inLanguage: 'en',
+      keywords: [
+        'Cristina Jiménez',
+        'portfolio',
+        'communication',
+        'international marketing',
+        'content creation',
+        'creative projects',
+      ],
+      creator: {
+        '@type': 'Person',
+        name: 'Michael Boethas',
+        alternateName: 'Mishmesh',
+        sameAs: [
+          'https://mishmesh.vercel.app/',
+          'https://michael-boethas.netlify.app',
+          'https://www.linkedin.com/in/micha%C3%ABl-bo%C3%ABthas-89028114b/',
+        ],
+      },
+    },
+  ];
+
   return (
     <>
       <meta charSet="utf-8" />
@@ -74,6 +106,13 @@ function Metadata() {
         content="black-translucent"
       />
       <meta name="mobile-web-app-title" content={textContent.metadata.title} />
+      {jsonLd.map((jsonLd, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      ))}
     </>
   );
 }
