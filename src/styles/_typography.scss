@@ -66,29 +66,18 @@
 
   h2 {
     font-size: 2rem;
-<<<<<<< HEAD
-=======
     transform: translateY(-30px);
->>>>>>> 42d4616 (Added not-found.js)
 
     @media screen and (min-width: $md) {
       font-size: 3rem;
     }
 
     @media screen and (min-width: $lg) {
-<<<<<<< HEAD
-      font-size: 3.5rem;
-    }
-
-    @media screen and (min-width: $xl) {
-      font-size: 4rem;
-=======
       font-size: 3.2rem;
     }
 
     @media screen and (min-width: $xl) {
       font-size: 3.4rem;
->>>>>>> 42d4616 (Added not-found.js)
     }
   }
 
