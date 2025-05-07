@@ -46,7 +46,7 @@ export default function Footer() {
 
       <div className="h-line-50 mt-5 mb-3"></div>
 
-      <div className="fs-5 p-3 d-flex gap-3 align-items-center">
+      <div className="fs-5 p-3 d-flex gap-4 align-items-center">
         <span className="fs-5">{textContent.sections.footer.training}</span>
         <a
           className="hover--zoom"
@@ -62,7 +62,25 @@ export default function Footer() {
             height={40}
             priority
           />
+
         </a>
+
+        <a
+          className="hover--zoom"
+          href={` ${language === 'fr' ? 'https://www.sorbonne-universite.fr/' : 'https://www.sorbonne-universite.fr/en'}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={'/images/upmc_logo.webp'}
+            alt={'UPMC Logo'}
+            title={'UPMC'}
+            width={80}
+            height={40}
+            priority
+          />
+        </a>
+
       </div>
     </footer>
   );
