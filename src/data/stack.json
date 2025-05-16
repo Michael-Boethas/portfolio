@@ -21,7 +21,7 @@
   ],
   "primary": [
     {
-      "name": "Next.js",
+      "name": "Next",
       "url": "https://nextjs.org/",
       "icon_light": "devicon-nextjs-plain colored",
       "icon_dark": "devicon-nextjs-plain colored"
