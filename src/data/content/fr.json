@@ -50,7 +50,7 @@
         "codebase_url": "https://github.com/Michael-Boethas/cristina",
         "thumbnail_url": "/images/Screenshot-Cristina-Portfolio.webp",
         "description": "Portfolio professionnel de Cristina Jiménez, spécialiste en marketing international et communication. Le projet comprend une interface utilisateur moderne et responsive développée avec Next.js (optimisée pour la performance et le référencement), ainsi qu’un CMS (Strapi) permettant à Cristina de mettre à jour le contenu de son portfolio via un accès administrateur.",
-        "stack": ["nextjs", "tailwind", "typescript"]
+        "stack": ["next.js", "tailwind", "typescript"]
       }
     },
     "stack": {

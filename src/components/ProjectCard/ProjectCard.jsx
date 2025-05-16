@@ -49,8 +49,7 @@ export default function ProjectCard({ projectData, index }) {
       role="button"
       aria-expanded={!isCollapsed}
       style={{
-        transition: 'opacity 500ms ease-out, transform 300ms',
-        transitionDelay: `${index * 150}ms`,
+        transition: `opacity 500ms ease-out ${index * 150}ms, transform 200ms ease`,
         willChange: 'opacity, transform',
         opacity: isVisible ? '1' : '0',
       }}
@@ -83,6 +82,7 @@ export default function ProjectCard({ projectData, index }) {
               and find the technology that matches the current tech */}
               {projectData.stack.map((tech, index) => {
                 const techData = [
+                  ...techStack.core,
                   ...techStack.primary,
                   ...techStack.secondary,
                 ].find((t) => t.name.toLowerCase() === tech.toLowerCase());

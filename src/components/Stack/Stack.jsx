@@ -4,13 +4,10 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 import Tech from '@/components/Tech/Tech';
 import techStack from '@/data/stack.json';
-// import useOnVisible from '@/hooks/useOnVisible';
 
 export default function Stack() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
-
-  // const [stackRef, isVisible] = useOnVisible(0.05, true);
 
   return (
     <section
