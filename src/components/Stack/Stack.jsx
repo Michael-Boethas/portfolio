@@ -4,25 +4,13 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 import Tech from '@/components/Tech/Tech';
 import techStack from '@/data/stack.json';
-import viewportClassTrigger from '@/utils/viewportClassTrigger';
-import { useEffect } from 'react';
+// import useOnVisible from '@/hooks/useOnVisible';
 
 export default function Stack() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
 
-  useEffect(() => {
-    document
-      .querySelectorAll('.viewport-trigger')
-      .forEach((techContainer, index) => {
-        return viewportClassTrigger(
-          techContainer,
-          index % 2 === 0
-            ? 'viewport-slide-in-from-right'
-            : 'viewport-slide-in-from-left'
-        );
-      });
-  }, []);
+  // const [stackRef, isVisible] = useOnVisible(0.05, true);
 
   return (
     <section
@@ -36,20 +24,30 @@ export default function Stack() {
       <div className="d-flex flex-column align-items-center">
         <h3 className="p-3 mb-5 fw-light">{textContent.sections.stack.main}</h3>
 
-        <div className="viewport-trigger w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center">
-          <div className="font-large d-flex flex-column">
-            <div className="d-flex gap-2">
-              <Tech techData={techStack.html} />
-              <Tech techData={techStack.css} />
+        <div className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center">
+          <div className="font-large d-flex flex-wrap align-items-center justify-content-center gap-4">
+            <div className="d-flex flex-column">
+              <div className="d-flex">
+                <Tech
+                  key={techStack.core[0].name}
+                  techData={techStack.core[0]}
+                  index={0}
+                />
+                <Tech
+                  key={techStack.core[1].name}
+                  techData={techStack.core[1]}
+                  index={1}
+                />
+              </div>
+              <Tech
+                key={techStack.core[2].name}
+                techData={techStack.core[2]}
+                index={2}
+              />
             </div>
-            <Tech techData={techStack.typescript} />
-          </div>
-
-          <div className="font-large d-flex flex-wrap justify-content-center gap-4">
-            <Tech techData={techStack.mongodb} />
-            <Tech techData={techStack.express} />
-            <Tech techData={techStack.react} />
-            <Tech techData={techStack.nodejs} />
+            {techStack.primary.map((tech, index) => (
+              <Tech key={tech.name} techData={tech} index={index} />
+            ))}
           </div>
         </div>
 
@@ -60,18 +58,10 @@ export default function Stack() {
             {textContent.sections.stack.secondary}
           </h3>
 
-          <div className="viewport-trigger font-large w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5">
-            <Tech techData={techStack.nextjs} />
-            <Tech techData={techStack.sass} />
-            <Tech techData={techStack.bootstrap} />
-            <Tech techData={techStack.tailwind} />
-            <Tech techData={techStack.swagger} />
-            <Tech techData={techStack.postman} />
-            <Tech techData={techStack.vercel} />
-            <Tech techData={techStack.aws} />
-            <Tech techData={techStack.git} />
-            <Tech techData={techStack.figma} />
-            <Tech techData={techStack.inkscape} />
+          <div className="font-large w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5">
+            {techStack.secondary.map((tech, index) => (
+              <Tech key={tech.name} techData={tech} index={index + 2} />
+            ))}
           </div>
         </div>
       </div>

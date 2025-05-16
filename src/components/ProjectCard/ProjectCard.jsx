@@ -4,12 +4,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
+import useOnVisible from '@/hooks/useOnVisible';
 import techStack from '@/data/stack.json';
 
-export default function ProjectCard({ projectData }) {
+export default function ProjectCard({ projectData, index }) {
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const [projectRef, isVisible] = useOnVisible(0.05, true);
 
   const themePrefix = theme === 'light' ? 'theme-L-' : 'theme-D-';
   let tagColor = '';
@@ -39,12 +41,19 @@ export default function ProjectCard({ projectData }) {
 
   return (
     <figure
+      ref={projectRef}
       className={`project-card hover--zoom card shadow rounded-0 flex-row ${theme === 'light' ? 'theme-L-bg-project-card' : 'theme-D-bg-project-card text-white'}`}
       tabIndex={0}
       onClick={toggleContent}
       onKeyDown={keyDownClick}
       role="button"
       aria-expanded={!isCollapsed}
+      style={{
+        transition: 'opacity 500ms ease-out, transform 300ms',
+        transitionDelay: `${index * 150}ms`,
+        willChange: 'opacity, transform',
+        opacity: isVisible ? '1' : '0',
+      }}
     >
       <div
         className={` ${isCollapsed ? '' : ''} ${tagColor} text-white d-flex flex-column p-2`}
@@ -70,13 +79,24 @@ export default function ProjectCard({ projectData }) {
           <div className="d-flex gap-2 justify-content-between align-items-center">
             <h3 className="card-title">{projectData.name}</h3>
             <div className="d-flex gap-2">
-              {projectData.stack.map((tech, index) => (
-                <div key={index} className="fs-2">
-                  <span
-                    className={`${theme === 'light' ? techStack[tech].icon_light : techStack[tech].icon_dark} ${theme === 'dark' ? 'dark-icon-glow' : ''}`}
-                  ></span>
-                </div>
-              ))}
+              {/* Flatten the primary and secondary stacks into a single array
+              and find the technology that matches the current tech */}
+              {projectData.stack.map((tech, index) => {
+                const techData = [
+                  ...techStack.primary,
+                  ...techStack.secondary,
+                ].find((t) => t.name.toLowerCase() === tech.toLowerCase());
+
+                if (!techData) return null;
+
+                return (
+                  <div key={index} className="fs-2">
+                    <span
+                      className={`${theme === 'light' ? techData.icon_light : techData.icon_dark} ${theme === 'dark' ? 'dark-icon-glow' : ''}`}
+                    ></span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
