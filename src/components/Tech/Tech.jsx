@@ -5,7 +5,7 @@ import useOnVisible from '@/hooks/useOnVisible';
 
 export default function Tech({ techData, index }) {
   const { theme } = useTheme();
-  const [techRef, isVisible] = useOnVisible(0.05, true);
+  const [techRef, isVisible] = useOnVisible(0.02, true);
 
   if (!techData) return null;
 
@@ -15,12 +15,14 @@ export default function Tech({ techData, index }) {
       className="hover--lift d-flex flex-column gap-2 align-items-center"
       style={{
         transition: 'opacity 500ms ease-out, transform 300ms',
-        transitionDelay: `${index * 80}ms`,
+        transitionDelay: `${index * 50 + Math.sqrt(index) * 50}ms`,
         willChange: 'opacity, transform',
         opacity: isVisible ? '1' : '0',
         transform: isVisible
-          ? 'translate(0, 0)'
-          : `translateY(${index % 2 === 0 ? '100px' : '-100px'})`,
+          ? 'translate(0, 0) scale(1)'
+          : index % 2 === 0
+            ? 'translateX(50px) scale(0.2)'
+            : 'translateY(-200px) scale(0.2)',
       }}
     >
       <a
