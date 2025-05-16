@@ -1,116 +1,128 @@
 {
-  "html": {
-    "name": "HTML",
-    "url": "https://html.spec.whatwg.org/multipage/",
-    "icon_light": "devicon-html5-plain colored",
-    "icon_dark": "devicon-html5-plain colored"
-  },
-  "css": {
-    "name": "CSS",
-    "url": "https://www.w3.org/TR/css/",
-    "icon_light": "devicon-css3-plain colored",
-    "icon_dark": "devicon-css3-plain colored"
-  },
-  "javascript": {
-    "name": "JavaScript",
-    "url": "https://tc39.es/ecma262/",
-    "icon_light": "devicon-javascript-plain colored",
-    "icon_dark": "devicon-javascript-plain colored"
-  },
-  "typescript": {
-    "name": "TypeScript",
-    "url": "https://www.typescriptlang.org/",
-    "icon_light": "devicon-typescript-plain colored",
-    "icon_dark": "devicon-typescript-plain colored"
-  },
-  "git": {
-    "name": "Git",
-    "url": "https://git-scm.com/",
-    "icon_light": "devicon-git-plain colored",
-    "icon_dark": "devicon-git-plain colored"
-  },
-  "react": {
-    "name": "React",
-    "url": "https://reactjs.org/",
-    "icon_light": "devicon-react-original colored",
-    "icon_dark": "devicon-react-original colored"
-  },
-  "nodejs": {
-    "name": "Node.js",
-    "url": "https://nodejs.org/en/",
-    "icon_light": "devicon-nodejs-plain colored",
-    "icon_dark": "devicon-nodejs-plain colored"
-  },
-  "sass": {
-    "name": "Sass",
-    "url": "https://sass-lang.com/",
-    "icon_light": "devicon-sass-original colored",
-    "icon_dark": "devicon-sass-original colored"
-  },
-  "mongodb": {
-    "name": "MongoDB",
-    "url": "https://www.mongodb.com/docs/",
-    "icon_light": "devicon-mongodb-plain colored",
-    "icon_dark": "devicon-mongodb-plain colored"
-  },
-  "aws": {
-    "name": "AWS",
-    "url": "https://aws.amazon.com/",
-    "icon_light": "devicon-amazonwebservices-plain-wordmark colored",
-    "icon_dark": "devicon-amazonwebservices-plain-wordmark colored"
-  },
-  "express": {
-    "name": "Express",
-    "url": "https://expressjs.com/",
-    "icon_light": "devicon-express-original colored",
-    "icon_dark": "devicon-express-original colored"
-  },
-  "swagger": {
-    "name": "Swagger",
-    "url": "https://swagger.io/",
-    "icon_light": "devicon-swagger-plain colored",
-    "icon_dark": "devicon-swagger-plain colored"
-  },
-  "postman": {
-    "name": "Postman",
-    "url": "https://www.postman.com/",
-    "icon_light": "devicon-postman-plain colored",
-    "icon_dark": "devicon-postman-plain colored"
-  },
-  "nextjs": {
-    "name": "Next.js",
-    "url": "https://nextjs.org/",
-    "icon_light": "devicon-nextjs-plain colored",
-    "icon_dark": "devicon-nextjs-plain colored"
-  },
-  "vercel": {
-    "name": "Vercel",
-    "url": "https://vercel.com/",
-    "icon_light": "devicon-vercel-original colored",
-    "icon_dark": "devicon-vercel-original colored"
-  },
-  "bootstrap": {
-    "name": "Bootstrap",
-    "url": "https://getbootstrap.com/",
-    "icon_light": "devicon-bootstrap-plain colored",
-    "icon_dark": "devicon-bootstrap-plain colored"
-  },
-  "tailwind": {
-    "name": "Tailwind",
-    "url": "https://tailwindcss.com/",
-    "icon_light": "devicon-tailwindcss-plain colored",
-    "icon_dark": "devicon-tailwindcss-plain colored"
-  },
-  "inkscape": {
-    "name": "Inkscape",
-    "url": "https://inkscape.org/",
-    "icon_light": "devicon-inkscape-plain colored",
-    "icon_dark": "devicon-inkscape-plain colored"
-  },
-  "figma": {
-    "name": "Figma",
-    "url": "https://www.figma.com/",
-    "icon_light": "devicon-figma-plain colored",
-    "icon_dark": "devicon-figma-plain colored"
-  }
+  "core": [
+    {
+      "name": "HTML",
+      "url": "https://html.spec.whatwg.org/multipage/",
+      "icon_light": "devicon-html5-plain colored",
+      "icon_dark": "devicon-html5-plain colored"
+    },
+    {
+      "name": "CSS",
+      "url": "https://www.w3.org/TR/css/",
+      "icon_light": "devicon-css3-plain colored",
+      "icon_dark": "devicon-css3-plain colored"
+    },
+    {
+      "name": "JavaScript",
+      "url": "https://tc39.es/ecma262/",
+      "icon_light": "devicon-javascript-plain colored",
+      "icon_dark": "devicon-javascript-plain colored"
+    }
+  ],
+  "primary": [
+    {
+      "name": "Next.js",
+      "url": "https://nextjs.org/",
+      "icon_light": "devicon-nextjs-plain colored",
+      "icon_dark": "devicon-nextjs-plain colored"
+    },
+    {
+      "name": "MongoDB",
+      "url": "https://www.mongodb.com/docs/",
+      "icon_light": "devicon-mongodb-plain colored",
+      "icon_dark": "devicon-mongodb-plain colored"
+    },
+    {
+      "name": "Express",
+      "url": "https://expressjs.com/",
+      "icon_light": "devicon-express-original colored",
+      "icon_dark": "devicon-express-original colored"
+    },
+    {
+      "name": "React",
+      "url": "https://reactjs.org/",
+      "icon_light": "devicon-react-original colored",
+      "icon_dark": "devicon-react-original colored"
+    },
+    {
+      "name": "Node.js",
+      "url": "https://nodejs.org/en/",
+      "icon_light": "devicon-nodejs-plain colored",
+      "icon_dark": "devicon-nodejs-plain colored"
+    }
+  ],
+  "secondary": [
+    {
+      "name": "TypeScript",
+      "url": "https://www.typescriptlang.org/",
+      "icon_light": "devicon-typescript-plain colored",
+      "icon_dark": "devicon-typescript-plain colored"
+    },
+    {
+      "name": "Sass",
+      "url": "https://sass-lang.com/",
+      "icon_light": "devicon-sass-original colored",
+      "icon_dark": "devicon-sass-original colored"
+    },
+    {
+      "name": "Bootstrap",
+      "url": "https://getbootstrap.com/",
+      "icon_light": "devicon-bootstrap-plain colored",
+      "icon_dark": "devicon-bootstrap-plain colored"
+    },
+    {
+      "name": "Tailwind",
+      "url": "https://tailwindcss.com/",
+      "icon_light": "devicon-tailwindcss-plain colored",
+      "icon_dark": "devicon-tailwindcss-plain colored"
+    },
+    {
+      "name": "Swagger",
+      "url": "https://swagger.io/",
+      "icon_light": "devicon-swagger-plain colored",
+      "icon_dark": "devicon-swagger-plain colored"
+    },
+    {
+      "name": "Postman",
+      "url": "https://www.postman.com/",
+      "icon_light": "devicon-postman-plain colored",
+      "icon_dark": "devicon-postman-plain colored"
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com/",
+      "icon_light": "devicon-vercel-original colored",
+      "icon_dark": "devicon-vercel-original colored"
+    },
+    {
+      "name": "Netlify",
+      "url": "https://netlify.com/",
+      "icon_light": "devicon-netlify-plain colored",
+      "icon_dark": "devicon-netlify-plain colored"
+    },
+    {
+      "name": "AWS",
+      "url": "https://aws.amazon.com/",
+      "icon_light": "devicon-amazonwebservices-plain-wordmark colored",
+      "icon_dark": "devicon-amazonwebservices-plain-wordmark colored"
+    },
+    {
+      "name": "Git",
+      "url": "https://git-scm.com/",
+      "icon_light": "devicon-git-plain colored",
+      "icon_dark": "devicon-git-plain colored"
+    },
+    {
+      "name": "Figma",
+      "url": "https://www.figma.com/",
+      "icon_light": "devicon-figma-plain colored",
+      "icon_dark": "devicon-figma-plain colored"
+    },
+    {
+      "name": "Inkscape",
+      "url": "https://inkscape.org/",
+      "icon_light": "devicon-inkscape-plain colored",
+      "icon_dark": "devicon-inkscape-plain colored"
+    }
+  ]
 }

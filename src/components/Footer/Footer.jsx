@@ -48,22 +48,6 @@ export default function Footer() {
 
       <div className="fs-5 p-3 d-flex gap-4 align-items-center">
         <span className="fs-5">{textContent.sections.footer.training}</span>
-        <a
-          className="hover--zoom"
-          href={` ${language === 'fr' ? 'https://www.openclassrooms.com/fr' : 'https://www.openclassrooms.com'}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src={'/images/ocr_logo.webp'}
-            alt={'OpenClassrooms Logo'}
-            title={'OpenClassrooms'}
-            width={40}
-            height={40}
-            priority
-          />
-
-        </a>
 
         <a
           className="hover--zoom"
@@ -80,7 +64,21 @@ export default function Footer() {
             priority
           />
         </a>
-
+        <a
+          className="hover--zoom"
+          href={` ${language === 'fr' ? 'https://www.openclassrooms.com/fr' : 'https://www.openclassrooms.com'}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={'/images/ocr_logo.webp'}
+            alt={'OpenClassrooms Logo'}
+            title={'OpenClassrooms'}
+            width={40}
+            height={40}
+            priority
+          />
+        </a>
       </div>
     </footer>
   );

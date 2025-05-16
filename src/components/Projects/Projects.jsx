@@ -33,13 +33,21 @@ export default function Projects() {
         {textContent.sections.projects.title}
       </h2>
       <div className="container d-flex flex-column flex-sm-row flex-wrap justify-content-center align-items-center align-items-md-start gap-4 gap-lg-5 p-4 p-lg-5">
-        <ProjectCard projectData={textContent.sections.projects.kasa} />
+        <ProjectCard
+          projectData={textContent.sections.projects.kasa}
+          index={1}
+        />
         <ProjectCard
           projectData={textContent.sections.projects.nina_carducci}
+          index={2}
         />
-        <ProjectCard projectData={textContent.sections.projects.mvg} />
+        <ProjectCard
+          projectData={textContent.sections.projects.mvg}
+          index={3}
+        />
         <ProjectCard
           projectData={textContent.sections.projects.cristina_portfolio}
+          index={4}
         />
       </div>
     </section>
