@@ -2,12 +2,15 @@
 
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
+import useOnVisible from '@/hooks/useOnVisible';
 import Tech from '@/components/Tech/Tech';
 import techStack from '@/data/stack.json';
 
 export default function Stack() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
+  const [mainStackRef, mainStackIsVisible] = useOnVisible(0.05, true);
+  const [secondaryStackRef, secondaryStackIsVisible] = useOnVisible(0.05, true);
 
   return (
     <section
@@ -21,29 +24,40 @@ export default function Stack() {
       <div className="d-flex flex-column align-items-center">
         <h3 className="p-3 mb-5 fw-light">{textContent.sections.stack.main}</h3>
 
-        <div className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center">
+        <div
+          ref={mainStackRef}
+          className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center"
+        >
           <div className="font-large d-flex flex-wrap align-items-center justify-content-center gap-4">
             <div className="d-flex flex-column">
               <div className="d-flex">
                 <Tech
                   key={techStack.core[0].name}
                   techData={techStack.core[0]}
+                  display={mainStackIsVisible}
                   index={0}
                 />
                 <Tech
                   key={techStack.core[1].name}
                   techData={techStack.core[1]}
+                  display={mainStackIsVisible}
                   index={1}
                 />
               </div>
               <Tech
                 key={techStack.core[2].name}
                 techData={techStack.core[2]}
+                display={mainStackIsVisible}
                 index={2}
               />
             </div>
             {techStack.primary.map((tech, index) => (
-              <Tech key={tech.name} techData={tech} index={index} />
+              <Tech
+                key={tech.name}
+                techData={tech}
+                index={index}
+                display={mainStackIsVisible}
+              />
             ))}
           </div>
         </div>
@@ -55,9 +69,17 @@ export default function Stack() {
             {textContent.sections.stack.secondary}
           </h3>
 
-          <div className="font-large w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5">
+          <div
+            ref={secondaryStackRef}
+            className="font-large w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5"
+          >
             {techStack.secondary.map((tech, index) => (
-              <Tech key={tech.name} techData={tech} index={index + 2} />
+              <Tech
+                key={tech.name}
+                techData={tech}
+                index={index + 2}
+                display={secondaryStackIsVisible}
+              />
             ))}
           </div>
         </div>
