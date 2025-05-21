@@ -1,24 +1,21 @@
 'use client';
 
 import { useTheme } from '@/context/ThemeContext';
-import useOnVisible from '@/hooks/useOnVisible';
 
-export default function Tech({ techData, index }) {
+export default function Tech({ techData, index, display }) {
   const { theme } = useTheme();
-  const [techRef, isVisible] = useOnVisible(0.02, true);
 
   if (!techData) return null;
 
   return (
     <div
-      ref={techRef}
       className="hover--lift d-flex flex-column gap-2 align-items-center"
       style={{
         transition: 'opacity 500ms ease-out, transform 300ms',
-        transitionDelay: `${index * 50 + Math.sqrt(index) * 50}ms`,
+        transitionDelay: `${index * 60 + Math.sqrt(index) * 50}ms`,
         willChange: 'opacity, transform',
-        opacity: isVisible ? '1' : '0',
-        transform: isVisible
+        opacity: display ? '1' : '0',
+        transform: display
           ? 'translate(0, 0) scale(1)'
           : index % 2 === 0
             ? 'translateX(50px) scale(0.2)'
