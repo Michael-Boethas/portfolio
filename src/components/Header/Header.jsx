@@ -19,7 +19,7 @@ export default function Header() {
       {/* Slogan and links  */}
       <div className="w-75 text-center mt-5">
         <h1 className="font-huge text-white fw-bold">
-          {textContent.sections.header.slogan}
+          {textContent.sections.header.tagline}
         </h1>
 
         <div className="d-flex justify-content-center gap-4 py-5">
