@@ -39,12 +39,6 @@
       "icon_dark": "devicon-express-original colored"
     },
     {
-      "name": "React",
-      "url": "https://reactjs.org/",
-      "icon_light": "devicon-react-original colored",
-      "icon_dark": "devicon-react-original colored"
-    },
-    {
       "name": "Node.js",
       "url": "https://nodejs.org/en/",
       "icon_light": "devicon-nodejs-plain colored",
@@ -57,6 +51,12 @@
       "url": "https://www.typescriptlang.org/",
       "icon_light": "devicon-typescript-plain colored",
       "icon_dark": "devicon-typescript-plain colored"
+    },
+    {
+      "name": "React",
+      "url": "https://reactjs.org/",
+      "icon_light": "devicon-react-original colored",
+      "icon_dark": "devicon-react-original colored"
     },
     {
       "name": "Sass",
