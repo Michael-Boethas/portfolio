@@ -11,15 +11,15 @@ export default function Tech({ techData, index, display }) {
     <div
       className="hover--lift d-flex flex-column gap-2 align-items-center"
       style={{
-        transition: 'opacity 500ms ease-out, transform 300ms',
-        transitionDelay: `${index * 60 + Math.sqrt(index) * 50}ms`,
+        transition: 'opacity 500ms ease-out, transform 350ms',
+        transitionDelay: `${100 + index * 60 + Math.sqrt(index) * 50}ms`,
         willChange: 'opacity, transform',
         opacity: display ? '1' : '0',
         transform: display
           ? 'translate(0, 0) scale(1)'
           : index % 2 === 0
-            ? 'translateX(50px) scale(0.2)'
-            : 'translateY(-200px) scale(0.2)',
+            ? 'translateX(500px) scale(0.1)'
+            : 'translateY(-500px) scale(0.1)',
       }}
     >
       <a
