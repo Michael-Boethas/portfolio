@@ -6,10 +6,14 @@ import { createContext, useContext, useState, useEffect } from 'react';
 import en from '@/data/content/en.json';
 import fr from '@/data/content/fr.json';
 
-const LanguageContext = createContext();
+const languagesList = { en, fr };
+const LanguageContext = createContext({
+  language: 'en',
+  textContent: en,
+  setLanguage: () => {},
+});
 
 export function LanguageProvider({ children }) {
-  const languagesList = { en, fr };
   const [language, setLanguage] = useState(null);
 
   useEffect(() => {
