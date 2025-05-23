@@ -101,12 +101,6 @@
       "icon_dark": "devicon-netlify-plain colored"
     },
     {
-      "name": "AWS",
-      "url": "https://aws.amazon.com/",
-      "icon_light": "devicon-amazonwebservices-plain-wordmark colored",
-      "icon_dark": "devicon-amazonwebservices-plain-wordmark colored"
-    },
-    {
       "name": "Git",
       "url": "https://git-scm.com/",
       "icon_light": "devicon-git-plain colored",

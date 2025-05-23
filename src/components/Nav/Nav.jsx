@@ -46,7 +46,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className="nav-custom container-fluid position-fixed top-0 navbar navbar-expand-lg">
+    <nav className="nav-custom position-fixed top-0 left-0 w-100 navbar navbar-expand-lg d-flex flex-lg-row-reverse px-0 px-lg-4 overflow-hidden">
       {/*** Global controls *******/}
       <div className="d-flex gap-1">
         <ThemeToggle />

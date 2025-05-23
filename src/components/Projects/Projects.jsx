@@ -4,10 +4,12 @@ import { useEffect } from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
+import useOnVisible from '@/hooks/useOnVisible';
 
 export default function Projects() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
+  const [projectsRef, isVisible] = useOnVisible(0.05, true);
 
   useEffect(() => {
     const mvgUrl = 'https://p6-mon-vieux-grimoire-m6zc.onrender.com/wake-up/';
@@ -27,6 +29,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
+      ref={projectsRef}
       className={`${theme === 'light' ? 'theme-L-bg-projects theme-L-txt-dark' : 'theme-D-bg-projects theme-D-txt-light'} py-5`}
     >
       <h2 className="fs-1 text-center py-4 fst-italic">
@@ -36,18 +39,22 @@ export default function Projects() {
         <ProjectCard
           projectData={textContent.sections.projects.kasa}
           index={1}
+          display={isVisible}
         />
         <ProjectCard
           projectData={textContent.sections.projects.nina_carducci}
           index={2}
+          display={isVisible}
         />
         <ProjectCard
           projectData={textContent.sections.projects.mvg}
           index={3}
+          display={isVisible}
         />
         <ProjectCard
           projectData={textContent.sections.projects.cristina_portfolio}
           index={4}
+          display={isVisible}
         />
       </div>
     </section>

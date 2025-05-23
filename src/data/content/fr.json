@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Mishmesh - Portfolio de développeur web",
-    "description": "Portfolio d’un développeur web spécialisé dans les technologies front-end et back-end comme React et Express."
+    "description": "Développeur web full-stack spécialisé en React, Next.js, TypeScript, Tailwind CSS, Node.js, express, MongoDB, Strapi..."
   },
   "sections": {
     "header": {
@@ -12,7 +12,7 @@
     },
     "about": {
       "title": "À propos",
-      "about_me": "Je suis développeur web full-stack, spécialisé dans la création de sites et d'applications sur mesure qui répondent aux besoins spécifiques des entreprises. J'aime construire, voir un projet évoluer à partir de rien pour devenir quelque chose de fonctionnel et attrayant. Je travaille à la fois sur le design front-end et l'architecture back-end, garantissant des page propres et réactives, ainsi qu'un code évolutif pour des sites efficaces et sécurisés qui peuvent accompagner la croissance de votre projet."
+      "about_me": "Je suis développeur web full-stack, spécialisé dans la création de sites et d'applications sur mesure qui répondent à des besoins spécifiques. J'aime construire, voir un projet évoluer à partir de rien pour devenir quelque chose de fonctionnel et attrayant. Je travaille à la fois sur le design front-end et l'architecture back-end, garantissant des pages propres et réactives, ainsi qu'un code évolutif pour des sites efficaces et sécurisés qui peuvent accompagner la croissance de votre projet."
     },
     "projects": {
       "title": "Projets récents",

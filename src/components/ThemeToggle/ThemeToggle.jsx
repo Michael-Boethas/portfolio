@@ -16,7 +16,8 @@ export default function ThemeToggle() {
       aria-label="Theme toggle"
     >
       <span
-        className={`${theme === 'light' ? 'bi-lightbulb-fill' : 'bi-lightbulb'} bi`}
+        // className={`${theme === 'light' ? 'bi-lightbulb-fill' : 'bi-lightbulb'} bi`}
+        className={`${theme === 'light' ? 'bi-sun-fill' : 'bi-moon-stars'} bi`}
       ></span>
     </button>
   );

@@ -4,14 +4,12 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
-import useOnVisible from '@/hooks/useOnVisible';
 import techStack from '@/data/stack.json';
 
-export default function ProjectCard({ projectData, index }) {
+export default function ProjectCard({ projectData, index, display }) {
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const [projectRef, isVisible] = useOnVisible(0.05, true);
 
   const themePrefix = theme === 'light' ? 'theme-L-' : 'theme-D-';
   let tagColor = '';
@@ -41,7 +39,6 @@ export default function ProjectCard({ projectData, index }) {
 
   return (
     <figure
-      ref={projectRef}
       className={`project-card hover--zoom card shadow rounded-0 flex-row ${theme === 'light' ? 'theme-L-bg-project-card' : 'theme-D-bg-project-card text-white'}`}
       tabIndex={0}
       onClick={toggleContent}
@@ -49,14 +46,13 @@ export default function ProjectCard({ projectData, index }) {
       role="button"
       aria-expanded={!isCollapsed}
       style={{
-        transition: `opacity 500ms ease-out ${index * 150}ms, transform 200ms ease`,
+        transition: `opacity 500ms ease ${index * 120}ms, transform 500ms ease ${index * 120}ms`,
         willChange: 'opacity, transform',
-        opacity: isVisible ? '1' : '0',
+        opacity: display ? '1' : '0',
+        transform: display ? 'scale(1)' : 'scale(0.8)',
       }}
     >
-      <div
-        className={` ${isCollapsed ? '' : ''} ${tagColor} text-white d-flex flex-column p-2`}
-      >
+      <div className={`${tagColor} text-white d-flex flex-column p-2`}>
         {projectData.type.split('').map((letter, index) => {
           return (
             <span className="fst-italic fw-bold" key={index}>
