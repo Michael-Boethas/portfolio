@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useTheme } from '@/context/ThemeContext';
+import { useTheme } from "@/context/ThemeContext";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -17,7 +17,7 @@ export default function ThemeToggle() {
     >
       <span
         // className={`${theme === 'light' ? 'bi-lightbulb-fill' : 'bi-lightbulb'} bi`}
-        className={`${theme === 'light' ? 'bi-sun-fill' : 'bi-moon-stars'} bi`}
+        className={`${theme === "light" ? "bi-sun-fill" : "bi-moon-stars"} bi`}
       ></span>
     </button>
   );

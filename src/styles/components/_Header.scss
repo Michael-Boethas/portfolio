@@ -2,7 +2,7 @@
 
 .header__overlay {
   z-index: 2000;
-  animation: fade-out 1200ms ease-in forwards;
+  animation: fade-out 1500ms ease-in forwards;
 }
 
 @keyframes fade-out {
@@ -19,19 +19,23 @@
 // Radial gradient for header animation ///////////////////
 
 .header__bg-light {
-  background: radial-gradient(ellipse,
-      map-get($light-theme-bg-fx, 'bg-fx-color-1'),
-      map-get($light-theme-bg-fx, 'bg-fx-color-2'),
-      map-get($light-theme-bg-fx, 'bg-fx-color-3') 80%);
+  background: radial-gradient(
+    ellipse,
+    map-get($light-theme-bg-fx, "bg-fx-color-1"),
+    map-get($light-theme-bg-fx, "bg-fx-color-2"),
+    map-get($light-theme-bg-fx, "bg-fx-color-3") 80%
+  );
   background-size: 1000% 1000%;
   animation: gradient 60s ease infinite;
 }
 
 .header__bg-dark {
-  background: radial-gradient(ellipse,
-      map-get($dark-theme-bg-fx, 'bg-fx-color-1'),
-      map-get($dark-theme-bg-fx, 'bg-fx-color-2'),
-      map-get($dark-theme-bg-fx, 'bg-fx-color-3') 80%);
+  background: radial-gradient(
+    ellipse,
+    map-get($dark-theme-bg-fx, "bg-fx-color-1"),
+    map-get($dark-theme-bg-fx, "bg-fx-color-2"),
+    map-get($dark-theme-bg-fx, "bg-fx-color-3") 80%
+  );
   background-size: 1000% 1000%;
   animation: gradient 60s ease infinite;
 }

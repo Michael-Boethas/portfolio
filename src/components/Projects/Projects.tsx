@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import ProjectCard from '../ProjectCard/ProjectCard';
-import { useLanguage } from '@/context/LanguageContext';
-import { useTheme } from '@/context/ThemeContext';
-import useOnVisible from '@/hooks/useOnVisible';
+import { useEffect } from "react";
+import ProjectCard from "../ProjectCard/ProjectCard";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import useOnVisible from "@/hooks/useOnVisible";
 
 export default function Projects() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
-  const [projectsRef, isVisible] = useOnVisible(0.05, true);
+  const [projectsRef, isVisible] = useOnVisible<HTMLElement>(0.05, true);
 
   useEffect(() => {
-    const mvgUrl = 'https://p6-mon-vieux-grimoire-m6zc.onrender.com/wake-up/';
+    const mvgUrl = "https://p6-mon-vieux-grimoire-m6zc.onrender.com/wake-up/";
 
     const wakeUpMVG = async () => {
       try {
-        console.info('Waking up Mon Vieux Grimoire API');
-        const response = await fetch(mvgUrl, { method: 'GET' });
-        console.log('API wake-up response:', await response.text());
+        console.info("Waking up Mon Vieux Grimoire API");
+        const response = await fetch(mvgUrl, { method: "GET" });
+        console.log("API wake-up response:", await response.text());
       } catch (error) {
-        console.error('Failed to wake up the API:', error);
+        console.error("Failed to wake up the API:", error);
       }
     };
     wakeUpMVG();
@@ -30,7 +30,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={projectsRef}
-      className={`${theme === 'light' ? 'theme-L-bg-projects theme-L-txt-dark' : 'theme-D-bg-projects theme-D-txt-light'} py-5`}
+      className={`${theme === "light" ? "theme-L-bg-projects theme-L-txt-dark" : "theme-D-bg-projects theme-D-txt-light"} py-5`}
     >
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.projects.title}

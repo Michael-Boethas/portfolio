@@ -1,21 +1,25 @@
-'use client';
+"use client";
 
-import { useLanguage } from '@/context/LanguageContext';
-import { useTheme } from '@/context/ThemeContext';
-import useOnVisible from '@/hooks/useOnVisible';
-import Tech from '@/components/Tech/Tech';
-import techStack from '@/data/stack.json';
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import useOnVisible from "@/hooks/useOnVisible";
+import Tech from "@/components/Tech/Tech";
+import techStack from "@/data/stack.json";
 
 export default function Stack() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
-  const [mainStackRef, mainStackIsVisible] = useOnVisible(0.05, true);
-  const [secondaryStackRef, secondaryStackIsVisible] = useOnVisible(0.05, true);
+  const [mainStackRef, mainStackIsVisible] = useOnVisible<HTMLDivElement>(
+    0.05,
+    true
+  );
+  const [secondaryStackRef, secondaryStackIsVisible] =
+    useOnVisible<HTMLDivElement>(0.05, true);
 
   return (
     <section
       id="stack"
-      className={`${theme === 'light' ? 'theme-L-bg-stack theme-L-txt-dark' : 'theme-D-bg-stack theme-D-txt-light'} py-5`}
+      className={`${theme === "light" ? "theme-L-bg-stack theme-L-txt-dark" : "theme-D-bg-stack theme-D-txt-light"} py-5`}
     >
       <h2 className="fs-1 text-center py-4 fst-italic">
         {textContent.sections.stack.title}

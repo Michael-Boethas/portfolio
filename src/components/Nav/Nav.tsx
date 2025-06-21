@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useLanguage } from '@/context/LanguageContext';
-import LanguageSwitch from '../LanguageSwitch/LanguageSwitch';
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 export default function Nav() {
   const { textContent } = useLanguage();
@@ -14,21 +14,23 @@ export default function Nav() {
 
   // Trigger opacity depending on scroll position
   const toggleOpacity = () => {
-    const navbar = document.querySelector('.nav-custom');
+    const navbar = document.querySelector(".nav-custom");
     const scrollPosition = window.scrollY;
     const triggerPoint = 100;
 
+    if (!navbar) return;
     if (scrollPosition > triggerPoint) {
-      navbar.classList.add('nav--opacity');
+      navbar.classList.add("nav--opacity");
     } else {
-      navbar.classList.remove('nav--opacity');
+      navbar.classList.remove("nav--opacity");
     }
   };
 
   // Avoid SSR import of bootstrap.js to prevent errors related to unavailable DOM
   useEffect(() => {
     const bootstrap = async () => {
-      await import('bootstrap/dist/js/bootstrap.bundle.min.js');
+      // @ts-expect-error - Bootstrap is not available in the browser
+      await import("bootstrap/dist/js/bootstrap.bundle.min.js");
     };
     bootstrap();
   }, []);
@@ -37,11 +39,11 @@ export default function Nav() {
     // Initial check for scroll position
     toggleOpacity();
 
-    window.addEventListener('scroll', toggleOpacity);
+    window.addEventListener("scroll", toggleOpacity);
 
     // Cleanup
     return () => {
-      window.removeEventListener('scroll', toggleOpacity);
+      window.removeEventListener("scroll", toggleOpacity);
     };
   }, []);
 
@@ -71,12 +73,12 @@ export default function Nav() {
 
       {/*** Nav Links *********************/}
       <div
-        className={`collapse navbar-collapse ${!isCollapsed ? 'show' : ''}`}
+        className={`collapse navbar-collapse ${!isCollapsed ? "show" : ""}`}
         id="navbarNavAltMarkup"
       >
         <div className="navbar-nav d-flex flex-column align-items-end me-3 me-sm-0 align-items-sm-center flex-lg-row gap-md-4">
           <Link
-            href="/home"
+            href="/"
             className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
             onClick={toggleCollapse}
           >
@@ -86,7 +88,7 @@ export default function Nav() {
           </Link>
 
           <Link
-            href="/home/#about"
+            href="/#about"
             className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
             onClick={toggleCollapse}
           >
@@ -96,7 +98,7 @@ export default function Nav() {
           </Link>
 
           <Link
-            href="/home/#projects"
+            href="/#projects"
             className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
             onClick={toggleCollapse}
           >
@@ -106,7 +108,7 @@ export default function Nav() {
           </Link>
 
           <Link
-            href="/home/#stack"
+            href="/#stack"
             className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
             onClick={toggleCollapse}
           >
@@ -116,7 +118,7 @@ export default function Nav() {
           </Link>
 
           <Link
-            href="/home/#contact"
+            href="/#contact"
             className="hover--highlight text-white nav-link d-flex fs-5 p-sm-1"
             onClick={toggleCollapse}
           >

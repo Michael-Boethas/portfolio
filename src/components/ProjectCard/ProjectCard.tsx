@@ -1,28 +1,48 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { useLanguage } from '@/context/LanguageContext';
-import { useTheme } from '@/context/ThemeContext';
-import techStack from '@/data/stack.json';
+import { useState } from "react";
+import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import techStack from "@/data/stack.json";
 
-export default function ProjectCard({ projectData, index, display }) {
+interface IProjectData {
+  name: string;
+  type: string;
+  project_url: string;
+  codebase_url: string;
+  thumbnail_url: string;
+  description: string;
+  stack: string[];
+}
+
+interface IProjectCardProps {
+  projectData: IProjectData;
+  index: number;
+  display: boolean;
+}
+
+export default function ProjectCard({
+  projectData,
+  index,
+  display,
+}: IProjectCardProps) {
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const themePrefix = theme === 'light' ? 'theme-L-' : 'theme-D-';
-  let tagColor = '';
+  const themePrefix = theme === "light" ? "theme-L-" : "theme-D-";
+  let tagColor = "";
 
   switch (projectData.type) {
-    case 'frontend':
-      tagColor = themePrefix + 'frontend-tag';
+    case "frontend":
+      tagColor = themePrefix + "frontend-tag";
       break;
-    case 'backend':
-      tagColor = themePrefix + 'backend-tag';
+    case "backend":
+      tagColor = themePrefix + "backend-tag";
       break;
     default:
-      tagColor = themePrefix + 'fullstack-tag';
+      tagColor = themePrefix + "fullstack-tag";
   }
 
   const toggleContent = () => {
@@ -30,8 +50,8 @@ export default function ProjectCard({ projectData, index, display }) {
   };
 
   // Force click on keyDown
-  const keyDownClick = (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
+  const keyDownClick = (event: React.KeyboardEvent<HTMLElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       event.currentTarget.click();
     }
@@ -39,7 +59,7 @@ export default function ProjectCard({ projectData, index, display }) {
 
   return (
     <figure
-      className={`project-card hover--zoom card shadow rounded-0 flex-row ${theme === 'light' ? 'theme-L-bg-project-card' : 'theme-D-bg-project-card text-white'}`}
+      className={`project-card hover--zoom card shadow rounded-0 flex-row ${theme === "light" ? "theme-L-bg-project-card" : "theme-D-bg-project-card text-white"}`}
       tabIndex={0}
       onClick={toggleContent}
       onKeyDown={keyDownClick}
@@ -47,13 +67,13 @@ export default function ProjectCard({ projectData, index, display }) {
       aria-expanded={!isCollapsed}
       style={{
         transition: `opacity 500ms ease ${index * 120}ms, transform 500ms ease ${index * 120}ms`,
-        willChange: 'opacity, transform',
-        opacity: display ? '1' : '0',
-        transform: display ? 'scale(1)' : 'scale(0.8)',
+        willChange: "opacity, transform",
+        opacity: display ? "1" : "0",
+        transform: display ? "scale(1)" : "scale(0.8)",
       }}
     >
       <div className={`${tagColor} text-white d-flex flex-column p-2`}>
-        {projectData.type.split('').map((letter, index) => {
+        {projectData.type.split("").map((letter, index) => {
           return (
             <span className="fst-italic fw-bold" key={index}>
               {letter.toUpperCase()}
@@ -88,7 +108,7 @@ export default function ProjectCard({ projectData, index, display }) {
                 return (
                   <div key={index} className="fs-2">
                     <span
-                      className={`${theme === 'light' ? techData.icon_light : techData.icon_dark} ${theme === 'dark' ? 'dark-icon-glow' : ''}`}
+                      className={`${theme === "light" ? techData.icon_light : techData.icon_dark} ${theme === "dark" ? "dark-icon-glow" : ""}`}
                     ></span>
                   </div>
                 );
@@ -97,23 +117,23 @@ export default function ProjectCard({ projectData, index, display }) {
           </div>
 
           <div
-            className={`card-text collapse p-2 border-top ${isCollapsed ? '' : 'show'}`}
+            className={`card-text collapse p-2 border-top ${isCollapsed ? "" : "show"}`}
           >
             <p>{projectData.description}</p>
 
             <div className="d-flex flex-column gap-2 py-3">
               <a
                 href={projectData.project_url}
-                className={`btn btn-primary rounded-0 ${theme === 'light' ? '' : 'text-white'}`}
+                className={`btn btn-primary rounded-0 ${theme === "light" ? "" : "text-white"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onKeyDown={keyDownClick}
               >
-                {language === 'fr' ? 'Projet' : 'Project'}
+                {language === "fr" ? "Projet" : "Project"}
               </a>
               <a
                 href={projectData.codebase_url}
-                className={`btn btn-primary rounded-0 ${theme === 'light' ? '' : 'text-white'}`}
+                className={`btn btn-primary rounded-0 ${theme === "light" ? "" : "text-white"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onKeyDown={keyDownClick}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 /**
  * Custom hook that observes the visibility of an element in the viewport.
@@ -8,8 +8,11 @@ import { useEffect, useRef, useState } from 'react';
  * @returns A ref to attach to the element and a boolean indicating visibility status.
  */
 
-export default function useOnVisible(threshold = 0.05, triggerOnce = true) {
-  const ref = useRef(null);
+export default function useOnVisible<T extends HTMLElement>(
+  threshold = 0.05,
+  triggerOnce = true,
+): [React.RefObject<T | null>, boolean] {
+  const ref = useRef<T | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -23,7 +26,7 @@ export default function useOnVisible(threshold = 0.05, triggerOnce = true) {
           if (triggerOnce) observer.disconnect(); // Only triggers once
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(element);

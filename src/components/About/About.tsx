@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useLanguage } from '@/context/LanguageContext';
-import { useTheme } from '@/context/ThemeContext';
-import Image from 'next/image';
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
+import Image from "next/image";
 
 export default function About() {
   const { language, textContent } = useLanguage();
@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className={`${theme === 'light' ? 'theme-L-bg-about theme-L-txt-dark' : 'theme-D-bg-about theme-D-txt-light'} py-5`}
+      className={`${theme === "light" ? "theme-L-bg-about theme-L-txt-dark" : "theme-D-bg-about theme-D-txt-light"} py-5`}
     >
       <div className="container d-md-flex gap-md-5 align-items-center">
         <div className="d-none d-md-flex flex-column gap-3 p-4 p-lg-5 border-start border-3">
@@ -26,7 +26,7 @@ export default function About() {
           />
           <span className="text-light--grey font-monospace fs-3 fw-bold align-self-end d-flex gap-1 align-items-end">
             <i className="bi bi-arrow-90deg-up fs-1"></i>
-            {language === 'fr' ? 'Michaël' : 'Michael'}
+            {language === "fr" ? "Michaël" : "Michael"}
           </span>
         </div>
         <div className="d-flex flex-column gap-3 px-4 px-lg-5">

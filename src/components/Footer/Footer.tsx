@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Contact from '../Contact/Contact';
-import { useLanguage } from '@/context/LanguageContext';
-import { useTheme } from '@/context/ThemeContext';
+import Image from "next/image";
+import Contact from "../Contact/Contact";
+import { useLanguage } from "@/context/LanguageContext";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Footer() {
   const { language, textContent } = useLanguage();
@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className={`${theme === 'light' ? 'theme-L-bg-footer text-white' : 'theme-D-bg-footer theme-D-txt-light'} w-100 d-flex flex-column align-items-center p-4`}
+      className={`${theme === "light" ? "theme-L-bg-footer text-white" : "theme-D-bg-footer theme-D-txt-light"} w-100 d-flex flex-column align-items-center p-4`}
     >
       <Contact />
 
@@ -36,7 +36,7 @@ export default function Footer() {
             {location}
           </strong>
           <em className="fst-normal">
-            {available === 'yes'
+            {available === "yes"
               ? textContent.sections.footer.available
               : textContent.sections.footer.unavailable}
           </em>
@@ -51,14 +51,14 @@ export default function Footer() {
 
         <a
           className="hover--zoom"
-          href={` ${language === 'fr' ? 'https://www.sorbonne-universite.fr/' : 'https://www.sorbonne-universite.fr/en'}`}
+          href={` ${language === "fr" ? "https://www.sorbonne-universite.fr/" : "https://www.sorbonne-universite.fr/en"}`}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            src={'/images/upmc_logo.webp'}
-            alt={'UPMC Logo'}
-            title={'UPMC'}
+            src={"/images/upmc_logo.webp"}
+            alt={"UPMC Logo"}
+            title={"UPMC"}
             width={80}
             height={40}
             priority
@@ -66,14 +66,14 @@ export default function Footer() {
         </a>
         <a
           className="hover--zoom"
-          href={` ${language === 'fr' ? 'https://www.openclassrooms.com/fr' : 'https://www.openclassrooms.com'}`}
+          href={` ${language === "fr" ? "https://www.openclassrooms.com/fr" : "https://www.openclassrooms.com"}`}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            src={'/images/ocr_logo.webp'}
-            alt={'OpenClassrooms Logo'}
-            title={'OpenClassrooms'}
+            src={"/images/ocr_logo.webp"}
+            alt={"OpenClassrooms Logo"}
+            title={"OpenClassrooms"}
             width={40}
             height={40}
             priority
