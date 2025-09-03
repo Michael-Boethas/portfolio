@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import en from "@/data/locale/en.json";
 import fr from "@/data/locale/fr.json";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
+
 /**
  * Generates metadata for the app based on the selected language.
  *
@@ -15,22 +17,28 @@ export async function generateMetadata({
   const { lang } = await params;
   const localeData = lang === "fr" ? fr : en;
 
+  const ogImage = "/opengraph-image.png?v=2";
+
   return {
     title: localeData.metadata.title,
     description: localeData.metadata.description,
-    metadataBase: new URL("https://mishmesh-portfolio.vercel.app"),
+    metadataBase: new URL(BASE_URL),
     alternates: {
-      canonical: "https://mishmesh-portfolio.vercel.app",
+      canonical: `${BASE_URL}/${lang}/`,
+      languages: {
+        en: `${BASE_URL}/en/`,
+        fr: `${BASE_URL}/fr/`,
+      },
     },
     openGraph: {
       title: localeData.metadata.title,
       description: localeData.metadata.description,
-      url: "https://mishmesh-portfolio.vercel.app",
+      url: `${BASE_URL}/${lang}/`,
       type: "website",
       siteName: "Mishmesh | Web developer portfolio",
       images: [
         {
-          url: "/opengraph-image.png?v=2",
+          url: ogImage,
           width: 512,
           height: 512,
           alt: "Mishmesh Portfolio Thumbnail",
@@ -41,23 +49,15 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: localeData.metadata.title,
       description: localeData.metadata.description,
-      images: ["/opengraph-image.png?v=2"],
+      images: [ogImage],
     },
     icons: {
       icon: [
         "/favicon.ico",
         { url: "/favicon.svg", type: "image/svg+xml" },
         { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-        {
-          url: "/web-app-manifest-192x192.png",
-          sizes: "192x192",
-          type: "image/png",
-        },
-        {
-          url: "/web-app-manifest-512x512.png",
-          sizes: "512x512",
-          type: "image/png",
-        },
+        { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+        { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" },
       ],
       apple: "/apple-touch-icon.png",
       shortcut: "/favicon.ico",
@@ -85,7 +85,7 @@ export async function generateMetadata({
     authors: [
       {
         name: "Michael Boethas",
-        url: "https://mishmesh.vercel.app/",
+        url: BASE_URL,
       },
     ],
     creator: "Michael Boethas",
@@ -95,15 +95,15 @@ export async function generateMetadata({
         "@type": "Person",
         name: "Michael Boethas",
         alternateName: "Mishmesh",
-        url: "https://mishmesh-portfolio.vercel.app",
-        image: "https://mishmesh-portfolio.vercel.app/opengraph-image.png?v=2",
+        url: BASE_URL,
+        image: `${BASE_URL}${ogImage}`,
         jobTitle: "Full-Stack Web Developer",
         worksFor: {
           "@type": "Organization",
           name: "Freelance",
         },
         sameAs: [
-          "https://mishmesh.vercel.app/",
+          BASE_URL,
           "https://michael-boethas.netlify.app",
           "https://www.linkedin.com/in/micha%C3%ABl-bo%C3%ABthas-89028114b/",
         ],

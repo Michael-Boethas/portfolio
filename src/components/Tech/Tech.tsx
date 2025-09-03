@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { useTheme } from "@/context/ThemeContext";
 
 interface ITechData {
@@ -12,24 +13,27 @@ interface ITechData {
 interface ITechProps {
   techData: ITechData;
   index: number;
-  display: boolean;
+  isVisible: boolean;
 }
 
-export default function Tech({ techData, index, display }: ITechProps) {
+/**
+ * Technology icon holding a link to its website
+ */
+export default function Tech({ techData, index, isVisible }: ITechProps) {
   const { theme } = useTheme();
 
   if (!techData) return null;
 
   return (
     <div
-      className="hover--lift d-flex flex-column gap-2 align-items-center"
+      className="flex flex-col items-center gap-2"
       style={{
         transition:
           "opacity 500ms ease-out, transform 450ms cubic-bezier(0.43, 0.63, 0.42, 1.21)",
         transitionDelay: `${100 + index * 60 + Math.sqrt(index) * 50}ms`,
         willChange: "opacity, transform",
-        opacity: display ? "1" : "0",
-        transform: display
+        opacity: isVisible ? "1" : "0",
+        transform: isVisible
           ? "translate(0, 0) scale(1)"
           : index % 2 === 0
             ? "translateX(500px) scale(0.1)"
@@ -40,10 +44,16 @@ export default function Tech({ techData, index, display }: ITechProps) {
         href={techData.url}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${theme === "light" ? techData.icon_light : techData.icon_dark} ${theme === "dark" ? "dark-icon-glow hover--zoom" : "hover--zoom"}`}
+        className={clsx(
+          theme === "light"
+            ? techData.icon_light
+            : `${techData.icon_dark} dark-icon-glow`,
+          "hover-lift p-2 text-5xl",
+          "lg:text-6xl",
+        )}
         aria-label={techData.name}
       ></a>
-      <p className="fs-6 fw-bold fst-italic">{techData.name}</p>
+      <p className="text-lg font-bold italic">{techData.name}</p>
     </div>
   );
 }

@@ -2,7 +2,12 @@
 
 import { useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { SUPPORTED_LANGUAGES } from "@/config/languages";
 
+/**
+ * Switch for the LanguageContext
+ * Updates the URL path segment without causing a page reload.
+ */
 export default function LanguageSwitch() {
   const { language, setLanguage } = useLanguage();
 
@@ -12,13 +17,16 @@ export default function LanguageSwitch() {
   }, [language]);
 
   const toggleLanguage = () => {
-    const newLanguage = language === "en" ? "fr" : "en";
+    const currentIndex = SUPPORTED_LANGUAGES.indexOf(language);
+    const nextIndex = (currentIndex + 1) % SUPPORTED_LANGUAGES.length;
+    const newLanguage = SUPPORTED_LANGUAGES[nextIndex];
+
     setLanguage(newLanguage);
 
     // Update the URL without redirecting
     const currentPath = window.location.pathname;
     const pathSegments = currentPath.split("/");
-    if (["en", "fr"].includes(pathSegments[1])) {
+    if (SUPPORTED_LANGUAGES.includes(pathSegments[1])) {
       pathSegments[1] = newLanguage;
     }
     const newPath =
@@ -28,12 +36,12 @@ export default function LanguageSwitch() {
 
   return (
     <button
-      className="hover--highlight d-flex align-items-center gap-2 fs-3 fw-bold bg-transparent border-0 ps-2 pe-4 text-white"
+      className="hover-highlight flex items-center gap-2 text-2xl text-white"
       onClick={toggleLanguage}
       aria-label="Language switch"
     >
       <span className="bi bi-globe-americas"></span>
-      <span className="fs-4">{language === "en" ? "EN" : "FR"}</span>
+      <span className="text-xl">{language.toUpperCase()}</span>
     </button>
   );
 }

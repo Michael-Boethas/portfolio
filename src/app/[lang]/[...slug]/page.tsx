@@ -1,9 +1,10 @@
 import { notFound } from "next/navigation";
 
-export default function CatchAllPage({
-  params,
-}: {
-  params: { slug?: string[] };
-}) {
+/**
+ * Calling `notFound()` from `next/navigation` signals Next.js
+ * to render the nearest `not-found.tsx` in the folder hierarchy,
+ * which acts as the route’s 404 page.
+ */
+export default function CatchAllPage() {
   notFound();
 }

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Global styles */
+@import "./colors.css";
+@import "./typography.css";
+@import "./utils.css";
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}

@@ -1,11 +1,15 @@
 "use client";
 
+import clsx from "clsx";
 import { useEffect } from "react";
-import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import useOnVisible from "@/hooks/useOnVisible";
+import { useOnVisible } from "@/hooks/useOnVisible";
 
+/**
+ * Section containing the projects gallery
+ */
 export default function Projects() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
@@ -30,12 +34,20 @@ export default function Projects() {
     <section
       id="projects"
       ref={projectsRef}
-      className={`${theme === "light" ? "theme-L-bg-projects theme-L-txt-dark" : "theme-D-bg-projects theme-D-txt-light"} py-5`}
+      className={clsx(
+        theme === "light" ? "theme-L" : "theme-D text-[var(--color-txt-light)]",
+        "flex flex-col items-center gap-12 bg-[var(--color-bg-projects)] px-8 py-16",
+      )}
     >
-      <h2 className="fs-1 text-center py-4 fst-italic">
+      <h2 className="py-6 text-center italic">
         {textContent.sections.projects.title}
       </h2>
-      <div className="container d-flex flex-column flex-sm-row flex-wrap justify-content-center align-items-center align-items-md-start gap-4 gap-lg-5 p-4 p-lg-5">
+      <div
+        className={clsx(
+          "flex flex-col items-center justify-center gap-6 px-4",
+          "lg:flex-row lg:flex-wrap lg:items-start lg:justify-center 2xl:gap-16 2xl:px-72",
+        )}
+      >
         <ProjectCard
           projectData={textContent.sections.projects.kasa}
           index={1}

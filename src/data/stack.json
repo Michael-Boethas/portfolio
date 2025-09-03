@@ -21,12 +21,6 @@
   ],
   "primary": [
     {
-      "name": "Next.js",
-      "url": "https://nextjs.org/",
-      "icon_light": "devicon-nextjs-plain colored",
-      "icon_dark": "devicon-nextjs-plain colored"
-    },
-    {
       "name": "MongoDB",
       "url": "https://www.mongodb.com/docs/",
       "icon_light": "devicon-mongodb-plain colored",
@@ -39,6 +33,12 @@
       "icon_dark": "devicon-express-original colored"
     },
     {
+      "name": "React",
+      "url": "https://reactjs.org/",
+      "icon_light": "devicon-react-original colored",
+      "icon_dark": "devicon-react-original colored"
+    },
+    {
       "name": "Node.js",
       "url": "https://nodejs.org/en/",
       "icon_light": "devicon-nodejs-plain colored",
@@ -47,28 +47,16 @@
   ],
   "secondary": [
     {
+      "name": "Next.js",
+      "url": "https://nextjs.org/",
+      "icon_light": "devicon-nextjs-plain colored",
+      "icon_dark": "devicon-nextjs-plain colored"
+    },
+    {
       "name": "TypeScript",
       "url": "https://www.typescriptlang.org/",
       "icon_light": "devicon-typescript-plain colored",
       "icon_dark": "devicon-typescript-plain colored"
-    },
-    {
-      "name": "React",
-      "url": "https://reactjs.org/",
-      "icon_light": "devicon-react-original colored",
-      "icon_dark": "devicon-react-original colored"
-    },
-    {
-      "name": "Sass",
-      "url": "https://sass-lang.com/",
-      "icon_light": "devicon-sass-original colored",
-      "icon_dark": "devicon-sass-original colored"
-    },
-    {
-      "name": "Bootstrap",
-      "url": "https://getbootstrap.com/",
-      "icon_light": "devicon-bootstrap-plain colored",
-      "icon_dark": "devicon-bootstrap-plain colored"
     },
     {
       "name": "Tailwind",
@@ -77,16 +65,22 @@
       "icon_dark": "devicon-tailwindcss-plain colored"
     },
     {
-      "name": "Swagger",
-      "url": "https://swagger.io/",
-      "icon_light": "devicon-swagger-plain colored",
-      "icon_dark": "devicon-swagger-plain colored"
+      "name": "Sass",
+      "url": "https://sass-lang.com/",
+      "icon_light": "devicon-sass-original colored",
+      "icon_dark": "devicon-sass-original colored"
     },
     {
       "name": "Postman",
       "url": "https://www.postman.com/",
       "icon_light": "devicon-postman-plain colored",
       "icon_dark": "devicon-postman-plain colored"
+    },
+    {
+      "name": "Swagger",
+      "url": "https://swagger.io/",
+      "icon_light": "devicon-swagger-plain colored",
+      "icon_dark": "devicon-swagger-plain colored"
     },
     {
       "name": "Vercel",

@@ -1,58 +1,78 @@
 "use client";
 
-import { useLanguage } from "@/context/LanguageContext";
-import { useTheme } from "@/context/ThemeContext";
-import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import clsx from "clsx";
+import LanguageSwitch from "./LanguageSwitch";
+import ThemeToggle from "./ThemeToggle";
+import Nav from "./Nav";
 
+/**
+ * Header containng Nav menu, language switch and theme toggle
+ */
 export default function Header() {
-  const { textContent } = useLanguage();
-  const { theme } = useTheme();
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isTransparent, setIsTransparent] = useState(false);
+
+  const pathname = usePathname();
+
+  const toggleCollapse = () => setIsCollapsed(!isCollapsed);
+
+  useEffect(() => {
+    // Force opacity on 404 page
+    const is404 = document.getElementById("404") !== null;
+    if (is404) {
+      setIsTransparent(false);
+      return;
+    }
+
+    // Trigger opacity depending on scroll position
+    const toggleOpacity = () => {
+      setIsTransparent(window.scrollY < 100);
+    };
+
+    toggleOpacity();
+    window.addEventListener("scroll", toggleOpacity);
+    return () => window.removeEventListener("scroll", toggleOpacity);
+  }, [pathname]);
 
   return (
     <header
       id="header"
-      className={`${theme === "light" ? "header__bg-light" : "header__bg-dark"} d-flex flex-column justify-content-center align-items-center min-vh-100 position-relative`}
+      className={clsx(
+        isTransparent && "lg:bg-transparent",
+        "fixed z-100 flex w-full flex-row-reverse items-center justify-between bg-black/95 p-4",
+        "transition-colors duration-300 ease-in-out",
+        "lg:flex-row lg:bg-black/85 lg:px-6 lg:py-2",
+      )}
     >
-      {/* Header overlay for fade-in transition */}
-      <div className="header__overlay bg-black position-absolute w-100 h-100"></div>
-
-      {/* Slogan and links  */}
-      <div className="w-75 text-center mt-5">
-        <h1 className="font-huge text-white fw-bold">
-          {textContent.sections.header.tagline}
-        </h1>
-
-        <div className="d-flex justify-content-center gap-4 py-5">
-          <a
-            href={textContent.sections.header.linkedin}
-            className="hover--zoom nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn Profile"
-          >
-            <i className="devicon-linkedin-plain text-white font-large"></i>
-          </a>
-
-          <a
-            href={textContent.sections.header.github}
-            className="hover--zoom nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub Profile"
-          >
-            <i className="devicon-github-plain text-white font-large"></i>
-          </a>
-        </div>
-      </div>
-
-      {/* Scroll down button */}
-      <Link
-        href="#about"
-        className="hover--zoom nav-link position-absolute bottom-0 end-0 m-5 mb-sm-4 mb-md-0"
-        aria-label="Scroll down to About section"
+      {/* Menu button for small viewports */}
+      <button
+        className="px-4 lg:hidden"
+        type="button"
+        onClick={toggleCollapse}
+        aria-expanded={!isCollapsed}
+        aria-label="Toggle navigation"
       >
-        <i className="bi bi-chevron-compact-down font-huge text-light"></i>
-      </Link>
+        <div className="hover-highlight flex items-center font-semibold text-white">
+          <span className="text-3xl">&lt;</span>
+          <span className="bi bi-three-dots text-xl"></span>
+          <span className="text-3xl"> /&gt;</span>
+        </div>
+      </button>
+
+      {/* Nav Links */}
+      <Nav
+        isCollapsed={isCollapsed}
+        toggleCollapse={toggleCollapse}
+        isTransparent={isTransparent}
+      />
+
+      {/* Global controls */}
+      <div className="flex gap-4 lg:gap-8 lg:px-16">
+        <ThemeToggle />
+        <LanguageSwitch />
+      </div>
     </header>
   );
 }

@@ -1,0 +1,72 @@
+/* Wrapper for the translation animation */
+.cube-wrapper {
+  position: absolute;
+  top: var(--position-top);
+  left: var(--position-left);
+  width: var(--cube-size);
+  height: var(--cube-size);
+  z-index: 0;
+  perspective: 500px;
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeIn 3000ms 4800ms forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+/* Wireframe cube with rotation animation */
+.wireframe-cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: cube-rotate 15s linear infinite;
+  cursor: pointer;
+  border: var(--border-gap); /* To open the cube */
+  transition: border 300ms linear;
+}
+
+@keyframes cube-rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* Cube's edges*/
+.wireframe-cube span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--color-intensity));
+  border: 2px solid rgba(175, 175, 175, 0.6);
+  box-shadow: 0 0 40px 2px rgba(255, 255, 255, var(--glow));
+  transition: box-shadow 150ms ease-in-out;
+}
+
+/* Positioning the cube's edges */
+.wireframe-cube span:nth-child(1) {
+  transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2));
+}
+.wireframe-cube span:nth-child(2) {
+  transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
+}
+.wireframe-cube span:nth-child(3) {
+  transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2));
+}
+.wireframe-cube span:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
+}
+.wireframe-cube span:nth-child(5) {
+  transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
+}
+.wireframe-cube span:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
+}

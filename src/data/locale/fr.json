@@ -4,18 +4,21 @@
     "description": "Développeur web full-stack spécialisé en React, Next.js, TypeScript, Tailwind CSS, Node.js, express, MongoDB, Strapi..."
   },
   "sections": {
-    "header": {
+    "hero": {
       "title": "Accueil",
+      "anchor": "/fr#home",
       "tagline": "Bienvenue sur mon portfolio",
       "github": "https://github.com/Michael-Boethas",
       "linkedin": "https://www.linkedin.com/in/michael-boethas-8bba6764/?originalSubdomain=fr"
     },
     "about": {
       "title": "À propos",
+      "anchor": "/fr#about",
       "about_me": "Je suis développeur web full-stack, spécialisé dans la création de sites et d'applications sur mesure qui répondent à des besoins spécifiques. J'aime construire, voir un projet évoluer à partir de rien pour devenir quelque chose de fonctionnel et attrayant. Je travaille à la fois sur le design front-end et l'architecture back-end, garantissant des pages propres et réactives, ainsi qu'un code évolutif pour des sites efficaces et sécurisés qui peuvent accompagner la croissance de votre projet."
     },
     "projects": {
-      "title": "Projets récents",
+      "title": "Quelques projets",
+      "anchor": "/fr#projects",
       "kasa": {
         "name": "Kasa",
         "type": "frontend",
@@ -54,9 +57,19 @@
       }
     },
     "stack": {
-      "title": "Technologies",
-      "main": "Je travaille principalement avec ",
-      "secondary": "Quelques technologies que j'utilise"
+      "title": "Stack",
+      "anchor": "/fr#stack",
+      "main": "Formation basée sur ",
+      "secondary": "Autres technologies que j'utilise"
+    },
+    "footer": {
+      "anchor": "/fr#footer",
+      "contact_CTA": "Me contacter",
+      "message_part_1": "Je suis actuellement basé à ",
+      "available": " et disponible pour des missions freelance. ",
+      "unavailable": ". ",
+      "message_part_2": "N'hésitez pas à me contacter si vous avez des questions ou souhaitez discuter de projets ou de collaborations potentielles.",
+      "training": "Formé chez"
     },
     "contact": {
       "title": "Contact",
@@ -65,14 +78,6 @@
       "submit_button_label": "Envoyer",
       "success_message": "Votre message a bien été envoyé !",
       "error_message": "Échec de l'envoi."
-    },
-    "footer": {
-      "contact_CTA": "Me contacter",
-      "message_part_1": "Je suis actuellement basé à ",
-      "available": " et disponible pour des missions freelance. ",
-      "unavailable": ". ",
-      "message_part_2": "N'hésitez pas à me contacter si vous avez des questions ou souhaitez discuter de projets ou de collaborations potentielles.",
-      "training": "Formé chez"
     }
   }
 }

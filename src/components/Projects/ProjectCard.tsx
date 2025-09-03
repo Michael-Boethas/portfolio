@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
@@ -22,6 +23,9 @@ interface IProjectCardProps {
   display: boolean;
 }
 
+/**
+ * Collapsible card for project overview
+ */
 export default function ProjectCard({
   projectData,
   index,
@@ -31,18 +35,17 @@ export default function ProjectCard({
   const { theme } = useTheme();
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const themePrefix = theme === "light" ? "theme-L-" : "theme-D-";
   let tagColor = "";
 
   switch (projectData.type) {
     case "frontend":
-      tagColor = themePrefix + "frontend-tag";
+      tagColor = "bg-[var(--color-frontend-tag)]";
       break;
     case "backend":
-      tagColor = themePrefix + "backend-tag";
+      tagColor = "bg-[var(--color-backend-tag)]";
       break;
     default:
-      tagColor = themePrefix + "fullstack-tag";
+      tagColor = "bg-[var(--color-fullstack-tag)]";
   }
 
   const toggleContent = () => {
@@ -59,23 +62,31 @@ export default function ProjectCard({
 
   return (
     <figure
-      className={`project-card hover--zoom card shadow rounded-0 flex-row ${theme === "light" ? "theme-L-bg-project-card" : "theme-D-bg-project-card text-white"}`}
+      className={clsx(
+        theme === "light"
+          ? "theme-L border-1 border-gray-100 shadow-lg"
+          : "theme-D text-[var(--color-txt-light)]",
+        isCollapsed && "hover:scale-101 hover:cursor-pointer",
+        "flex bg-[var(--color-bg-project-card)]",
+        "lg:max-w-max",
+      )}
       tabIndex={0}
       onClick={toggleContent}
       onKeyDown={keyDownClick}
       role="button"
       aria-expanded={!isCollapsed}
       style={{
-        transition: `opacity 500ms ease ${index * 120}ms, transform 500ms ease ${index * 120}ms`,
+        transition: `opacity 500ms ease ${index * 200}ms, transform 500ms ease ${index * 200}ms`,
         willChange: "opacity, transform",
         opacity: display ? "1" : "0",
         transform: display ? "scale(1)" : "scale(0.8)",
       }}
     >
-      <div className={`${tagColor} text-white d-flex flex-column p-2`}>
+      {/* Project type tag */}
+      <div className={`${tagColor} flex flex-col p-2 text-white`}>
         {projectData.type.split("").map((letter, index) => {
           return (
-            <span className="fst-italic fw-bold" key={index}>
+            <span className="font-bold italic" key={index}>
               {letter.toUpperCase()}
             </span>
           );
@@ -83,17 +94,21 @@ export default function ProjectCard({
       </div>
       <div>
         <Image
-          className="project-card__image"
+          className={clsx(
+            !isCollapsed && "cursor-pointer",
+            "h-auto max-w-full",
+          )}
           src={projectData.thumbnail_url}
           alt={`Screenshot of ${projectData.name}`}
           width={400}
           height={300}
           priority
         />
-        <figcaption className="card-body">
-          <div className="d-flex gap-2 justify-content-between align-items-center">
-            <h3 className="card-title">{projectData.name}</h3>
-            <div className="d-flex gap-2">
+        {/* Dropdown description */}
+        <figcaption className="max-w-100 p-4">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-xl font-semibold">{projectData.name}</h3>
+            <div className="flex gap-2">
               {/* Flatten the primary and secondary stacks into a single array
               and find the technology that matches the current tech */}
               {projectData.stack.map((tech, index) => {
@@ -106,9 +121,13 @@ export default function ProjectCard({
                 if (!techData) return null;
 
                 return (
-                  <div key={index} className="fs-2">
+                  <div key={index} className="text-2xl">
                     <span
-                      className={`${theme === "light" ? techData.icon_light : techData.icon_dark} ${theme === "dark" ? "dark-icon-glow" : ""}`}
+                      className={clsx(
+                        theme === "light"
+                          ? techData.icon_light
+                          : `${techData.icon_dark} dark-icon-glow`,
+                      )}
                     ></span>
                   </div>
                 );
@@ -116,15 +135,13 @@ export default function ProjectCard({
             </div>
           </div>
 
-          <div
-            className={`card-text collapse p-2 border-top ${isCollapsed ? "" : "show"}`}
-          >
-            <p>{projectData.description}</p>
+          <div className={`border-t p-2 ${isCollapsed ? "hidden" : "block"}`}>
+            <p className="mt-2">{projectData.description}</p>
 
-            <div className="d-flex flex-column gap-2 py-3">
+            <div className="flex flex-col gap-2 py-3">
               <a
                 href={projectData.project_url}
-                className={`btn btn-primary rounded-0 ${theme === "light" ? "" : "text-white"}`}
+                className={`bg-[var(--color-primary)]/90 px-4 py-2 text-white hover:bg-[var(--color-primary)]`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onKeyDown={keyDownClick}
@@ -133,7 +150,7 @@ export default function ProjectCard({
               </a>
               <a
                 href={projectData.codebase_url}
-                className={`btn btn-primary rounded-0 ${theme === "light" ? "" : "text-white"}`}
+                className={`bg-[var(--color-primary)]/90 px-4 py-2 text-white hover:bg-[var(--color-primary)]`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onKeyDown={keyDownClick}

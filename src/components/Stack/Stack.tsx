@@ -1,17 +1,21 @@
 "use client";
 
+import clsx from "clsx";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTheme } from "@/context/ThemeContext";
-import useOnVisible from "@/hooks/useOnVisible";
+import { useOnVisible } from "@/hooks/useOnVisible";
 import Tech from "@/components/Tech/Tech";
 import techStack from "@/data/stack.json";
 
+/**
+ * Section displaying a list of technologies
+ */
 export default function Stack() {
   const { textContent } = useLanguage();
   const { theme } = useTheme();
   const [mainStackRef, mainStackIsVisible] = useOnVisible<HTMLDivElement>(
     0.05,
-    true
+    true,
   );
   const [secondaryStackRef, secondaryStackIsVisible] =
     useOnVisible<HTMLDivElement>(0.05, true);
@@ -19,39 +23,46 @@ export default function Stack() {
   return (
     <section
       id="stack"
-      className={`${theme === "light" ? "theme-L-bg-stack theme-L-txt-dark" : "theme-D-bg-stack theme-D-txt-light"} py-5`}
+      className={clsx(
+        theme === "light"
+          ? "theme-L bg-[var(--color-bg-stack)] text-[var(--color-txt-dark)]"
+          : "theme-D bg-[var(--color-bg-stack)] text-[var(--color-txt-light)]",
+        "flex min-h-screen flex-col gap-12 py-16",
+      )}
     >
-      <h2 className="fs-1 text-center py-4 fst-italic">
+      <h2 className="py-6 text-center italic">
         {textContent.sections.stack.title}
       </h2>
 
-      <div className="d-flex flex-column align-items-center">
-        <h3 className="p-3 mb-5 fw-light">{textContent.sections.stack.main}</h3>
+      <div className="flex flex-col items-center gap-6">
+        <h3 className="mb-5 p-3 font-light">
+          {textContent.sections.stack.main}
+        </h3>
 
         <div
           ref={mainStackRef}
-          className="w-50 d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center"
+          className="flex w-1/2 flex-col items-center justify-center lg:flex-row"
         >
-          <div className="font-large d-flex flex-wrap align-items-center justify-content-center gap-4">
-            <div className="d-flex flex-column">
-              <div className="d-flex">
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            <div className="flex flex-col">
+              <div className="flex">
                 <Tech
                   key={techStack.core[0].name}
                   techData={techStack.core[0]}
-                  display={mainStackIsVisible}
+                  isVisible={mainStackIsVisible}
                   index={0}
                 />
                 <Tech
                   key={techStack.core[1].name}
                   techData={techStack.core[1]}
-                  display={mainStackIsVisible}
+                  isVisible={mainStackIsVisible}
                   index={1}
                 />
               </div>
               <Tech
                 key={techStack.core[2].name}
                 techData={techStack.core[2]}
-                display={mainStackIsVisible}
+                isVisible={mainStackIsVisible}
                 index={2}
               />
             </div>
@@ -60,29 +71,30 @@ export default function Stack() {
                 key={tech.name}
                 techData={tech}
                 index={index}
-                display={mainStackIsVisible}
+                isVisible={mainStackIsVisible}
               />
             ))}
           </div>
         </div>
 
-        <div className="h-line-50 mt-5 mb-3"></div>
+        {/* Separation line */}
+        <div className="my-4 w-2/3 outline outline-gray-300 md:my-12 md:w-1/2"></div>
 
-        <div className="d-flex flex-column align-items-center">
-          <h3 className="p-3 mb-5 fw-light text-center">
-            {textContent.sections.stack.secondary}
-          </h3>
+        <h3 className="mb-5 p-3 font-light">
+          {textContent.sections.stack.secondary}
+        </h3>
 
+        <div className="flex flex-col items-center">
           <div
             ref={secondaryStackRef}
-            className="font-large w-75 d-flex flex-wrap justify-content-center gap-5 p-md-5"
+            className="flex w-3/4 flex-wrap justify-center gap-6 p-5 font-bold italic md:p-5"
           >
             {techStack.secondary.map((tech, index) => (
               <Tech
                 key={tech.name}
                 techData={tech}
                 index={index + 2}
-                display={secondaryStackIsVisible}
+                isVisible={secondaryStackIsVisible}
               />
             ))}
           </div>

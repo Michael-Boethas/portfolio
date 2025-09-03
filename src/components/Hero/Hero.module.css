@@ -1,0 +1,131 @@
+/* Fading overlay  */
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: #000;
+  animation: fade-out 2500ms ease-in forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Content animations */
+
+.tagline--glow {
+  animation: tagline-glow 2000ms 2600ms ease-in-out forwards;
+  /* Force line breaks after words */
+  word-break: break-word;
+  word-spacing: 0.5em;
+  line-height: 1.2;
+}
+
+@keyframes tagline-glow {
+  0% {
+    text-shadow: none;
+  }
+  33% {
+    text-shadow: 0 0 5px #fff;
+    text-shadow: -2px 0 8px #fff;
+  }
+
+  50% {
+    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 -1px 10px #fff;
+  }
+  66% {
+    text-shadow: 0 0 5px #fff;
+    text-shadow: 2px 0 8px #fff;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+.character--drop-in {
+  display: inline-block;
+  opacity: 0;
+  animation: drop-in 200ms forwards;
+}
+
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    scale: 3;
+    transform: translate(500%, 100%);
+  }
+  75%,
+  100% {
+    opacity: 1;
+    scale: 1;
+    transform: translate(0);
+  }
+}
+
+.social-links--pop-in {
+  pointer-events: none;
+  display: inline-block;
+  opacity: 0;
+  animation: pop-in 300ms ease-in forwards;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    scale: 0.8;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    pointer-events: all;
+  }
+}
+
+/* Radial gradient for hero animation */
+
+.bg-animation {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    ellipse,
+    var(--color-bg-fx-1),
+    var(--color-bg-fx-2),
+    var(--color-bg-fx-3) 80%
+  );
+  background-size: 1000% 1000%;
+  animation: gradient 60s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 45% 50%;
+  }
+  40% {
+    background-position: 50% 75%;
+  }
+  60% {
+    background-position: 100% 0%;
+  }
+  80% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}

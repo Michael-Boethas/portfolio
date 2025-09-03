@@ -4,18 +4,21 @@
     "description": "Full-stack web developer specialized in React, Next.js, TypeScript, Tailwind CSS, Node.js, Express, MongoDB, Strapi..."
   },
   "sections": {
-    "header": {
+    "hero": {
       "title": "Home",
+      "anchor": "/en#home",
       "tagline": "Welcome to my portfolio",
       "github": "https://github.com/Michael-Boethas",
       "linkedin": "https://www.linkedin.com/in/michael-boethas-8bba6764/"
     },
     "about": {
       "title": "About me",
+      "anchor": "/en#about",
       "about_me": "I’m a full-stack web developer focused on building custom websites and applications that meet the specific needs of businesses. I love the process of taking an idea from concept to reality, seeing a project grow from nothing into a fully functional, engaging product. Working on both front-end design and back-end architecture, I ensure clean, responsive layouts and scalable code for efficient, secure sites that can evolve alongside your business."
     },
     "projects": {
-      "title": "Recent projects",
+      "title": "Some projects",
+      "anchor": "/en#projects",
       "kasa": {
         "name": "Kasa",
         "type": "frontend",
@@ -55,8 +58,18 @@
     },
     "stack": {
       "title": "Stack",
-      "main": "I mainly work with",
+      "anchor": "/en#stack",
+      "main": "Initially trained on",
       "secondary": "Some other technologies I use"
+    },
+    "footer": {
+      "anchor": "/en#footer",
+      "contact_CTA": "Get in touch",
+      "message_part_1": "I'm currently based in ",
+      "available": " and available for freelance work opportunities. ",
+      "unavailable": ". ",
+      "message_part_2": "Feel free to email me if you have any questions or would like to discuss potential projects or collaborations.",
+      "training": "Trained at"
     },
     "contact": {
       "title": "Contact",
@@ -65,14 +78,6 @@
       "submit_button_label": "Submit",
       "success_message": "Email sent successfully !",
       "error_message": "Failed to send email."
-    },
-    "footer": {
-      "contact_CTA": "Get in touch",
-      "message_part_1": "I'm currently based in ",
-      "available": " and available for freelance work opportunities. ",
-      "unavailable": ". ",
-      "message_part_2": "Feel free to email me if you have any questions or would like to discuss potential projects or collaborations.",
-      "training": "Trained at"
     }
   }
 }

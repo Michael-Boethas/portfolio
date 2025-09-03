@@ -23,7 +23,6 @@ const LanguageContext = createContext<ILanguageContextProps>({
 
 /**
  * Provides language state and localized content to its children.
- * Automatically detects language from the URL path.
  */
 export function LanguageProvider({
   children,
@@ -37,8 +36,8 @@ export function LanguageProvider({
   return (
     <LanguageContext.Provider
       value={{
-        language,
-        setLanguage,
+        language: language,
+        setLanguage: setLanguage,
         supportedLanguages: SUPPORTED_LANGUAGES,
         textContent: CONTENT[language],
       }}

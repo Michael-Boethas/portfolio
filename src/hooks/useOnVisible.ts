@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
  * @returns A ref to attach to the element and a boolean indicating visibility status.
  */
 
-export default function useOnVisible<T extends HTMLElement>(
+export function useOnVisible<T extends HTMLElement>(
   threshold = 0.05,
   triggerOnce = true,
 ): [React.RefObject<T | null>, boolean] {

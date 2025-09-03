@@ -1,0 +1,60 @@
+/* Hover effects */
+
+.hover-highlight {
+  @apply hover:text-primary lg:hover:text-primary hover:font-bold lg:hover:font-bold;
+}
+
+.hover-zoom {
+  @apply transition-transform duration-100 lg:hover:scale-110;
+}
+
+.hover-lift {
+  @apply transition-transform duration-100 lg:hover:-translate-y-2 lg:hover:scale-110;
+}
+
+/* Glow effects */
+
+.dark-icon-glow {
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.dark-icon-glow:hover {
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Glint effect */
+
+.glint-effect {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.glint-effect::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  width: 150%;
+  height: 35%;
+  background: #ffffffb3;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.glint-effect:hover::before {
+  animation: glint-effect 8s infinite;
+}
+
+@keyframes glint-effect {
+  0% {
+    top: 100%;
+    left: -100%;
+  }
+  10%,
+  100% {
+    top: -100%;
+    left: 100%;
+  }
+}

@@ -2,6 +2,9 @@
 
 import { useTheme } from "@/context/ThemeContext";
 
+/**
+ * Toggle for the ThemeContext
+ */
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
@@ -11,7 +14,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="hover--highlight d-flex align-items-center gap-2 fs-3 fw-bold bg-transparent border-0 ps-2 pe-4 text-white"
+      className="hover-highlight flex items-center text-2xl text-white"
       onClick={toggleTheme}
       aria-label="Theme toggle"
     >

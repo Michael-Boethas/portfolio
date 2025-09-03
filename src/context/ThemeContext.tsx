@@ -1,5 +1,3 @@
-// Context for the application of the color theme across all the elements ////
-
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
@@ -10,10 +8,13 @@ interface IThemeContextProps {
 }
 
 const ThemeContext = createContext<IThemeContextProps>({
-  theme: "light",
+  theme: "light", // Default
   setTheme: () => {},
 });
 
+/**
+ * Provides theme state to its children.
+ */
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState("light"); // Default theme
 
@@ -33,7 +34,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Custom hook to use the ThemeContext
+/**
+ * Custom hook to use the ThemeContext
+ */
 export function useTheme(): IThemeContextProps {
   return useContext(ThemeContext);
 }
