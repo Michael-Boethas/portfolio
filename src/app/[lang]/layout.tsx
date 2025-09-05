@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import ViewportWarning from "@/components/ViewportWarning/ViewportWarning";
 import Header from "@/components/Header/Header";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import type { ReactNode } from "react";
 
 export { generateMetadata } from "../metadata";
@@ -43,7 +44,6 @@ export default async function RootLayout({
       </head>
       {/* Layout */}
       <body>
-        <GoogleAnalytics gaId="G-TN5C4T5GQ2" />
         <LanguageProvider initialLanguage={lang}>
           <ThemeProvider>
             <ViewportWarning />
@@ -51,6 +51,8 @@ export default async function RootLayout({
             {children}
           </ThemeProvider>
         </LanguageProvider>
+        <GoogleAnalytics gaId="G-TN5C4T5GQ2" />
+        <Analytics /> {/* Vercel analytics */}
       </body>
     </html>
   );

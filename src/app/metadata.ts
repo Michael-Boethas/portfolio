@@ -35,13 +35,13 @@ export async function generateMetadata({
       description: localeData.metadata.description,
       url: `${BASE_URL}/${lang}/`,
       type: "website",
-      siteName: "Mishmesh | Web developer portfolio",
+      siteName: "Michael Boethas | Web developer portfolio",
       images: [
         {
           url: ogImage,
           width: 512,
           height: 512,
-          alt: "Mishmesh Portfolio Thumbnail",
+          alt: "Michael Boethas Portfolio Thumbnail",
         },
       ],
     },
@@ -63,14 +63,13 @@ export async function generateMetadata({
       shortcut: "/favicon.ico",
     },
     manifest: "/site.webmanifest",
-    applicationName: "Mishmesh Portfolio",
+    applicationName: "Michael Boethas Portfolio",
     appleWebApp: {
       capable: true,
       statusBarStyle: "black-translucent",
-      title: "Mishmesh Portfolio",
+      title: "Michael Boethas Portfolio",
     },
     keywords: [
-      "Mishmesh",
       "Michael Boethas",
       "web developer",
       "full-stack developer",
@@ -81,6 +80,7 @@ export async function generateMetadata({
       "Node.js",
       "MongoDB",
       "portfolio",
+      "Mishmesh",
     ],
     authors: [
       {
@@ -104,7 +104,6 @@ export async function generateMetadata({
         },
         sameAs: [
           BASE_URL,
-          "https://michael-boethas.netlify.app",
           "https://www.linkedin.com/in/micha%C3%ABl-bo%C3%ABthas-89028114b/",
         ],
         description: localeData.metadata.description,

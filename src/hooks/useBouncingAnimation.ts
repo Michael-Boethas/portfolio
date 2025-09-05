@@ -78,7 +78,7 @@ export function useBouncingAnimation({
 
         // Cleanup to avoid memory leaks from rogue animations
         return () => cancelAnimationFrame(rafId);
-    }, [targetRef, targetSize, containerSize, start]);
+    }, [targetRef, targetSize, containerSize, start, initialCoordinates]);
 
     return coordinatesRef;
 }

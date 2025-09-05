@@ -124,7 +124,9 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
           </label>
           <textarea
             id="messageTextArea"
-            rows={12}
+            rows={Math.floor(
+              typeof window !== "undefined" ? window.innerHeight / 100 : 10,
+            )}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
