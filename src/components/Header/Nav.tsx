@@ -31,10 +31,10 @@ export default function Nav({
       className={clsx(
         isTransparent && "lg:bg-transparent",
         isCollapsed ? "translate-x-full lg:translate-x-0" : "translate-x-0",
-        "absolute top-full right-0 flex w-screen flex-col items-center gap-4 bg-black/95 p-6",
+        "absolute top-full right-0 flex w-screen flex-col items-center gap-2 bg-black/95 p-4",
         "transition-transform duration-150",
         "bg-transparent bg-gradient-to-b from-black/95 to-black/70",
-        "md:items-end md:bg-transparent md:bg-gradient-to-l md:from-black/85 md:to-transparent",
+        "md:items-end md:gap-4 md:bg-transparent md:bg-gradient-to-l md:from-black/85 md:to-transparent",
         "lg:static lg:flex-row lg:gap-10 lg:bg-none lg:py-2",
       )}
     >
