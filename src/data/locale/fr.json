@@ -14,7 +14,7 @@
     "about": {
       "title": "À propos",
       "anchor": "/fr#about",
-      "about_me": "Je suis développeur web full-stack, spécialisé dans la création de sites et d'applications sur mesure qui répondent à des besoins spécifiques. J'aime construire, voir un projet évoluer à partir de rien pour devenir quelque chose de fonctionnel et attrayant. Je travaille à la fois sur le design front-end et l'architecture back-end, garantissant des pages propres et réactives, ainsi qu'un code évolutif pour des sites efficaces et sécurisés qui peuvent accompagner la croissance de votre projet."
+      "about_me": "Je suis développeur web full-stack, spécialisé dans la création de sites sur mesure qui répondent à des besoins spécifiques. J'aime construire et voir un projet évoluer à partir de rien pour devenir un produit fonctionnel et attrayant. Je travaille à la fois sur le design front-end et l'architecture back-end pour des sites efficaces et sécurisés qui peuvent accompagner la croissance de votre projet."
     },
     "projects": {
       "title": "Quelques projets",
@@ -25,7 +25,7 @@
         "project_url": "https://p5-kasa-seven.vercel.app/",
         "codebase_url": "https://github.com/Michael-Boethas/p5-kasa",
         "thumbnail_url": "/images/Screenshot-Kasa.webp",
-        "description": "Développement front-end d'une plateforme de location d'hébergements en ligne, permettant aux utilisateurs de consulter des annonces avec descriptions détaillées, photos et avis. Il s'agit d'une application web moderne, optimisée pour tous les types d’écrans : ordinateur, tablette et mobile. Le projet met en avant l’utilisation de React et React Router pour créer des applications interactives avec des composants réutilisables, une gestion efficace des états et des effets de bord, ainsi qu’un design responsive développé avec Sass.",
+        "description": "Front-end d'une plateforme de location d'hébergements en ligne, permettant aux utilisateurs de consulter des annonces avec descriptions détaillées, photos et avis. Il est optimisé pour tous les types d’écrans : ordinateur, tablette et mobile. Le projet a été réalisé avec React en utilisant des composants réutilisables et une gestion des états. Le design responsive a été développé avec Sass.",
         "stack": ["react", "sass"]
       },
       "nina_carducci": {
@@ -52,7 +52,7 @@
         "project_url": "https://cristina-jimenez.netlify.app",
         "codebase_url": "https://github.com/Michael-Boethas/cristina",
         "thumbnail_url": "/images/Screenshot-Cristina-Portfolio.webp",
-        "description": "Portfolio professionnel de Cristina Jiménez, spécialiste en marketing international et communication. Le projet comprend une interface utilisateur moderne et responsive développée avec Next.js (optimisée pour la performance et le référencement), ainsi qu’un CMS (Strapi) permettant à Cristina de mettre à jour le contenu de son portfolio via un accès administrateur.",
+        "description": "Portfolio professionnel de Cristina Jiménez, spécialiste en marketing international et communication. Le projet comprend une interface utilisateur moderne et responsive développée avec Next.js, principalement en SSG, ainsi qu’un CMS (Strapi) permettant à Cristina de mettre à jour le contenu de son portfolio via un accès administrateur.",
         "stack": ["next.js", "tailwind", "typescript"]
       }
     },
