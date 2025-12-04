@@ -38,7 +38,7 @@ export default function WireframeCube({
   };
 
   const [animate, setAnimate] = useState(0);
-  const animationThreshold = useRef(Math.floor(2 + Math.random() * 3)).current;
+  const animationThreshold = useRef(Math.floor(2 + Math.random() * 2)).current;
 
   // Animation
   useBouncingAnimation({
@@ -46,7 +46,7 @@ export default function WireframeCube({
     targetSize: cubeSize,
     containerSize: containerSize,
     initialCoordinates: coordinates,
-    minVel: 100,
+    minVel: 120,
     maxVel: 150, // pixels per second
     start: animate > animationThreshold,
   });

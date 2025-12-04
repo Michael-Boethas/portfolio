@@ -9,7 +9,7 @@
   perspective: 500px;
   opacity: 0;
   pointer-events: none;
-  animation: fadeIn 3000ms 4800ms forwards;
+  animation: fadeIn 3000ms 2800ms forwards;
 }
 
 @keyframes fadeIn {
@@ -49,6 +49,10 @@
   border: 2px solid rgba(175, 175, 175, 0.6);
   box-shadow: 0 0 40px 2px rgba(255, 255, 255, var(--glow));
   transition: box-shadow 150ms ease-in-out;
+}
+
+.wireframe-cube:hover span {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Positioning the cube's edges */
