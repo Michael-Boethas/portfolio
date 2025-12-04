@@ -48,7 +48,7 @@ export default async function RootLayout({
           <ThemeProvider>
             <ViewportWarning />
             <Header />
-            {children}
+            <main id="main-content">{children}</main>
           </ThemeProvider>
         </LanguageProvider>
         <GoogleAnalytics gaId="G-TN5C4T5GQ2" />
